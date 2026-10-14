@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MessageCircle, Sparkles, Eye, ArrowUpRight } from 'lucide-react';
+import { MessageCircle, Sparkles, Eye, Plus } from 'lucide-react';
 import { buildProductInquiryMessage } from '../utils/whatsappMessages';
 import { openWhatsAppChat } from '../config/businessConfig';
 import { useCart } from '../context/CartContext';
@@ -31,26 +31,27 @@ export default function ProductCard({ product }) {
   };
 
   return (
-    <div className="bg-navy-900 border border-navy-800 rounded-2xl overflow-hidden hover:border-electric-500/50 hover:shadow-xl hover:shadow-electric-950/20 transition-all duration-300 flex flex-col group">
+    <div className="bg-dark-900 border border-dark-800 rounded-2xl overflow-hidden hover:border-neon-500/40 hover:shadow-2xl hover:shadow-neon-500/5 transition-all duration-300 flex flex-col group h-full">
       
-      {/* IMAGE CONTAINER */}
-      <Link to={`/product/${product.id}`} className="relative block aspect-[4/3] bg-navy-950 overflow-hidden">
+      {/* IMAGE CONTAINER WITH CONSISTENT 4:3 RATIO */}
+      <Link to={`/product/${product.id}`} className="relative block aspect-[4/3] bg-dark-950 overflow-hidden">
         <img
           src={product.images?.[0] || 'https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=800&q=80'}
           alt={product.name}
           className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+          loading="lazy"
           onError={(e) => {
             e.target.src = 'https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=800&q=80';
           }}
         />
 
         {/* SPORT & BADGES */}
-        <div className="absolute top-3 left-3 flex flex-wrap gap-1.5 pointer-events-none">
-          <span className="px-2.5 py-1 rounded-md text-[11px] font-bold uppercase tracking-wider bg-navy-950/90 text-electric-400 backdrop-blur-md border border-navy-700">
+        <div className="absolute top-3 left-3 flex flex-wrap gap-1.5 pointer-events-none z-10">
+          <span className="px-2.5 py-1 rounded-lg text-[11px] font-bold uppercase tracking-wider bg-dark-950/90 text-white backdrop-blur-md border border-dark-700">
             {product.sport}
           </span>
           {product.badge && (
-            <span className="px-2.5 py-1 rounded-md text-[11px] font-bold uppercase tracking-wider bg-electric-500 text-white shadow">
+            <span className="px-2.5 py-1 rounded-lg text-[11px] font-extrabold uppercase tracking-wider bg-neon-500 text-black shadow-sm">
               {product.badge}
             </span>
           )}
@@ -58,16 +59,16 @@ export default function ProductCard({ product }) {
 
         {/* CUSTOMIZABLE INDICATOR */}
         {product.isCustomizable && (
-          <div className="absolute bottom-3 left-3 bg-navy-900/90 backdrop-blur-md px-2.5 py-1 rounded-md border border-electric-500/30 flex items-center gap-1.5 text-[11px] text-white font-medium">
-            <Sparkles className="w-3.5 h-3.5 text-electric-400" />
-            <span>Custom Name & Number</span>
+          <div className="absolute bottom-3 left-3 bg-dark-950/90 backdrop-blur-md px-2.5 py-1 rounded-lg border border-neon-500/30 flex items-center gap-1.5 text-[11px] text-white font-medium z-10">
+            <Sparkles className="w-3.5 h-3.5 text-neon-400" />
+            <span>Custom Name & No.</span>
           </div>
         )}
 
-        {/* HOVER QUICK VIEW ICON */}
-        <div className="absolute inset-0 bg-navy-950/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2 pointer-events-none">
-          <span className="bg-navy-900/90 text-white text-xs font-semibold px-3 py-1.5 rounded-lg border border-navy-700 flex items-center gap-1.5 backdrop-blur-sm">
-            <Eye className="w-3.5 h-3.5 text-electric-400" /> View Details
+        {/* HOVER OVERLAY QUICK VIEW */}
+        <div className="absolute inset-0 bg-dark-950/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
+          <span className="bg-dark-900/90 text-white text-xs font-bold px-3 py-1.5 rounded-lg border border-dark-700 flex items-center gap-1.5 backdrop-blur-sm shadow-lg">
+            <Eye className="w-3.5 h-3.5 text-neon-400" /> View Details
           </span>
         </div>
       </Link>
@@ -75,13 +76,18 @@ export default function ProductCard({ product }) {
       {/* CONTENT INFO */}
       <div className="p-5 flex-1 flex flex-col justify-between">
         <div>
-          <div className="flex items-center justify-between text-xs text-slate-400 mb-1">
-            <span className="uppercase tracking-wider font-semibold text-slate-400">{product.category}</span>
-            <span className="text-electric-400 font-medium">Price on WhatsApp</span>
+          <div className="flex items-center justify-between text-xs text-slate-400 mb-1.5">
+            <span className="uppercase tracking-wider font-semibold text-slate-400 text-[11px]">
+              {product.category}
+            </span>
+            <span className="text-neon-400 font-semibold text-[11px] flex items-center gap-1">
+              <span className="w-1.5 h-1.5 rounded-full bg-neon-400"></span>
+              Price on WhatsApp
+            </span>
           </div>
 
           <Link to={`/product/${product.id}`} className="block">
-            <h3 className="text-base font-bold text-white group-hover:text-electric-400 transition-colors line-clamp-1">
+            <h3 className="text-base font-bold text-white group-hover:text-neon-400 transition-colors line-clamp-1">
               {product.name}
             </h3>
           </Link>
@@ -94,7 +100,7 @@ export default function ProductCard({ product }) {
           {product.sizes && (
             <div className="flex flex-wrap gap-1 mt-3">
               {product.sizes.slice(0, 5).map(sz => (
-                <span key={sz} className="text-[10px] font-semibold px-2 py-0.5 rounded bg-navy-950 text-slate-300 border border-navy-800">
+                <span key={sz} className="text-[10px] font-semibold px-2 py-0.5 rounded-md bg-dark-950 text-slate-300 border border-dark-800">
                   {sz}
                 </span>
               ))}
@@ -106,30 +112,31 @@ export default function ProductCard({ product }) {
         </div>
 
         {/* BOTTOM ACTION BUTTONS */}
-        <div className="pt-4 mt-4 border-t border-navy-800 grid grid-cols-2 gap-2">
+        <div className="pt-4 mt-4 border-t border-dark-800 grid grid-cols-2 gap-2">
           {product.isCustomizable ? (
             <Link
               to={`/custom-design?sport=${product.sportSlug}&product=${product.id}`}
-              className="col-span-1 px-3 py-2 rounded-xl text-xs font-bold bg-navy-800 hover:bg-navy-700 text-slate-200 border border-navy-700 flex items-center justify-center gap-1 transition-colors"
+              className="col-span-1 px-3 py-2.5 rounded-xl text-xs font-bold bg-dark-800 hover:bg-dark-700 text-slate-200 border border-dark-700 flex items-center justify-center gap-1 transition-colors"
             >
-              <Sparkles className="w-3.5 h-3.5 text-electric-400" />
+              <Sparkles className="w-3.5 h-3.5 text-neon-400" />
               <span>Customize</span>
             </Link>
           ) : (
             <button
               onClick={handleQuickAddToCart}
-              className="col-span-1 px-3 py-2 rounded-xl text-xs font-bold bg-navy-800 hover:bg-navy-700 text-slate-200 border border-navy-700 flex items-center justify-center gap-1 transition-colors"
+              className="col-span-1 px-3 py-2.5 rounded-xl text-xs font-bold bg-dark-800 hover:bg-dark-700 text-slate-200 border border-dark-700 flex items-center justify-center gap-1 transition-colors"
             >
-              <span>+ Add to Cart</span>
+              <Plus className="w-3.5 h-3.5 text-slate-300" />
+              <span>Add to Cart</span>
             </button>
           )}
 
           <button
             onClick={handleQuickWhatsAppInquiry}
-            className="col-span-1 px-3 py-2 rounded-xl text-xs font-bold bg-emerald-600 hover:bg-emerald-500 text-white flex items-center justify-center gap-1 shadow-md shadow-emerald-950 transition-colors"
+            className="col-span-1 px-3 py-2.5 rounded-xl text-xs font-bold bg-emerald-600 hover:bg-emerald-500 text-white flex items-center justify-center gap-1.5 shadow-md shadow-emerald-950/40 transition-colors"
           >
             <MessageCircle className="w-3.5 h-3.5 fill-current" />
-            <span>WhatsApp</span>
+            <span>Inquire</span>
           </button>
         </div>
 

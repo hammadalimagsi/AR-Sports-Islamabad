@@ -79,10 +79,10 @@ export default function TeamOrderForm() {
   };
 
   return (
-    <div className="bg-navy-900 border border-navy-800 rounded-3xl p-6 lg:p-10 shadow-2xl">
-      <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 pb-6 border-b border-navy-800">
+    <div className="bg-dark-900 border border-dark-800 rounded-3xl p-6 lg:p-10 shadow-2xl">
+      <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 pb-6 border-b border-dark-800">
         <div>
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-electric-500/20 text-electric-400 border border-electric-500/30 mb-2">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-dark-950 text-neon-400 border border-neon-500/30 mb-2">
             <School className="w-3.5 h-3.5" /> Bulk Team Roster Specialist
           </span>
           <h2 className="font-teko text-3xl sm:text-4xl font-bold text-white tracking-wide">
@@ -93,8 +93,8 @@ export default function TeamOrderForm() {
           </p>
         </div>
 
-        <div className="flex items-center gap-2 bg-navy-950 px-4 py-2.5 rounded-xl border border-navy-800">
-          <Users className="w-5 h-5 text-electric-400" />
+        <div className="flex items-center gap-2 bg-dark-950 px-4 py-2.5 rounded-xl border border-dark-800">
+          <Users className="w-5 h-5 text-neon-400" />
           <div className="text-left">
             <span className="text-[10px] uppercase font-bold text-slate-400 block">Total Players</span>
             <span className="text-base font-bold text-white">{players.length} Uniforms</span>
@@ -116,7 +116,7 @@ export default function TeamOrderForm() {
               value={teamName}
               onChange={(e) => setTeamName(e.target.value)}
               placeholder="e.g. Crescent Model School"
-              className="w-full bg-navy-950 border border-navy-700 rounded-xl py-2.5 px-3.5 text-white text-sm focus:border-electric-500 focus:outline-none"
+              className="w-full bg-dark-950 border border-dark-700 rounded-xl py-2.5 px-3.5 text-white text-sm focus:border-neon-500 focus:outline-none"
             />
           </div>
 
@@ -127,7 +127,7 @@ export default function TeamOrderForm() {
             <select
               value={organizationType}
               onChange={(e) => setOrganizationType(e.target.value)}
-              className="w-full bg-navy-950 border border-navy-700 rounded-xl py-2.5 px-3.5 text-white text-sm focus:border-electric-500 focus:outline-none"
+              className="w-full bg-dark-950 border border-dark-700 rounded-xl py-2.5 px-3.5 text-white text-sm focus:border-neon-500 focus:outline-none"
             >
               <option value="School / College / University">School / College / University</option>
               <option value="Sports Club / Academy">Sports Club / Academy</option>
@@ -143,7 +143,7 @@ export default function TeamOrderForm() {
             <select
               value={sport}
               onChange={(e) => setSport(e.target.value)}
-              className="w-full bg-navy-950 border border-navy-700 rounded-xl py-2.5 px-3.5 text-white text-sm focus:border-electric-500 focus:outline-none"
+              className="w-full bg-dark-950 border border-dark-700 rounded-xl py-2.5 px-3.5 text-white text-sm focus:border-neon-500 focus:outline-none"
             >
               {SPORTS_CATEGORIES.map(s => (
                 <option key={s.id} value={s.name}>{s.name}</option>
@@ -158,7 +158,7 @@ export default function TeamOrderForm() {
             <select
               value={kitType}
               onChange={(e) => setKitType(e.target.value)}
-              className="w-full bg-navy-950 border border-navy-700 rounded-xl py-2.5 px-3.5 text-white text-sm focus:border-electric-500 focus:outline-none"
+              className="w-full bg-dark-950 border border-dark-700 rounded-xl py-2.5 px-3.5 text-white text-sm focus:border-neon-500 focus:outline-none"
             >
               <option value="Complete Kit (Jersey + Pants/Shorts + Socks)">Complete Kit (Jersey + Pants + Socks)</option>
               <option value="Match Jersey Only">Match Jersey Only</option>
@@ -172,13 +172,13 @@ export default function TeamOrderForm() {
         {/* PLAYER ROSTER TABLE */}
         <div>
           <div className="flex items-center justify-between mb-3">
-            <h3 className="text-sm font-bold uppercase tracking-wider text-electric-400 flex items-center gap-2">
+            <h3 className="text-sm font-bold uppercase tracking-wider text-neon-400 flex items-center gap-2">
               <FileSpreadsheet className="w-4 h-4" /> Squad Roster & Individual Sizes
             </h3>
             <button
               type="button"
               onClick={handleAddPlayer}
-              className="px-3.5 py-1.5 rounded-xl text-xs font-bold bg-electric-500 hover:bg-electric-600 text-white flex items-center gap-1.5 shadow transition-colors"
+              className="px-3.5 py-1.5 rounded-xl text-xs font-extrabold bg-neon-500 hover:bg-neon-400 text-black flex items-center gap-1.5 shadow transition-colors"
             >
               <Plus className="w-3.5 h-3.5" />
               <span>Add Player</span>
@@ -192,9 +192,9 @@ export default function TeamOrderForm() {
           )}
 
           {/* Roster responsive table */}
-          <div className="overflow-x-auto border border-navy-800 rounded-2xl bg-navy-950">
+          <div className="overflow-x-auto border border-dark-800 rounded-2xl bg-dark-950">
             <table className="w-full text-left text-sm text-slate-300">
-              <thead className="bg-navy-900/90 text-xs text-slate-400 uppercase font-semibold border-b border-navy-800">
+              <thead className="bg-dark-900 text-xs text-slate-400 uppercase font-semibold border-b border-dark-800">
                 <tr>
                   <th className="py-3 px-4 w-12 text-center">#</th>
                   <th className="py-3 px-4">Player Name (on Jersey)</th>
@@ -204,9 +204,9 @@ export default function TeamOrderForm() {
                   <th className="py-3 px-4 w-16 text-center">Action</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-navy-800/60 font-medium">
+              <tbody className="divide-y divide-dark-800 font-medium">
                 {players.map((player, index) => (
-                  <tr key={player.id} className="hover:bg-navy-900/40 transition-colors">
+                  <tr key={player.id} className="hover:bg-dark-900/60 transition-colors">
                     <td className="py-3 px-4 text-center text-xs text-slate-400">
                       {index + 1}
                     </td>
@@ -216,7 +216,7 @@ export default function TeamOrderForm() {
                         value={player.name}
                         onChange={(e) => handlePlayerChange(player.id, 'name', e.target.value)}
                         placeholder="e.g. Z. ABBAS"
-                        className="w-full bg-navy-900 border border-navy-700/80 rounded-lg py-1.5 px-2.5 text-white text-xs focus:border-electric-500 focus:outline-none"
+                        className="w-full bg-dark-900 border border-dark-700 rounded-lg py-1.5 px-2.5 text-white text-xs focus:border-neon-500 focus:outline-none"
                       />
                     </td>
                     <td className="py-2 px-4">
@@ -226,14 +226,14 @@ export default function TeamOrderForm() {
                         onChange={(e) => handlePlayerChange(player.id, 'number', e.target.value)}
                         placeholder="e.g. 10"
                         maxLength={3}
-                        className="w-full bg-navy-900 border border-navy-700/80 rounded-lg py-1.5 px-2.5 text-white text-xs focus:border-electric-500 focus:outline-none"
+                        className="w-full bg-dark-900 border border-dark-700 rounded-lg py-1.5 px-2.5 text-white text-xs focus:border-neon-500 focus:outline-none"
                       />
                     </td>
                     <td className="py-2 px-4">
                       <select
                         value={player.size}
                         onChange={(e) => handlePlayerChange(player.id, 'size', e.target.value)}
-                        className="w-full bg-navy-900 border border-navy-700/80 rounded-lg py-1.5 px-2 text-white text-xs focus:border-electric-500 focus:outline-none"
+                        className="w-full bg-dark-900 border border-dark-700 rounded-lg py-1.5 px-2 text-white text-xs focus:border-neon-500 focus:outline-none"
                       >
                         {SIZES.map(s => (
                           <option key={s} value={s}>{s}</option>
@@ -246,7 +246,7 @@ export default function TeamOrderForm() {
                         value={player.role}
                         onChange={(e) => handlePlayerChange(player.id, 'role', e.target.value)}
                         placeholder="Player / GK / Coach"
-                        className="w-full bg-navy-900 border border-navy-700/80 rounded-lg py-1.5 px-2.5 text-white text-xs focus:border-electric-500 focus:outline-none"
+                        className="w-full bg-dark-900 border border-dark-700 rounded-lg py-1.5 px-2.5 text-white text-xs focus:border-neon-500 focus:outline-none"
                       />
                     </td>
                     <td className="py-2 px-4 text-center">
@@ -271,7 +271,7 @@ export default function TeamOrderForm() {
             <button
               type="button"
               onClick={handleAddPlayer}
-              className="text-electric-400 hover:underline font-semibold flex items-center gap-1"
+              className="text-neon-400 hover:underline font-bold flex items-center gap-1"
             >
               <Plus className="w-3.5 h-3.5" /> Add Another Player Row
             </button>
@@ -289,7 +289,7 @@ export default function TeamOrderForm() {
               value={deliveryCity}
               onChange={(e) => setDeliveryCity(e.target.value)}
               placeholder="e.g. Lahore, Karachi, or International"
-              className="w-full bg-navy-950 border border-navy-700 rounded-xl py-2.5 px-3.5 text-white text-sm focus:border-electric-500 focus:outline-none"
+              className="w-full bg-dark-950 border border-dark-700 rounded-xl py-2.5 px-3.5 text-white text-sm focus:border-neon-500 focus:outline-none"
             />
           </div>
 
@@ -302,16 +302,16 @@ export default function TeamOrderForm() {
               value={notes}
               onChange={(e) => setNotes(e.target.value)}
               placeholder="Detail colors, crest placements, or special deadlines..."
-              className="w-full bg-navy-950 border border-navy-700 rounded-xl p-2.5 text-white text-xs focus:border-electric-500 focus:outline-none"
+              className="w-full bg-dark-950 border border-dark-700 rounded-xl p-2.5 text-white text-xs focus:border-neon-500 focus:outline-none"
             />
           </div>
         </div>
 
         {/* SUMMARY & DIRECT WHATSAPP ACTION */}
-        <div className="bg-navy-950 border border-navy-800 rounded-2xl p-6 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="bg-dark-950 border border-dark-800 rounded-2xl p-6 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-1 text-center md:text-left">
             <h4 className="text-base font-bold text-white flex items-center justify-center md:justify-start gap-2">
-              <ShieldCheck className="w-5 h-5 text-emerald-400" />
+              <ShieldCheck className="w-5 h-5 text-neon-400" />
               <span>Bulk Order Summary Ready for WhatsApp</span>
             </h4>
             <p className="text-xs text-slate-400 max-w-lg">
@@ -321,10 +321,10 @@ export default function TeamOrderForm() {
 
           <button
             type="submit"
-            className="w-full md:w-auto px-8 py-4 rounded-xl font-bold text-sm bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white flex items-center justify-center gap-2.5 shadow-xl shadow-emerald-950/60 transition-all hover:scale-105 active:scale-95"
+            className="w-full md:w-auto px-8 py-4 rounded-xl font-extrabold text-sm bg-neon-500 hover:bg-neon-400 text-black flex items-center justify-center gap-2.5 shadow-xl shadow-neon-500/20 transition-all hover:scale-105 active:scale-95"
           >
             <MessageCircle className="w-5 h-5 fill-current" />
-            <span>Place Bulk Order on WhatsApp</span>
+            <span>Send Bulk Order on WhatsApp</span>
           </button>
         </div>
 

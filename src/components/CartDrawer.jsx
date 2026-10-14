@@ -31,26 +31,26 @@ export default function CartDrawer() {
     <div className="fixed inset-0 z-50 overflow-hidden animate-in fade-in duration-200">
       {/* Backdrop */}
       <div 
-        className="absolute inset-0 bg-navy-950/80 backdrop-blur-sm transition-opacity"
+        className="absolute inset-0 bg-dark-950/80 backdrop-blur-sm transition-opacity"
         onClick={() => setIsCartOpen(false)}
       />
 
       <div className="fixed inset-y-0 right-0 max-w-full flex pl-10">
-        <div className="w-screen max-w-md bg-navy-900 border-l border-navy-800 shadow-2xl flex flex-col">
+        <div className="w-screen max-w-md bg-dark-900 border-l border-dark-800 shadow-2xl flex flex-col">
           
           {/* HEADER */}
-          <div className="p-6 border-b border-navy-800 flex items-center justify-between bg-navy-950/50">
+          <div className="p-6 border-b border-dark-800 flex items-center justify-between bg-dark-950/70">
             <div className="flex items-center gap-2">
               <h2 className="font-teko text-2xl font-bold text-white tracking-wide">
                 ORDER INQUIRY CART
               </h2>
-              <span className="px-2 py-0.5 rounded-full text-xs font-semibold bg-electric-500/20 text-electric-400 border border-electric-500/30">
+              <span className="px-2.5 py-0.5 rounded-full text-xs font-extrabold bg-dark-850 text-neon-400 border border-neon-500/30">
                 {totalItemsCount} {totalItemsCount === 1 ? 'Item' : 'Items'}
               </span>
             </div>
             <button
               onClick={() => setIsCartOpen(false)}
-              className="p-2 text-slate-400 hover:text-white rounded-lg hover:bg-navy-800 transition-colors"
+              className="p-2 text-slate-400 hover:text-white rounded-lg hover:bg-dark-800 transition-colors"
               aria-label="Close cart"
             >
               <X className="w-5 h-5" />
@@ -58,8 +58,8 @@ export default function CartDrawer() {
           </div>
 
           {/* CRITICAL PRICING NOTICE BANNER */}
-          <div className="bg-navy-800/60 px-6 py-2.5 border-b border-navy-800 text-xs text-slate-300 flex items-center gap-2">
-            <ShieldCheck className="w-4 h-4 text-emerald-400 flex-shrink-0" />
+          <div className="bg-dark-950/80 px-6 py-2.5 border-b border-dark-800 text-xs text-slate-300 flex items-center gap-2">
+            <ShieldCheck className="w-4 h-4 text-neon-400 flex-shrink-0" />
             <span>Prices are customized per order and finalized via WhatsApp.</span>
           </div>
 
@@ -67,8 +67,8 @@ export default function CartDrawer() {
           <div className="flex-1 overflow-y-auto p-6 space-y-4">
             {cartItems.length === 0 ? (
               <div className="h-full flex flex-col items-center justify-center text-center p-6 space-y-4">
-                <div className="w-16 h-16 rounded-2xl bg-navy-800 flex items-center justify-center text-slate-400">
-                  <Sparkles className="w-8 h-8 text-slate-500" />
+                <div className="w-16 h-16 rounded-2xl bg-dark-950 border border-dark-800 flex items-center justify-center text-slate-400">
+                  <Sparkles className="w-8 h-8 text-neon-400" />
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-white">Your Inquiry Cart is Empty</h3>
@@ -79,7 +79,7 @@ export default function CartDrawer() {
                 <Link
                   to="/shop"
                   onClick={() => setIsCartOpen(false)}
-                  className="px-5 py-2.5 rounded-xl text-sm font-semibold bg-electric-500 hover:bg-electric-600 text-white transition-colors"
+                  className="px-5 py-2.5 rounded-xl text-sm font-bold bg-neon-500 hover:bg-neon-400 text-black transition-colors"
                 >
                   Explore Products
                 </Link>
@@ -88,13 +88,13 @@ export default function CartDrawer() {
               cartItems.map((item) => (
                 <div 
                   key={item.cartItemId} 
-                  className="bg-navy-950 border border-navy-800 rounded-xl p-4 flex gap-4 relative group"
+                  className="bg-dark-950 border border-dark-800 rounded-2xl p-4 flex gap-4 relative group"
                 >
                   {/* Thumbnail */}
                   <img
                     src={item.image || 'https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=300&q=80'}
                     alt={item.name}
-                    className="w-20 h-20 rounded-lg object-cover bg-navy-900 border border-navy-800 flex-shrink-0"
+                    className="w-20 h-20 rounded-xl object-cover bg-dark-900 border border-dark-800 flex-shrink-0"
                     onError={(e) => {
                       e.target.src = 'https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=300&q=80';
                     }}
@@ -103,7 +103,7 @@ export default function CartDrawer() {
                   {/* Info */}
                   <div className="flex-1 min-w-0">
                     <div className="flex items-start justify-between gap-2">
-                      <h4 className="text-sm font-semibold text-white truncate">
+                      <h4 className="text-sm font-bold text-white truncate">
                         {item.name}
                       </h4>
                       <button
@@ -119,8 +119,8 @@ export default function CartDrawer() {
                       <p><span className="text-slate-400">Sport:</span> {item.sport}</p>
                       
                       {item.customDetails ? (
-                        <div className="bg-navy-900 rounded p-1.5 mt-1 border border-navy-800 text-[11px] space-y-0.5">
-                          <p><strong className="text-electric-400">Custom Kit:</strong> {item.customDetails.productType}</p>
+                        <div className="bg-dark-900 rounded-xl p-2 mt-1 border border-dark-800 text-[11px] space-y-0.5">
+                          <p><strong className="text-neon-400">Custom Kit:</strong> {item.customDetails.productType}</p>
                           <p>Colors: {item.customDetails.primaryColor} / {item.customDetails.secondaryColor}</p>
                           {item.customDetails.playerName && (
                             <p>Player: {item.customDetails.playerName} (#{item.customDetails.playerNumber})</p>
@@ -139,12 +139,12 @@ export default function CartDrawer() {
                     </div>
 
                     {/* Quantity Controls */}
-                    <div className="flex items-center justify-between mt-3 pt-2 border-t border-navy-800/80">
+                    <div className="flex items-center justify-between mt-3 pt-2 border-t border-dark-800">
                       <span className="text-xs text-slate-400 font-medium">Quantity</span>
-                      <div className="flex items-center border border-navy-700 rounded-lg overflow-hidden bg-navy-900">
+                      <div className="flex items-center border border-dark-700 rounded-lg overflow-hidden bg-dark-900">
                         <button
                           onClick={() => updateQuantity(item.cartItemId, item.quantity - 1)}
-                          className="p-1 text-slate-400 hover:text-white hover:bg-navy-800 transition-colors"
+                          className="p-1 text-slate-400 hover:text-white hover:bg-dark-800 transition-colors"
                           aria-label="Decrease quantity"
                         >
                           <Minus className="w-3.5 h-3.5" />
@@ -154,7 +154,7 @@ export default function CartDrawer() {
                         </span>
                         <button
                           onClick={() => updateQuantity(item.cartItemId, item.quantity + 1)}
-                          className="p-1 text-slate-400 hover:text-white hover:bg-navy-800 transition-colors"
+                          className="p-1 text-slate-400 hover:text-white hover:bg-dark-800 transition-colors"
                           aria-label="Increase quantity"
                         >
                           <Plus className="w-3.5 h-3.5" />
@@ -169,18 +169,18 @@ export default function CartDrawer() {
 
           {/* FOOTER ACTIONS */}
           {cartItems.length > 0 && (
-            <div className="p-6 border-t border-navy-800 bg-navy-950/70 space-y-3">
+            <div className="p-6 border-t border-dark-800 bg-dark-950/80 space-y-3">
               <div className="flex justify-between items-center text-xs text-slate-400">
-                <span>Total Items:</span>
+                <span>Total Pieces:</span>
                 <span className="font-bold text-white">{totalItemsCount} pieces</span>
               </div>
               
               <button
                 onClick={handleCheckoutWhatsApp}
-                className="w-full py-3.5 px-4 rounded-xl font-bold text-sm bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white flex items-center justify-center gap-2 shadow-xl shadow-emerald-950/50 transition-all hover:scale-[1.01] active:scale-[0.99]"
+                className="w-full py-3.5 px-4 rounded-xl font-extrabold text-sm bg-neon-500 hover:bg-neon-400 text-black flex items-center justify-center gap-2 shadow-xl shadow-neon-500/20 transition-all hover:scale-[1.01] active:scale-[0.99]"
               >
                 <MessageCircle className="w-4 h-4 fill-current" />
-                <span>Place Order on WhatsApp</span>
+                <span>Send Order on WhatsApp</span>
               </button>
 
               <div className="flex justify-between items-center pt-2">

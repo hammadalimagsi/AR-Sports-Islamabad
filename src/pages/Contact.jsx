@@ -48,13 +48,13 @@ export default function Contact() {
   };
 
   return (
-    <div className="py-12 bg-navy-950 min-h-screen">
+    <div className="py-12 bg-dark-950 min-h-screen text-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* HEADER */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-brand-red/20 text-brand-red border border-brand-red/30 mb-3">
-            <MapPin className="w-3.5 h-3.5" /> AR SPORTS ISLAMABAD SHOWROOM
+          <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold bg-dark-900 text-white border border-dark-700 mb-3">
+            <MapPin className="w-3.5 h-3.5 text-red-500" /> AR SPORTS ISLAMABAD SHOWROOM
           </span>
           <h1 className="font-teko text-4xl sm:text-6xl font-bold text-white tracking-wide">
             STORE LOCATION & INQUIRIES
@@ -68,7 +68,7 @@ export default function Contact() {
           
           {/* LEFT: BUSINESS DETAILS & GOOGLE MAPS SHOWCASE */}
           <div className="lg:col-span-5 space-y-6">
-            <div className="bg-navy-900 border border-navy-800 rounded-3xl p-6 sm:p-8 space-y-6 shadow-2xl">
+            <div className="bg-dark-900 border border-dark-800 rounded-3xl p-6 sm:p-8 space-y-6 shadow-2xl">
               <div>
                 <h2 className="font-teko text-3xl font-bold text-white tracking-wide">
                   STORE CONTACT & ADDRESS
@@ -80,9 +80,9 @@ export default function Contact() {
 
               <div className="space-y-4 text-sm text-slate-300">
                 {/* Store Physical Address */}
-                <div className="p-4 rounded-xl bg-navy-950 border border-navy-800 space-y-2">
+                <div className="p-4 rounded-xl bg-dark-950 border border-dark-800 space-y-2">
                   <div className="flex items-start gap-3">
-                    <MapPin className="w-5 h-5 text-brand-red flex-shrink-0 mt-0.5" />
+                    <MapPin className="w-5 h-5 text-red-500 flex-shrink-0 mt-0.5" />
                     <div>
                       <span className="text-xs text-slate-400 block font-semibold">Store Address</span>
                       <span className="text-white font-medium block">{BUSINESS_CONFIG.address}</span>
@@ -94,7 +94,7 @@ export default function Contact() {
                     href={BUSINESS_CONFIG.googleMapsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-2 inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-electric-500/20 text-electric-400 hover:bg-electric-500 hover:text-white text-xs font-bold transition-colors"
+                    className="mt-2 inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-dark-850 text-neon-400 hover:bg-neon-500 hover:text-black text-xs font-bold transition-colors border border-dark-700"
                   >
                     <MapPin className="w-3.5 h-3.5" />
                     <span>Open in Google Maps</span>
@@ -103,31 +103,31 @@ export default function Contact() {
                 </div>
 
                 {/* Primary WhatsApp Phone */}
-                <div className="flex items-start gap-3.5 p-3.5 rounded-xl bg-navy-950 border border-navy-800">
-                  <Phone className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
+                <div className="flex items-start gap-3.5 p-3.5 rounded-xl bg-dark-950 border border-dark-800">
+                  <Phone className="w-5 h-5 text-neon-400 flex-shrink-0 mt-0.5" />
                   <div>
                     <span className="text-xs text-slate-400 block font-semibold">Official WhatsApp Number</span>
-                    <button onClick={handleQuickWhatsApp} className="text-white font-bold hover:text-emerald-400 text-base">
+                    <button onClick={handleQuickWhatsApp} className="text-white font-bold hover:text-neon-400 text-base">
                       {BUSINESS_CONFIG.whatsappPhoneDisplay}
                     </button>
-                    <span className="text-[11px] text-emerald-400 block mt-0.5">Instant WhatsApp Quoting</span>
+                    <span className="text-[11px] text-neon-400 block mt-0.5">Instant WhatsApp Quoting</span>
                   </div>
                 </div>
 
                 {/* Calling Phone */}
-                <div className="flex items-start gap-3.5 p-3.5 rounded-xl bg-navy-950 border border-navy-800">
-                  <Phone className="w-5 h-5 text-sky-400 flex-shrink-0 mt-0.5" />
+                <div className="flex items-start gap-3.5 p-3.5 rounded-xl bg-dark-950 border border-dark-800">
+                  <Phone className="w-5 h-5 text-slate-300 flex-shrink-0 mt-0.5" />
                   <div>
                     <span className="text-xs text-slate-400 block font-semibold">Voice Call & Store Line</span>
-                    <a href={`tel:${BUSINESS_CONFIG.callingPhone}`} className="text-white font-bold hover:text-sky-400 text-base">
+                    <a href={`tel:${BUSINESS_CONFIG.callingPhone}`} className="text-white font-bold hover:text-neon-400 text-base">
                       {BUSINESS_CONFIG.callingPhone}
                     </a>
                   </div>
                 </div>
 
                 {/* Email */}
-                <div className="flex items-start gap-3.5 p-3.5 rounded-xl bg-navy-950 border border-navy-800">
-                  <Mail className="w-5 h-5 text-electric-400 flex-shrink-0 mt-0.5" />
+                <div className="flex items-start gap-3.5 p-3.5 rounded-xl bg-dark-950 border border-dark-800">
+                  <Mail className="w-5 h-5 text-neon-400 flex-shrink-0 mt-0.5" />
                   <div>
                     <span className="text-xs text-slate-400 block font-semibold">Email</span>
                     <span className="text-white font-medium">{BUSINESS_CONFIG.email}</span>
@@ -135,7 +135,7 @@ export default function Contact() {
                 </div>
 
                 {/* Operating Hours */}
-                <div className="flex items-start gap-3.5 p-3.5 rounded-xl bg-navy-950 border border-navy-800">
+                <div className="flex items-start gap-3.5 p-3.5 rounded-xl bg-dark-950 border border-dark-800">
                   <Clock className="w-5 h-5 text-slate-400 flex-shrink-0 mt-0.5" />
                   <div>
                     <span className="text-xs text-slate-400 block font-semibold">Store Operational Hours</span>
@@ -148,7 +148,7 @@ export default function Contact() {
               <button
                 type="button"
                 onClick={handleQuickWhatsApp}
-                className="w-full py-4 px-6 rounded-2xl font-bold text-sm bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white flex items-center justify-center gap-2 shadow-xl shadow-emerald-950/50 transition-all hover:scale-105"
+                className="w-full py-4 px-6 rounded-2xl font-extrabold text-sm bg-neon-500 hover:bg-neon-400 text-black flex items-center justify-center gap-2 shadow-xl shadow-neon-500/20 transition-all hover:scale-105"
               >
                 <Phone className="w-4 h-4 fill-current" />
                 <span>Open Instant WhatsApp Chat</span>
@@ -158,7 +158,7 @@ export default function Contact() {
 
           {/* RIGHT: INQUIRY FORM */}
           <div className="lg:col-span-7">
-            <div className="bg-navy-900 border border-navy-800 rounded-3xl p-6 sm:p-8 shadow-2xl">
+            <div className="bg-dark-900 border border-dark-800 rounded-3xl p-6 sm:p-8 shadow-2xl">
               <h2 className="font-teko text-3xl font-bold text-white tracking-wide mb-1">
                 SEND AN INQUIRY
               </h2>
@@ -186,7 +186,7 @@ export default function Contact() {
                       value={formData.fullName}
                       onChange={handleChange}
                       placeholder="e.g. Asad Farooq"
-                      className="w-full bg-navy-950 border border-navy-700 rounded-xl py-2.5 px-3.5 text-white text-sm focus:border-electric-500 focus:outline-none"
+                      className="w-full bg-dark-950 border border-dark-700 rounded-xl py-2.5 px-3.5 text-white text-sm focus:border-neon-500 focus:outline-none"
                     />
                   </div>
 
@@ -200,7 +200,7 @@ export default function Contact() {
                       value={formData.phone}
                       onChange={handleChange}
                       placeholder="e.g. +92 318 0000000"
-                      className="w-full bg-navy-950 border border-navy-700 rounded-xl py-2.5 px-3.5 text-white text-sm focus:border-electric-500 focus:outline-none"
+                      className="w-full bg-dark-950 border border-dark-700 rounded-xl py-2.5 px-3.5 text-white text-sm focus:border-neon-500 focus:outline-none"
                     />
                   </div>
                 </div>
@@ -216,7 +216,7 @@ export default function Contact() {
                       value={formData.email}
                       onChange={handleChange}
                       placeholder="e.g. team@example.com"
-                      className="w-full bg-navy-950 border border-navy-700 rounded-xl py-2.5 px-3.5 text-white text-sm focus:border-electric-500 focus:outline-none"
+                      className="w-full bg-dark-950 border border-dark-700 rounded-xl py-2.5 px-3.5 text-white text-sm focus:border-neon-500 focus:outline-none"
                     />
                   </div>
 
@@ -228,12 +228,12 @@ export default function Contact() {
                       name="subject"
                       value={formData.subject}
                       onChange={handleChange}
-                      className="w-full bg-navy-950 border border-navy-700 rounded-xl py-2.5 px-3.5 text-white text-sm focus:border-electric-500 focus:outline-none"
+                      className="w-full bg-dark-950 border border-dark-700 rounded-xl py-2.5 px-3.5 text-white text-sm focus:border-neon-500 focus:outline-none"
                     >
                       <option value="Sublimation Sports Kits Hub Inquiry">Sublimation Sports Kits Hub</option>
                       <option value="Cricket Kits & Jerseys">Cricket Kits & Jerseys</option>
                       <option value="Football Kits & Jerseys">Football Kits & Jerseys</option>
-                      <option value="Volleyball Kits & Jerseys">Volleyball Kits & Jerseys</option>
+                      <option value="Basketball Kits & Jerseys">Basketball Kits & Jerseys</option>
                       <option value="Badminton & Hockey Kits">Badminton & Hockey Kits</option>
                       <option value="School & Academy Bulk Order">School & Academy Bulk Order</option>
                     </select>
@@ -251,14 +251,14 @@ export default function Contact() {
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Describe your team requirements: quantities needed, sport, preferred colors, delivery date, custom sponsor logos..."
-                    className="w-full bg-navy-950 border border-navy-700 rounded-xl p-3 text-white text-xs focus:border-electric-500 focus:outline-none"
+                    className="w-full bg-dark-950 border border-dark-700 rounded-xl p-3 text-white text-xs focus:border-neon-500 focus:outline-none"
                   />
                 </div>
 
                 {/* HOW THIS WORKS INSTRUCTION */}
-                <div className="p-3.5 bg-navy-950 rounded-xl border border-navy-800 text-xs text-slate-400 space-y-1">
+                <div className="p-3.5 bg-dark-950 rounded-xl border border-dark-800 text-xs text-slate-400 space-y-1">
                   <div className="flex items-center gap-1.5 text-slate-300 font-semibold">
-                    <ShieldCheck className="w-4 h-4 text-emerald-400" />
+                    <ShieldCheck className="w-4 h-4 text-neon-400" />
                     <span>How WhatsApp Inquiry Works:</span>
                   </div>
                   <p>
@@ -268,10 +268,10 @@ export default function Contact() {
 
                 <button
                   type="submit"
-                  className="w-full py-4 px-6 rounded-2xl font-bold text-sm bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 text-white flex items-center justify-center gap-2 shadow-xl shadow-emerald-950/60 transition-all hover:scale-[1.01] active:scale-[0.99]"
+                  className="w-full py-4 px-6 rounded-2xl font-extrabold text-sm bg-neon-500 hover:bg-neon-400 text-black flex items-center justify-center gap-2 shadow-xl shadow-neon-500/20 transition-all hover:scale-[1.01] active:scale-[0.99]"
                 >
                   <Send className="w-4 h-4" />
-                  <span>Submit Inquiry on WhatsApp</span>
+                  <span>Send Inquiry on WhatsApp</span>
                 </button>
               </form>
             </div>

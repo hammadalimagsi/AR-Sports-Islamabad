@@ -29,13 +29,13 @@ export default function App() {
   const { toastMessage } = useCart();
 
   return (
-    <div className="min-h-screen flex flex-col bg-navy-950 text-slate-100 selection:bg-electric-500 selection:text-white">
+    <div className="min-h-screen flex flex-col bg-dark-950 text-slate-100 selection:bg-neon-500 selection:text-black">
       <ScrollToTop />
       
       {/* Toast Notification */}
       {toastMessage && (
-        <div className="fixed bottom-6 right-6 z-50 bg-emerald-600 text-white font-semibold text-sm px-4 py-3 rounded-xl shadow-2xl flex items-center gap-2 animate-in fade-in slide-in-from-bottom-3 duration-200 border border-emerald-400/40">
-          <span className="w-2 h-2 rounded-full bg-white animate-ping" />
+        <div className="fixed bottom-6 right-6 z-50 bg-dark-900 text-white font-bold text-sm px-5 py-3.5 rounded-xl shadow-2xl flex items-center gap-3 border border-neon-500/60 shadow-neon-500/10">
+          <span className="w-2.5 h-2.5 rounded-full bg-neon-accent animate-ping" />
           <span>{toastMessage}</span>
         </div>
       )}

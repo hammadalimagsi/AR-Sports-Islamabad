@@ -39,23 +39,25 @@ export function buildCustomDesignInquiryMessage({
   includePantsAndSocks,
   additionalNotes
 }) {
-  let msg = `Assalam-o-Alaikum AR Sports!\n\n`;
-  msg += `I want to inquire about a custom kit design:\n\n`;
+  let msg = `Assalam-o-Alaikum AR SPORTS ISLAMABAD!\n\n`;
+  msg += `I want to place an order inquiry for custom jerseys / teamwear:\n\n`;
   msg += `• Sport: ${sport}\n`;
-  msg += `• Product Type: ${productType}${includePantsAndSocks ? ' (Complete Kit with Pants & Socks)' : ''}\n`;
+  msg += `• Jersey Type: ${productType}${includePantsAndSocks ? ' (Complete Kit with Pants/Shorts & Socks)' : ''}\n`;
   msg += `• Design Pattern: ${designPattern}\n`;
   msg += `• Primary Color: ${primaryColor}\n`;
   msg += `• Secondary Color: ${secondaryColor}\n`;
-  msg += `• Team/School Name: ${teamName || 'None'}\n`;
-  msg += `• Sample Player Name: ${playerName || 'N/A'}\n`;
-  msg += `• Sample Player Number: ${playerNumber || 'N/A'}\n`;
-  msg += `• Size: ${size}\n`;
-  msg += `• Quantity: ${quantity}\n`;
-  msg += `• Logo: ${hasLogo ? 'Customer uploaded logo preview (File will be sent via WhatsApp)' : 'No logo requested'}\n`;
-  if (additionalNotes) {
-    msg += `• Additional Requirements: ${additionalNotes}\n`;
+  msg += `• Customer / Player Name: ${playerName || 'N/A'}\n`;
+  msg += `• Jersey Number: ${playerNumber || 'N/A'}\n`;
+  if (teamName) {
+    msg += `• Team / Club Name: ${teamName}\n`;
   }
-  msg += `\nPlease confirm the final price per kit, bulk pricing, and production turnaround time.`;
+  msg += `• Size: ${size}\n`;
+  msg += `• Quantity: ${quantity} ${quantity === 1 ? 'piece' : 'pieces'}\n`;
+  msg += `• Logo: ${hasLogo ? 'Logo preview uploaded on website (High-res image/vector file will be attached in this chat)' : 'No custom logo requested'}\n`;
+  if (additionalNotes) {
+    msg += `• Additional Instructions: ${additionalNotes}\n`;
+  }
+  msg += `\nPlease provide the final custom quote, 3D design proof confirmation, and delivery schedule.`;
   return msg;
 }
 

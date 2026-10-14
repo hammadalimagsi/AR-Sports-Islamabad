@@ -7,32 +7,49 @@ export default {
   theme: {
     extend: {
       colors: {
+        dark: {
+          950: '#080809',
+          900: '#101013',
+          850: '#151518',
+          800: '#1d1d22',
+          700: '#282830',
+          600: '#383844',
+        },
         navy: {
-          950: '#070b14',
-          900: '#0c1322',
-          850: '#111a2e',
-          800: '#16233d',
-          700: '#213357',
-          600: '#2d4474',
+          950: '#080809',
+          900: '#101013',
+          850: '#151518',
+          800: '#1d1d22',
+          700: '#282830',
+          600: '#383844',
+        },
+        neon: {
+          300: '#86efac',
+          400: '#4ade80',
+          500: '#22c55e',
+          600: '#16a34a',
+          accent: '#10e760',
+          glow: 'rgba(16, 231, 96, 0.25)',
         },
         electric: {
-          300: '#7dd3fc',
-          400: '#38bdf8',
-          500: '#0284c7',
-          600: '#0369a1',
-          accent: '#00d2ff',
+          300: '#86efac',
+          400: '#4ade80',
+          500: '#22c55e',
+          600: '#16a34a',
+          accent: '#10e760',
         },
         brand: {
           red: '#ef4444',
-          green: '#10b981',
+          green: '#22c55e',
+          neon: '#10e760',
           yellow: '#f59e0b',
-          blue: '#2563eb',
-          purple: '#8b5cf6',
-          dark: '#0a0f1d'
+          blue: '#3b82f6',
+          dark: '#080809'
         }
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+        teko: ['Teko', 'sans-serif'],
       }
     },
   },
