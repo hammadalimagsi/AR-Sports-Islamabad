@@ -7,32 +7,33 @@
     scroll-behavior: smooth;
   }
   body {
-    @apply bg-dark-950 text-slate-100 font-sans;
+    @apply bg-white text-brand-text font-sans;
     overflow-x: hidden;
+  }
+
+  /* Accessible keyboard focus states */
+  a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+    @apply outline-none ring-2 ring-brand-green ring-offset-2 ring-offset-white;
   }
 }
 
-/* Custom Scrollbar */
+/* Custom Scrollbar for Light Theme */
 ::-webkit-scrollbar {
   width: 7px;
   height: 7px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #080809;
+  background: #F5F7F5;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #282830;
+  background: #CBD5CB;
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #22c55e;
-}
-
-.font-teko {
-  font-family: 'Teko', sans-serif;
+  background: #248A45;
 }
 
 /* Reduced Motion Respect */

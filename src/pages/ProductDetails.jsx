@@ -29,12 +29,12 @@ export default function ProductDetails() {
 
   if (!product) {
     return (
-      <div className="py-24 bg-dark-950 min-h-[70vh] flex flex-col items-center justify-center text-center px-4">
-        <h2 className="text-2xl font-bold text-white mb-2">Product Not Found</h2>
-        <p className="text-slate-400 text-sm mb-6">The requested sports product or kit design does not exist.</p>
+      <div className="py-24 bg-white min-h-[70vh] flex flex-col items-center justify-center text-center px-4">
+        <h2 className="text-2xl font-bold text-brand-text mb-2">Product Not Found</h2>
+        <p className="text-brand-muted text-sm mb-6">The requested sports product or kit design does not exist.</p>
         <Link
           to="/shop"
-          className="px-6 py-3 rounded-xl bg-neon-500 text-black font-extrabold text-sm hover:bg-neon-400 transition-colors"
+          className="px-6 py-3 rounded-xl bg-brand-green text-white font-bold text-sm hover:bg-brand-hover transition-colors shadow-sm"
         >
           Back to Shop All
         </Link>
@@ -67,18 +67,18 @@ export default function ProductDetails() {
   };
 
   return (
-    <div className="py-12 bg-dark-950 min-h-screen text-slate-100">
+    <div className="py-12 bg-white min-h-screen text-brand-text">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* BREADCRUMB NAVIGATION */}
-        <div className="flex items-center gap-2 text-xs text-slate-400 mb-8">
-          <Link to="/" className="hover:text-white transition-colors">Home</Link>
+        <div className="flex items-center gap-2 text-xs text-brand-muted mb-8">
+          <Link to="/" className="hover:text-brand-text transition-colors">Home</Link>
           <span>/</span>
-          <Link to="/shop" className="hover:text-white transition-colors">Shop</Link>
+          <Link to="/shop" className="hover:text-brand-text transition-colors">Shop</Link>
           <span>/</span>
-          <Link to={`/shop?sport=${product.sportSlug}`} className="hover:text-neon-400 transition-colors">{product.sport}</Link>
+          <Link to={`/shop?sport=${product.sportSlug}`} className="hover:text-brand-green transition-colors">{product.sport}</Link>
           <span>/</span>
-          <span className="text-slate-200 truncate max-w-xs">{product.name}</span>
+          <span className="text-brand-text font-medium truncate max-w-xs">{product.name}</span>
         </div>
 
         {/* MAIN PRODUCT DETAIL GRID */}
@@ -87,18 +87,18 @@ export default function ProductDetails() {
           {/* LEFT: GALLERY */}
           <div className="lg:col-span-6 space-y-4">
             {/* Main Image */}
-            <div className="aspect-[4/3] rounded-3xl overflow-hidden bg-dark-900 border border-dark-800 relative shadow-2xl">
+            <div className="aspect-[4/3] rounded-3xl overflow-hidden bg-brand-alt border border-brand-border relative shadow-sm">
               <img
                 src={product.images?.[activeImageIndex] || product.images?.[0]}
                 alt={product.name}
                 className="w-full h-full object-cover object-center"
               />
               <div className="absolute top-4 left-4 flex gap-2">
-                <span className="px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider bg-dark-950/90 text-white border border-dark-700">
+                <span className="px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider bg-white/95 backdrop-blur-md text-brand-text border border-brand-border shadow-xs">
                   {product.sport}
                 </span>
                 {product.badge && (
-                  <span className="px-3 py-1 rounded-lg text-xs font-extrabold uppercase tracking-wider bg-neon-500 text-black shadow">
+                  <span className="px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-wider bg-brand-green text-white shadow-xs">
                     {product.badge}
                   </span>
                 )}
@@ -113,7 +113,7 @@ export default function ProductDetails() {
                     key={idx}
                     type="button"
                     onClick={() => setActiveImageIndex(idx)}
-                    className={`w-20 h-20 rounded-xl overflow-hidden border-2 transition-all ${activeImageIndex === idx ? 'border-neon-500 ring-2 ring-neon-500/30' : 'border-dark-800 hover:border-slate-600'}`}
+                    className={`w-20 h-20 rounded-xl overflow-hidden border-2 transition-all cursor-pointer ${activeImageIndex === idx ? 'border-brand-green ring-2 ring-brand-green/30' : 'border-brand-border hover:border-brand-muted'}`}
                   >
                     <img src={img} alt="Thumbnail" className="w-full h-full object-cover" />
                   </button>
@@ -123,20 +123,20 @@ export default function ProductDetails() {
 
             {/* Credibility highlights */}
             <div className="grid grid-cols-3 gap-3 pt-4 text-center">
-              <div className="bg-dark-900 border border-dark-800 rounded-2xl p-4">
-                <ShieldCheck className="w-5 h-5 text-neon-400 mx-auto mb-2" />
-                <p className="text-xs font-bold text-white">Genuine Materials</p>
-                <p className="text-[10px] text-slate-400 mt-0.5">High GSM Fabric</p>
+              <div className="bg-brand-alt border border-brand-border rounded-2xl p-4 shadow-xs">
+                <ShieldCheck className="w-5 h-5 text-brand-green mx-auto mb-2" />
+                <p className="text-xs font-bold text-brand-text">Genuine Materials</p>
+                <p className="text-[11px] text-brand-muted mt-0.5">High GSM Fabric</p>
               </div>
-              <div className="bg-dark-900 border border-dark-800 rounded-2xl p-4">
-                <Truck className="w-5 h-5 text-neon-400 mx-auto mb-2" />
-                <p className="text-xs font-bold text-white">Direct Dispatch</p>
-                <p className="text-[10px] text-slate-400 mt-0.5">Nationwide Courier</p>
+              <div className="bg-brand-alt border border-brand-border rounded-2xl p-4 shadow-xs">
+                <Truck className="w-5 h-5 text-brand-green mx-auto mb-2" />
+                <p className="text-xs font-bold text-brand-text">Direct Dispatch</p>
+                <p className="text-[11px] text-brand-muted mt-0.5">Nationwide Courier</p>
               </div>
-              <div className="bg-dark-900 border border-dark-800 rounded-2xl p-4">
-                <Sparkles className="w-5 h-5 text-neon-400 mx-auto mb-2" />
-                <p className="text-xs font-bold text-white">Customization</p>
-                <p className="text-[10px] text-slate-400 mt-0.5">Rosters & Names</p>
+              <div className="bg-brand-alt border border-brand-border rounded-2xl p-4 shadow-xs">
+                <Sparkles className="w-5 h-5 text-brand-green mx-auto mb-2" />
+                <p className="text-xs font-bold text-brand-text">Customization</p>
+                <p className="text-[11px] text-brand-muted mt-0.5">Rosters & Names</p>
               </div>
             </div>
           </div>
@@ -144,34 +144,34 @@ export default function ProductDetails() {
           {/* RIGHT: PRODUCT INFO & ORDER FORM */}
           <div className="lg:col-span-6 space-y-6">
             <div>
-              <div className="flex items-center justify-between text-xs text-slate-400 mb-2">
-                <span className="uppercase tracking-wider font-semibold text-slate-400">{product.category}</span>
-                <span className="text-neon-400 font-bold bg-dark-900 border border-neon-500/30 px-3 py-1 rounded-full flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-neon-400" />
+              <div className="flex items-center justify-between text-xs text-brand-muted mb-2">
+                <span className="uppercase tracking-wider font-semibold text-brand-muted">{product.category}</span>
+                <span className="text-brand-green font-bold bg-emerald-50 border border-emerald-200 px-3 py-1 rounded-full flex items-center gap-1.5">
+                  <span className="w-1.5 h-1.5 rounded-full bg-brand-green" />
                   Price on WhatsApp
                 </span>
               </div>
               
-              <h1 className="font-teko text-3xl sm:text-5xl font-bold text-white tracking-wide leading-tight">
+              <h1 className="text-2xl sm:text-4xl font-extrabold text-brand-text tracking-tight leading-tight">
                 {product.name}
               </h1>
 
-              <p className="text-sm text-slate-300 mt-3 leading-relaxed">
+              <p className="text-sm text-brand-muted mt-3 leading-relaxed">
                 {product.description}
               </p>
             </div>
 
             {/* KEY FEATURES LIST */}
             {product.features && (
-              <div className="bg-dark-900 border border-dark-800 rounded-2xl p-4">
-                <h4 className="text-xs font-bold uppercase tracking-wider text-slate-300 mb-2.5">
+              <div className="bg-brand-alt border border-brand-border rounded-2xl p-4">
+                <h4 className="text-xs font-bold uppercase tracking-wider text-brand-text mb-2.5">
                   Specifications & Highlights:
                 </h4>
-                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-300">
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-brand-muted">
                   {product.features.map((feat, i) => (
                     <li key={i} className="flex items-center gap-2">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-neon-400 flex-shrink-0" />
-                      <span>{feat}</span>
+                      <CheckCircle2 className="w-3.5 h-3.5 text-brand-green shrink-0" />
+                      <span className="text-brand-text">{feat}</span>
                     </li>
                   ))}
                 </ul>
@@ -184,8 +184,8 @@ export default function ProductDetails() {
               {/* SIZES */}
               {product.sizes && (
                 <div>
-                  <label className="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">
-                    Available Sizes: <span className="text-neon-400">{selectedSize}</span>
+                  <label className="block text-xs font-bold uppercase tracking-wider text-brand-text mb-2">
+                    Available Sizes: <span className="text-brand-green">{selectedSize}</span>
                   </label>
                   <div className="flex flex-wrap gap-2">
                     {product.sizes.map(size => (
@@ -193,7 +193,7 @@ export default function ProductDetails() {
                         key={size}
                         type="button"
                         onClick={() => setSelectedSize(size)}
-                        className={`px-3.5 py-2 rounded-xl text-xs font-bold transition-all ${selectedSize === size ? 'bg-neon-500 text-black shadow-md shadow-neon-500/20' : 'bg-dark-900 text-slate-300 border border-dark-800 hover:border-slate-600'}`}
+                        className={`px-3.5 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${selectedSize === size ? 'bg-brand-green text-white shadow-xs' : 'bg-brand-alt text-brand-text border border-brand-border hover:bg-emerald-50'}`}
                       >
                         {size}
                       </button>
@@ -205,8 +205,8 @@ export default function ProductDetails() {
               {/* VARIANTS OR COLORS */}
               {(product.variants || product.colors) && (
                 <div>
-                  <label className="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">
-                    Select Option / Variant: <span className="text-white">{selectedVariant}</span>
+                  <label className="block text-xs font-bold uppercase tracking-wider text-brand-text mb-2">
+                    Select Option / Variant: <span className="text-brand-text font-bold">{selectedVariant}</span>
                   </label>
                   <div className="flex flex-wrap gap-2">
                     {(product.variants || product.colors).map(variant => (
@@ -214,7 +214,7 @@ export default function ProductDetails() {
                         key={variant}
                         type="button"
                         onClick={() => setSelectedVariant(variant)}
-                        className={`px-3.5 py-2 rounded-xl text-xs font-medium transition-all ${selectedVariant === variant ? 'bg-dark-800 text-white border-2 border-neon-500' : 'bg-dark-900 text-slate-400 border border-dark-800 hover:text-white'}`}
+                        className={`px-3.5 py-2 rounded-xl text-xs font-medium transition-all cursor-pointer ${selectedVariant === variant ? 'bg-white text-brand-text border-2 border-brand-green font-bold shadow-xs' : 'bg-brand-alt text-brand-muted border border-brand-border hover:text-brand-text'}`}
                       >
                         {variant}
                       </button>
@@ -225,7 +225,7 @@ export default function ProductDetails() {
 
               {/* QUANTITY */}
               <div className="w-36">
-                <label className="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1.5">
+                <label className="block text-xs font-bold uppercase tracking-wider text-brand-text mb-1.5">
                   Order Quantity:
                 </label>
                 <input
@@ -233,13 +233,13 @@ export default function ProductDetails() {
                   min="1"
                   value={quantity}
                   onChange={(e) => setQuantity(Math.max(1, parseInt(e.target.value) || 1))}
-                  className="w-full bg-dark-900 border border-dark-700 rounded-xl py-2 px-3 text-white text-sm focus:border-neon-500 focus:outline-none"
+                  className="w-full bg-white border border-brand-border rounded-xl py-2 px-3 text-brand-text text-sm focus:border-brand-green focus:outline-none focus:ring-1 focus:ring-brand-green"
                 />
               </div>
 
               {/* SPECIAL NOTES */}
               <div>
-                <label className="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1.5">
+                <label className="block text-xs font-bold uppercase tracking-wider text-brand-text mb-1.5">
                   Inquiry Notes / Custom Requirements (Optional):
                 </label>
                 <textarea
@@ -247,13 +247,13 @@ export default function ProductDetails() {
                   value={customNotes}
                   onChange={(e) => setCustomNotes(e.target.value)}
                   placeholder="Need custom sponsor logos, specific numbers, or bulk team pricing?"
-                  className="w-full bg-dark-900 border border-dark-700 rounded-xl p-3 text-white text-xs focus:border-neon-500 focus:outline-none"
+                  className="w-full bg-white border border-brand-border rounded-xl p-3 text-brand-text text-xs focus:border-brand-green focus:outline-none focus:ring-1 focus:ring-brand-green"
                 />
               </div>
 
-              {/* CRITICAL ZERO-PRICE RULE REMINDER */}
-              <div className="p-3.5 rounded-xl bg-dark-900 border border-dark-800 text-xs text-slate-400 leading-relaxed">
-                <strong className="text-white">Custom Pricing on Inquiry: </strong>
+              {/* ZERO-PRICE RULE REMINDER */}
+              <div className="p-3.5 rounded-xl bg-brand-alt border border-brand-border text-xs text-brand-muted leading-relaxed">
+                <strong className="text-brand-text">Custom Pricing on Inquiry: </strong>
                 Because every custom sportswear piece has unique printing specifications, fabric GSM, and quantity requirements, our admin confirms the final quotation and delivery timetable personally on WhatsApp.
               </div>
 
@@ -261,18 +261,18 @@ export default function ProductDetails() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
                 <button
                   type="submit"
-                  className="w-full py-4 px-6 rounded-xl font-extrabold text-sm bg-neon-500 hover:bg-neon-400 text-black flex items-center justify-center gap-2 shadow-xl shadow-neon-500/20 transition-all hover:scale-[1.02] active:scale-[0.98]"
+                  className="w-full py-3.5 px-6 rounded-xl font-bold text-sm bg-brand-green hover:bg-brand-hover text-white flex items-center justify-center gap-2 shadow-md shadow-brand-green/20 transition-all cursor-pointer"
                 >
-                  <MessageCircle className="w-5 h-5 fill-current" />
+                  <MessageCircle className="w-4 h-4 fill-current" />
                   <span>Send Order on WhatsApp</span>
                 </button>
 
                 <button
                   type="button"
                   onClick={handleAddToCart}
-                  className="w-full py-4 px-6 rounded-xl font-bold text-sm bg-dark-800 hover:bg-dark-750 text-white border border-dark-700 flex items-center justify-center gap-2 transition-colors"
+                  className="w-full py-3.5 px-6 rounded-xl font-bold text-sm bg-white hover:bg-brand-alt text-brand-text border border-brand-border flex items-center justify-center gap-2 transition-colors cursor-pointer shadow-xs"
                 >
-                  <Plus className="w-5 h-5 text-neon-400" />
+                  <Plus className="w-4 h-4 text-brand-green" />
                   <span>Add to Inquiry Cart</span>
                 </button>
               </div>
@@ -282,9 +282,9 @@ export default function ProductDetails() {
                 <div className="pt-2">
                   <Link
                     to={`/custom-design?sport=${product.sportSlug}&product=${product.id}`}
-                    className="w-full py-3 px-4 rounded-xl font-bold text-xs bg-dark-900 hover:bg-dark-850 text-neon-400 border border-neon-500/30 flex items-center justify-center gap-2 transition-colors"
+                    className="w-full py-3 px-4 rounded-xl font-bold text-xs bg-brand-alt hover:bg-emerald-50 text-brand-green border border-emerald-200 flex items-center justify-center gap-2 transition-colors"
                   >
-                    <Sparkles className="w-4 h-4 text-neon-400" />
+                    <Sparkles className="w-4 h-4 text-brand-green" />
                     <span>Open in 3D Garment Customizer</span>
                   </Link>
                 </div>
@@ -297,9 +297,9 @@ export default function ProductDetails() {
 
         {/* RELATED PRODUCTS SECTION */}
         {relatedProducts.length > 0 && (
-          <div className="mt-24 pt-12 border-t border-dark-800">
-            <h3 className="font-teko text-3xl font-bold text-white tracking-wide mb-6">
-              RELATED {product.sport.toUpperCase()} GEAR
+          <div className="mt-20 pt-12 border-t border-brand-border">
+            <h3 className="text-2xl font-bold text-brand-text tracking-tight mb-6">
+              Related {product.sport} Gear
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {relatedProducts.map(rel => (

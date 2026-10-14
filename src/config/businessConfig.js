@@ -22,15 +22,18 @@ export const BUSINESS_CONFIG = {
   address: "Jmal Plaza, Shop# 3, High Court Road, Near Car Chowk, Rawalpindi / Islamabad",
   locationDisplay: "High Court Road, Near Car Chowk, Rawalpindi",
   
-  // GOOGLE MAPS DIRECT STORE LINK
-  googleMapsUrl: "https://www.google.com/maps/search/?api=1&query=Jmal+Plaza+Shop+3+High+Court+Road+Near+Car+Chowk+Rawalpindi",
+  // GOOGLE MAPS DIRECT STORE & EMBED LINK (Uses env var if provided, otherwise verified store location)
+  googleMapsUrl: import.meta.env?.VITE_GOOGLE_MAPS_URL || "https://www.google.com/maps/search/?api=1&query=Jmal+Plaza+Shop+3+High+Court+Road+Near+Car+Chowk+Rawalpindi",
+  googleMapsEmbedUrl: import.meta.env?.VITE_GOOGLE_MAPS_EMBED_URL || "https://maps.google.com/maps?q=Jmal+Plaza+Shop+3+High+Court+Road+Near+Car+Chowk+Rawalpindi&t=&z=15&ie=UTF8&iwloc=&output=embed",
   
   businessHours: "Mon - Sat: 10:00 AM - 10:00 PM (PKT)",
   
   socials: {
-    instagram: "https://instagram.com/arsports_official",
-    facebook: "https://facebook.com/arsports",
-    youtube: "https://youtube.com/@arsports"
+    instagram: "https://instagram.com/arsportsislamabad1?utm_source=qr&psln=MTNobTUzamxpemx0Yw==",
+    x: "https://x.com/arsportsis",
+    threads: "https://www.threads.com/@arsportsislamabad1",
+    tiktok: "https://www.tiktok.com/@arsportsislamabad?_r=1&_t=ZS-9AXWdtZalco",
+    facebook: "https://www.facebook.com/share/19w2iJP7rp/"
   }
 };
 

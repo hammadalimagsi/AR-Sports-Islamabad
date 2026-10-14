@@ -19,7 +19,7 @@ export default function Shop() {
   const [searchQuery, setSearchQuery] = useState(initialSearch);
   const [onlyCustomizable, setOnlyCustomizable] = useState(false);
 
-  // Sync state when URL search params change (e.g., from Navbar links)
+  // Sync state when URL search params change
   useEffect(() => {
     const paramSport = searchParams.get('sport') || 'all';
     const paramCategory = searchParams.get('category') || 'all';
@@ -49,7 +49,7 @@ export default function Shop() {
       if (selectedSport !== 'all' && product.sportSlug !== selectedSport) {
         return false;
       }
-      // 2. Category filter (Sportswear vs Equipment vs School & Teamwear)
+      // 2. Category filter
       if (selectedCategory !== 'all' && product.category.toLowerCase() !== selectedCategory.toLowerCase()) {
         return false;
       }
@@ -92,25 +92,25 @@ export default function Shop() {
   ];
 
   return (
-    <div className="py-12 bg-dark-950 min-h-screen">
+    <div className="py-12 bg-white min-h-screen text-brand-text">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* SHOP HEADER */}
         <div className="mb-10 text-center sm:text-left">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-dark-850 text-neon-400 border border-dark-700 mb-2">
-            <span className="w-2 h-2 rounded-full bg-neon-accent animate-pulse" />
-            <span>AR SPORTS ISLAMABAD CATALOG</span>
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-emerald-50 text-brand-green border border-emerald-200 mb-2">
+            <span className="w-2 h-2 rounded-full bg-brand-green animate-pulse" />
+            <span>AR Sports Islamabad Catalog</span>
           </div>
-          <h1 className="font-teko text-4xl sm:text-6xl font-bold text-white tracking-wide mt-1">
-            ALL SPORTS & CUSTOM GEAR
+          <h1 className="text-3xl sm:text-5xl font-extrabold text-brand-text tracking-tight mt-1.5">
+            All Sports & Custom Gear
           </h1>
-          <p className="text-sm text-slate-400 max-w-2xl mt-1 leading-relaxed">
+          <p className="text-sm text-brand-muted max-w-2xl mt-2 leading-relaxed">
             Browse our full lineup of custom sublimated match jerseys, team uniforms, tracksuits, and professional sports equipment. Every item is quoted directly on WhatsApp based on your team requirements.
           </p>
         </div>
 
         {/* SEARCH & FILTER CONTROLS BAR */}
-        <div className="bg-dark-900 border border-dark-800 rounded-3xl p-5 sm:p-6 mb-8 shadow-2xl">
+        <div className="bg-brand-alt border border-brand-border rounded-3xl p-5 sm:p-6 mb-8 shadow-xs">
           <div className="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4">
             
             {/* Search Input */}
@@ -120,13 +120,13 @@ export default function Shop() {
                 placeholder="Search by title, sport (Cricket, Football, Basketball, Badminton)..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full bg-dark-950 border border-dark-700 rounded-xl py-3.5 pl-11 pr-10 text-white placeholder-slate-500 text-sm focus:border-neon-500 focus:outline-none transition-colors"
+                className="w-full bg-white border border-brand-border rounded-xl py-3 pl-11 pr-10 text-brand-text placeholder-brand-muted text-sm focus:border-brand-green focus:outline-none focus:ring-1 focus:ring-brand-green transition-colors"
               />
-              <Search className="w-4 h-4 text-slate-400 absolute left-4 top-4" />
+              <Search className="w-4 h-4 text-brand-muted absolute left-4 top-3.5" />
               {searchQuery && (
                 <button
                   onClick={() => setSearchQuery('')}
-                  className="absolute right-3.5 top-3.5 text-slate-400 hover:text-white"
+                  className="absolute right-3.5 top-3.5 text-brand-muted hover:text-brand-text"
                   aria-label="Clear search query"
                 >
                   <X className="w-4 h-4" />
@@ -140,7 +140,7 @@ export default function Shop() {
                 <select
                   value={selectedSport}
                   onChange={(e) => handleSelectSport(e.target.value)}
-                  className="w-full bg-dark-950 border border-dark-700 rounded-xl py-3 px-4 text-white text-sm focus:border-neon-500 focus:outline-none cursor-pointer"
+                  className="w-full bg-white border border-brand-border rounded-xl py-3 px-4 text-brand-text text-sm focus:border-brand-green focus:outline-none focus:ring-1 focus:ring-brand-green cursor-pointer shadow-xs"
                 >
                   <option value="all">All Sports</option>
                   {SPORTS_CATEGORIES.map(sport => (
@@ -154,7 +154,7 @@ export default function Shop() {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="w-full bg-dark-950 border border-dark-700 rounded-xl py-3 px-4 text-white text-sm focus:border-neon-500 focus:outline-none cursor-pointer"
+                  className="w-full bg-white border border-brand-border rounded-xl py-3 px-4 text-brand-text text-sm focus:border-brand-green focus:outline-none focus:ring-1 focus:ring-brand-green cursor-pointer shadow-xs"
                 >
                   <option value="all">All Product Types</option>
                   <option value="Sportswear">Sportswear (Jerseys & Kits)</option>
@@ -164,15 +164,15 @@ export default function Shop() {
               </div>
 
               {/* Customizable Checkbox */}
-              <label className="flex items-center gap-2 text-xs font-semibold text-slate-300 cursor-pointer select-none px-3.5 py-3 bg-dark-950 border border-dark-700 rounded-xl hover:border-slate-500 transition-colors">
+              <label className="flex items-center gap-2 text-xs font-semibold text-brand-text cursor-pointer select-none px-3.5 py-3 bg-white border border-brand-border rounded-xl hover:border-brand-muted transition-colors shadow-xs">
                 <input
                   type="checkbox"
                   checked={onlyCustomizable}
                   onChange={(e) => setOnlyCustomizable(e.target.checked)}
-                  className="w-4 h-4 rounded text-neon-500 bg-dark-900 border-dark-700 focus:ring-0 accent-neon-500"
+                  className="w-4 h-4 rounded text-brand-green border-brand-border focus:ring-brand-green"
                 />
                 <span className="flex items-center gap-1.5">
-                  <Sparkles className="w-3.5 h-3.5 text-neon-400" /> Customizable
+                  <Sparkles className="w-3.5 h-3.5 text-brand-green" /> Customizable
                 </span>
               </label>
 
@@ -180,7 +180,7 @@ export default function Shop() {
               {(selectedSport !== 'all' || selectedCategory !== 'all' || searchQuery || onlyCustomizable) && (
                 <button
                   onClick={handleResetFilters}
-                  className="p-3 rounded-xl bg-dark-950 border border-dark-700 text-slate-400 hover:text-white hover:border-slate-500 transition-colors"
+                  className="p-3 rounded-xl bg-white border border-brand-border text-brand-muted hover:text-brand-text hover:border-brand-muted transition-colors shadow-xs cursor-pointer"
                   title="Reset filters"
                   aria-label="Reset filters"
                 >
@@ -191,9 +191,9 @@ export default function Shop() {
 
           </div>
 
-          {/* Functional Quick Sport Filter Pills */}
-          <div className="flex items-center gap-2 overflow-x-auto pt-4 mt-4 border-t border-dark-800 pb-1 scrollbar-none text-xs">
-            <span className="text-slate-400 font-bold flex-shrink-0 mr-1 text-[11px] uppercase tracking-wider">
+          {/* Quick Sport Filter Pills */}
+          <div className="flex items-center gap-2 overflow-x-auto pt-4 mt-4 border-t border-brand-border pb-1 scrollbar-none text-xs">
+            <span className="text-brand-muted font-bold flex-shrink-0 mr-1 text-[11px] uppercase tracking-wider">
               Filter by Sport:
             </span>
             {primarySportsList.map(sport => {
@@ -202,10 +202,10 @@ export default function Shop() {
                 <button
                   key={sport.slug}
                   onClick={() => handleSelectSport(sport.slug)}
-                  className={`px-3.5 py-2 rounded-xl whitespace-nowrap transition-all duration-200 font-bold ${
+                  className={`px-3.5 py-2 rounded-xl whitespace-nowrap transition-all duration-200 font-bold cursor-pointer ${
                     isActive 
-                      ? 'bg-neon-500 text-black shadow-md shadow-neon-500/20' 
-                      : 'bg-dark-950 text-slate-300 hover:text-white hover:bg-dark-800 border border-dark-750'
+                      ? 'bg-brand-green text-white shadow-xs' 
+                      : 'bg-white text-brand-text hover:text-brand-green hover:bg-emerald-50 border border-brand-border'
                   }`}
                 >
                   {sport.name}
@@ -216,14 +216,14 @@ export default function Shop() {
         </div>
 
         {/* RESULTS COUNT & STATUS */}
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6 text-xs text-slate-400">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6 text-xs text-brand-muted">
           <div>
-            Showing <strong className="text-white font-bold">{filteredProducts.length}</strong> products
-            {selectedSport !== 'all' && <span> in <strong className="text-neon-400">{selectedSport.toUpperCase()}</strong></span>}
+            Showing <strong className="text-brand-text font-bold">{filteredProducts.length}</strong> products
+            {selectedSport !== 'all' && <span> in <strong className="text-brand-green">{selectedSport.toUpperCase()}</strong></span>}
             {selectedCategory !== 'all' && <span> ({selectedCategory})</span>}
           </div>
-          <div className="text-neon-400 font-medium flex items-center gap-1.5">
-            <ShieldCheck className="w-4 h-4 text-neon-400" />
+          <div className="text-brand-green font-medium flex items-center gap-1.5">
+            <ShieldCheck className="w-4 h-4 text-brand-green" />
             <span>Custom quotes confirmed directly on WhatsApp — No hidden fees</span>
           </div>
         </div>
@@ -237,17 +237,17 @@ export default function Shop() {
           </div>
         ) : (
           /* EMPTY STATE */
-          <div className="bg-dark-900 border border-dark-800 rounded-3xl p-12 text-center max-w-lg mx-auto shadow-2xl">
-            <div className="w-16 h-16 rounded-2xl bg-dark-950 border border-dark-800 flex items-center justify-center text-slate-400 mx-auto mb-4">
-              <PackageSearch className="w-8 h-8 text-neon-400" />
+          <div className="bg-brand-alt border border-brand-border rounded-3xl p-12 text-center max-w-lg mx-auto shadow-sm">
+            <div className="w-16 h-16 rounded-2xl bg-white border border-brand-border flex items-center justify-center text-brand-muted mx-auto mb-4 shadow-xs">
+              <PackageSearch className="w-8 h-8 text-brand-green" />
             </div>
-            <h3 className="text-lg font-bold text-white mb-2">No Matching Products Found</h3>
-            <p className="text-xs text-slate-400 mb-6 leading-relaxed">
+            <h3 className="text-lg font-bold text-brand-text mb-2">No Matching Products Found</h3>
+            <p className="text-xs text-brand-muted mb-6 leading-relaxed">
               We couldn't find any products matching your current search or filter criteria. Try selecting another sport or reset your filters.
             </p>
             <button
               onClick={handleResetFilters}
-              className="px-6 py-3 rounded-xl text-xs font-bold bg-neon-500 hover:bg-neon-400 text-black transition-colors shadow-lg shadow-neon-500/20"
+              className="px-6 py-3 rounded-xl text-xs font-bold bg-brand-green hover:bg-brand-hover text-white transition-colors shadow-md shadow-brand-green/20 cursor-pointer"
             >
               Reset All Filters
             </button>

@@ -7,49 +7,74 @@ export default {
   theme: {
     extend: {
       colors: {
+        // Modern Brand Color System requested by USER
+        brand: {
+          bg: '#FFFFFF',
+          alt: '#F5F7F5',
+          text: '#202720',
+          muted: '#626B63',
+          green: '#248A45',
+          hover: '#176B35',
+          border: '#E2E8E2',
+          charcoal: '#202720',
+          50: '#F0F9F3',
+          100: '#DCF1E3',
+          200: '#B8E3C6',
+          500: '#248A45',
+          600: '#176B35',
+          700: '#12542A',
+        },
+        // Semantic surface and content tokens
+        surface: {
+          DEFAULT: '#FFFFFF',
+          alt: '#F5F7F5',
+          card: '#FFFFFF',
+          subtle: '#F0F3F0',
+        },
+        content: {
+          DEFAULT: '#202720',
+          muted: '#626B63',
+          subtle: '#8E978F',
+        },
+        border: {
+          DEFAULT: '#E2E8E2',
+          subtle: '#ECEFEC',
+        },
+        // Backward-compatible tokens mapped cleanly to new light/contrast theme
         dark: {
-          950: '#080809',
-          900: '#101013',
-          850: '#151518',
-          800: '#1d1d22',
-          700: '#282830',
-          600: '#383844',
+          950: '#FFFFFF',
+          900: '#F5F7F5',
+          850: '#ECEFEC',
+          800: '#E2E8E2',
+          750: '#D5DDD5',
+          700: '#CBD5CB',
+          600: '#626B63',
+          charcoal: '#202720'
         },
         navy: {
-          950: '#080809',
-          900: '#101013',
-          850: '#151518',
-          800: '#1d1d22',
-          700: '#282830',
-          600: '#383844',
+          950: '#FFFFFF',
+          900: '#F5F7F5',
+          850: '#ECEFEC',
+          800: '#E2E8E2',
+          700: '#CBD5CB',
         },
         neon: {
-          300: '#86efac',
-          400: '#4ade80',
-          500: '#22c55e',
-          600: '#16a34a',
-          accent: '#10e760',
-          glow: 'rgba(16, 231, 96, 0.25)',
+          300: '#4ADE80',
+          400: '#248A45',
+          500: '#248A45',
+          600: '#176B35',
+          accent: '#248A45',
+          glow: 'rgba(36, 138, 69, 0.2)',
         },
         electric: {
-          300: '#86efac',
-          400: '#4ade80',
-          500: '#22c55e',
-          600: '#16a34a',
-          accent: '#10e760',
-        },
-        brand: {
-          red: '#ef4444',
-          green: '#22c55e',
-          neon: '#10e760',
-          yellow: '#f59e0b',
-          blue: '#3b82f6',
-          dark: '#080809'
+          400: '#248A45',
+          500: '#248A45',
+          600: '#176B35',
         }
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
-        teko: ['Teko', 'sans-serif'],
+        sans: ['Manrope', 'Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+        display: ['Manrope', 'Inter', 'sans-serif'],
       }
     },
   },

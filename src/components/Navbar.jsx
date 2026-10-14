@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { Link, NavLink, useNavigate, useLocation } from 'react-router-dom';
 import { 
   Menu, X, ShoppingBag, ChevronDown, 
-  Search, ShieldCheck, Phone, Sparkles, MapPin, ExternalLink
+  Search, Phone, Sparkles, MapPin, ExternalLink
 } from 'lucide-react';
-import { SPORTS_CATEGORIES } from '../data/productsData';
 import { BUSINESS_CONFIG, openWhatsAppChat } from '../config/businessConfig';
 import { useCart } from '../context/CartContext';
 
@@ -16,6 +15,20 @@ export default function Navbar() {
 
   const { totalItemsCount, setIsCartOpen } = useCart();
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleNavToSection = (sectionId, fallbackPath = '/') => {
+    setMobileMenuOpen(false);
+    setSportsDropdownOpen(false);
+    if (location.pathname === '/') {
+      const el = document.getElementById(sectionId);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+        return;
+      }
+    }
+    navigate(`${fallbackPath}#${sectionId}`);
+  };
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
@@ -34,37 +47,37 @@ export default function Navbar() {
   return (
     <>
       {/* 1. TOP ANNOUNCEMENT & LOCATION BAR */}
-      <div className="bg-dark-950 border-b border-dark-800 text-xs py-2 px-4 text-slate-300">
+      <div className="bg-brand-alt border-b border-brand-border text-xs py-2 px-4 text-brand-muted">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-1.5 text-center sm:text-left">
           
           {/* Tagline & City */}
           <div className="flex items-center gap-2 font-medium">
-            <span className="inline-block w-2 h-2 rounded-full bg-neon-accent animate-pulse shadow-sm shadow-neon-400"></span>
+            <span className="inline-block w-2 h-2 rounded-full bg-brand-green animate-pulse"></span>
             <span>
-              <strong className="text-white">AR SPORTS ISLAMABAD</strong> — Sublimation Sports Kits Hub (Cricket, Football, Basketball & Badminton)
+              <strong className="text-brand-text font-semibold">AR SPORTS ISLAMABAD</strong> — Sublimation Sports Kits Hub (Cricket, Football, Volleyball, Badminton)
             </span>
           </div>
 
           {/* Direct Address Link + Phones */}
-          <div className="flex items-center flex-wrap justify-center gap-3 text-slate-300">
+          <div className="flex items-center flex-wrap justify-center gap-3 text-brand-muted">
             <a 
               href={BUSINESS_CONFIG.googleMapsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-slate-300 hover:text-neon-400 transition-colors"
+              className="inline-flex items-center gap-1 hover:text-brand-green transition-colors"
               title="Open Google Maps location"
             >
-              <MapPin className="w-3.5 h-3.5 text-red-500" />
-              <span className="hidden md:inline">Jmal Plaza, High Court Rd, Rawalpindi</span>
+              <MapPin className="w-3.5 h-3.5 text-brand-green" />
+              <span className="hidden md:inline">{BUSINESS_CONFIG.locationDisplay}</span>
               <span className="md:hidden">Store Location</span>
-              <ExternalLink className="w-2.5 h-2.5 text-slate-400" />
+              <ExternalLink className="w-2.5 h-2.5 text-brand-muted" />
             </a>
 
-            <span className="text-dark-700 hidden sm:inline">|</span>
+            <span className="text-brand-border hidden sm:inline">|</span>
 
             <button 
               onClick={handleDirectWhatsAppClick}
-              className="text-neon-400 hover:text-neon-300 transition-colors flex items-center gap-1 font-semibold"
+              className="text-brand-green hover:text-brand-hover transition-colors flex items-center gap-1 font-semibold cursor-pointer"
             >
               <Phone className="w-3 h-3 fill-current" /> WA: {BUSINESS_CONFIG.whatsappPhoneDisplay}
             </button>
@@ -73,31 +86,31 @@ export default function Navbar() {
       </div>
 
       {/* 2. MAIN NAVBAR */}
-      <header className="sticky top-0 z-40 bg-dark-900/95 backdrop-blur-md border-b border-dark-800 transition-all">
+      <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-brand-border transition-all">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             
             {/* BRAND LOGO WITH AR SPORTS ISLAMABAD BADGE */}
-            <Link to="/" className="flex items-center gap-3 group">
+            <Link to="/" className="flex items-center gap-3 group flex-shrink-0">
               <img
                 src="/brand/logo.png"
                 alt="AR Sports Islamabad"
-                className="h-12 w-auto object-contain drop-shadow-md group-hover:scale-105 transition-transform"
+                className="h-11 sm:h-12 w-auto object-contain transition-transform group-hover:scale-105"
                 onError={(e) => {
                   e.target.style.display = 'none';
                 }}
               />
               <div className="flex flex-col">
                 <div className="flex items-center gap-1.5">
-                  <span className="font-teko text-3xl font-black tracking-wider text-white leading-none group-hover:text-neon-400 transition-colors">
+                  <span className="text-xl sm:text-2xl font-extrabold tracking-tight text-brand-charcoal group-hover:text-brand-green transition-colors">
                     AR SPORTS
                   </span>
-                  <span className="text-[10px] font-black px-1.5 py-0.5 rounded bg-red-600 text-white uppercase tracking-wider">
+                  <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-brand-green text-white uppercase tracking-wider">
                     ISLAMABAD
                   </span>
                 </div>
-                <span className="text-[10px] tracking-widest text-neon-400 uppercase font-bold">
-                  Sublimation Sports Kits Hub
+                <span className="text-[10px] tracking-wider text-brand-muted uppercase font-semibold">
+                  Custom Sportswear & Kits
                 </span>
               </div>
             </Link>
@@ -106,52 +119,55 @@ export default function Navbar() {
             <nav className="hidden lg:flex items-center space-x-1 xl:space-x-2 text-sm font-medium">
               <NavLink 
                 to="/" 
-                className={({ isActive }) => `px-3.5 py-2 rounded-xl transition-all duration-200 ${isActive ? 'text-white bg-dark-800 font-semibold border-b-2 border-neon-500' : 'text-slate-300 hover:text-white hover:bg-dark-800/60'}`}
+                className={({ isActive }) => `px-3.5 py-2 rounded-xl transition-all duration-200 ${isActive ? 'text-brand-green bg-brand-50 font-semibold' : 'text-brand-muted hover:text-brand-text hover:bg-brand-alt'}`}
               >
                 Home
               </NavLink>
 
-              {/* SHOP BY SPORT DROPDOWN */}
+              {/* SPORTS CATEGORIES WITH DROPDOWN */}
               <div 
                 className="relative"
                 onMouseEnter={() => setSportsDropdownOpen(true)}
                 onMouseLeave={() => setSportsDropdownOpen(false)}
               >
-                <NavLink 
-                  to="/shop" 
-                  className={({ isActive }) => `px-3.5 py-2 rounded-xl transition-all duration-200 flex items-center gap-1.5 ${isActive && sportsDropdownOpen ? 'text-white bg-dark-800' : 'text-slate-300 hover:text-white hover:bg-dark-800/60'}`}
+                <button
+                  type="button"
+                  onClick={() => handleNavToSection('sports-categories', '/')}
+                  className="px-3.5 py-2 rounded-xl transition-all duration-200 flex items-center gap-1.5 text-brand-muted hover:text-brand-text hover:bg-brand-alt font-medium cursor-pointer"
                   aria-expanded={sportsDropdownOpen}
                 >
-                  <span>Shop by Sport</span>
-                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${sportsDropdownOpen ? 'rotate-180 text-neon-400' : 'text-slate-400'}`} />
-                </NavLink>
+                  <span>Sports Categories</span>
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${sportsDropdownOpen ? 'rotate-180 text-brand-green' : 'text-brand-muted'}`} />
+                </button>
 
                 {sportsDropdownOpen && (
-                  <div className="absolute top-full left-0 w-80 bg-dark-900 border border-dark-700 rounded-2xl shadow-2xl p-3 grid gap-1.5 backdrop-blur-xl animate-in fade-in slide-in-from-top-2 duration-150 z-50">
-                    <div className="px-3 py-1.5 text-[11px] font-bold text-slate-400 uppercase tracking-wider border-b border-dark-800 flex items-center justify-between">
-                      <span>Select Sport</span>
-                      <Link to="/shop?sport=all" onClick={() => setSportsDropdownOpen(false)} className="text-neon-400 hover:underline normal-case font-semibold">
-                        All Sports &rarr;
-                      </Link>
+                  <div className="absolute top-full left-0 w-80 bg-white border border-brand-border rounded-2xl shadow-xl p-3 grid gap-1.5 animate-in fade-in slide-in-from-top-2 duration-150 z-50">
+                    <div className="px-3 py-1.5 text-[11px] font-bold text-brand-muted uppercase tracking-wider border-b border-brand-border flex items-center justify-between">
+                      <span>Browse Categories</span>
+                      <button 
+                        onClick={() => handleNavToSection('sports-categories', '/')} 
+                        className="text-brand-green hover:underline normal-case font-semibold text-xs cursor-pointer"
+                      >
+                        All Categories &darr;
+                      </button>
                     </div>
                     {[
-                      { slug: 'all', name: 'All Sports', badge: 'Full Catalog' },
-                      { slug: 'cricket', name: 'Cricket', badge: 'Sublimation Kits' },
-                      { slug: 'football', name: 'Football', badge: 'Match Uniforms' },
-                      { slug: 'basketball', name: 'Basketball', badge: 'Reversible Jerseys' },
-                      { slug: 'badminton', name: 'Badminton', badge: 'Dry-Fit Wear' },
-                      { slug: 'volleyball', name: 'Volleyball', badge: 'Sleeveless Tops' },
-                      { slug: 'school-teamwear', name: 'School & Teamwear', badge: 'Bulk Orders' },
-                    ].map((sport) => (
+                      { slug: 'sublimation', name: 'Sublimation Sports Kits', badge: 'Hub Focus' },
+                      { slug: 'cricket', name: 'Cricket Kits & Jerseys', badge: 'Popular' },
+                      { slug: 'football', name: 'Football Kits & Jerseys', badge: 'Match Wear' },
+                      { slug: 'volleyball', name: 'Volleyball Kits & Jerseys', badge: 'Athletic' },
+                      { slug: 'badminton', name: 'Badminton & Hockey Kits', badge: 'Lightweight' },
+                      { slug: 'all', name: 'All Products & Gear', badge: 'Catalog' },
+                    ].map((cat) => (
                       <Link
-                        key={sport.slug}
-                        to={sport.slug === 'school-teamwear' ? '/school-teamwear' : `/shop?sport=${sport.slug}`}
+                        key={cat.slug}
+                        to={cat.slug === 'sublimation' ? '/custom-design' : cat.slug === 'all' ? '/shop' : `/shop?sport=${cat.slug}`}
                         onClick={() => setSportsDropdownOpen(false)}
-                        className="flex items-center justify-between px-3 py-2 rounded-xl text-slate-300 hover:text-white hover:bg-dark-800 transition-colors text-sm group"
+                        className="flex items-center justify-between px-3 py-2 rounded-xl text-brand-text hover:bg-brand-alt hover:text-brand-green transition-colors text-sm group"
                       >
-                        <span className="group-hover:translate-x-1 transition-transform font-medium">{sport.name}</span>
-                        <span className="text-[10px] px-2 py-0.5 rounded-full bg-dark-950 text-slate-400 group-hover:text-neon-400 group-hover:border-neon-500/30 border border-transparent transition-colors">
-                          {sport.badge}
+                        <span className="group-hover:translate-x-1 transition-transform font-medium">{cat.name}</span>
+                        <span className="text-[10px] px-2 py-0.5 rounded-full bg-brand-alt text-brand-muted group-hover:text-brand-green group-hover:bg-brand-50 border border-brand-border transition-colors">
+                          {cat.badge}
                         </span>
                       </Link>
                     ))}
@@ -160,30 +176,23 @@ export default function Navbar() {
               </div>
 
               <NavLink 
-                to="/shop" 
-                className={({ isActive }) => `px-3.5 py-2 rounded-xl transition-all duration-200 ${isActive ? 'text-white bg-dark-800 font-semibold border-b-2 border-neon-500' : 'text-slate-300 hover:text-white hover:bg-dark-800/60'}`}
-              >
-                Products
-              </NavLink>
-
-              <NavLink 
                 to="/custom-design" 
-                className={({ isActive }) => `px-3.5 py-2 rounded-xl transition-all duration-200 flex items-center gap-1.5 ${isActive ? 'text-white bg-dark-800 font-semibold border-b-2 border-neon-500' : 'text-slate-300 hover:text-white hover:bg-dark-800/60'}`}
+                className={({ isActive }) => `px-3.5 py-2 rounded-xl transition-all duration-200 flex items-center gap-1.5 ${isActive ? 'text-brand-green bg-brand-50 font-semibold' : 'text-brand-muted hover:text-brand-text hover:bg-brand-alt'}`}
               >
-                <Sparkles className="w-4 h-4 text-neon-400" />
-                <span>Custom Jerseys</span>
+                <Sparkles className="w-4 h-4 text-brand-green" />
+                <span>Customize Your Kit</span>
               </NavLink>
 
               <NavLink 
                 to="/about" 
-                className={({ isActive }) => `px-3.5 py-2 rounded-xl transition-all duration-200 ${isActive ? 'text-white bg-dark-800 font-semibold border-b-2 border-neon-500' : 'text-slate-300 hover:text-white hover:bg-dark-800/60'}`}
+                className={({ isActive }) => `px-3.5 py-2 rounded-xl transition-all duration-200 ${isActive ? 'text-brand-green bg-brand-50 font-semibold' : 'text-brand-muted hover:text-brand-text hover:bg-brand-alt'}`}
               >
                 About Us
               </NavLink>
 
               <NavLink 
                 to="/contact" 
-                className={({ isActive }) => `px-3.5 py-2 rounded-xl transition-all duration-200 ${isActive ? 'text-white bg-dark-800 font-semibold border-b-2 border-neon-500' : 'text-slate-300 hover:text-white hover:bg-dark-800/60'}`}
+                className={({ isActive }) => `px-3.5 py-2 rounded-xl transition-all duration-200 ${isActive ? 'text-brand-green bg-brand-50 font-semibold' : 'text-brand-muted hover:text-brand-text hover:bg-brand-alt'}`}
               >
                 Contact
               </NavLink>
@@ -194,7 +203,7 @@ export default function Navbar() {
               {/* Search Toggle */}
               <button 
                 onClick={() => setShowSearchModal(true)}
-                className="p-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-navy-800 transition-colors"
+                className="p-2.5 rounded-xl text-brand-muted hover:text-brand-text hover:bg-brand-alt transition-colors cursor-pointer"
                 title="Search Products"
                 aria-label="Search Products"
               >
@@ -204,13 +213,13 @@ export default function Navbar() {
               {/* Cart Drawer Toggle */}
               <button 
                 onClick={() => setIsCartOpen(true)}
-                className="relative p-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-dark-800 transition-colors"
+                className="relative p-2.5 rounded-xl text-brand-muted hover:text-brand-text hover:bg-brand-alt transition-colors cursor-pointer"
                 title="View Inquiry Cart"
                 aria-label="Inquiry Cart"
               >
                 <ShoppingBag className="w-5 h-5" />
                 {totalItemsCount > 0 && (
-                  <span className="absolute -top-1 -right-1 bg-neon-500 text-black font-extrabold text-[11px] w-5 h-5 rounded-full flex items-center justify-center border-2 border-dark-900 shadow">
+                  <span className="absolute -top-1 -right-1 bg-brand-green text-white font-extrabold text-[10px] w-4.5 h-4.5 rounded-full flex items-center justify-center border-2 border-white shadow-xs">
                     {totalItemsCount}
                   </span>
                 )}
@@ -219,7 +228,7 @@ export default function Navbar() {
               {/* PROMINENT WHATSAPP ACTION BUTTON */}
               <button
                 onClick={handleDirectWhatsAppClick}
-                className="hidden sm:inline-flex items-center gap-2 px-4 py-2.5 rounded-xl font-bold text-sm bg-neon-500 hover:bg-neon-400 text-black shadow-lg shadow-neon-500/20 transition-all hover:scale-[1.02] active:scale-[0.98]"
+                className="hidden sm:inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl font-semibold text-xs sm:text-sm bg-brand-green hover:bg-brand-hover text-white shadow-xs transition-all hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
               >
                 <Phone className="w-4 h-4 fill-current" />
                 <span>Order on WhatsApp</span>
@@ -228,7 +237,7 @@ export default function Navbar() {
               {/* MOBILE HAMBURGER BUTTON */}
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="lg:hidden p-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-dark-800 transition-colors"
+                className="lg:hidden p-2.5 rounded-xl text-brand-text hover:bg-brand-alt transition-colors cursor-pointer"
                 aria-label="Toggle navigation menu"
               >
                 {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -239,70 +248,67 @@ export default function Navbar() {
 
         {/* MOBILE MENU ACCORDION */}
         {mobileMenuOpen && (
-          <div className="lg:hidden bg-navy-950 border-b border-navy-800 px-4 pt-3 pb-6 max-h-[85vh] overflow-y-auto">
-            <div className="flex flex-col space-y-2">
+          <div className="lg:hidden bg-white border-b border-brand-border px-4 pt-3 pb-6 max-h-[85vh] overflow-y-auto shadow-xl animate-in slide-in-from-top-2 duration-150">
+            <div className="flex flex-col space-y-1.5">
               <NavLink
                 to="/"
                 onClick={() => setMobileMenuOpen(false)}
-                className={({ isActive }) => `px-4 py-3 rounded-xl text-base font-medium ${isActive ? 'bg-dark-800 text-neon-400 font-semibold' : 'text-slate-300 hover:bg-dark-900'}`}
+                className={({ isActive }) => `px-4 py-3 rounded-xl text-sm font-semibold ${isActive ? 'bg-brand-50 text-brand-green' : 'text-brand-text hover:bg-brand-alt'}`}
               >
                 Home
               </NavLink>
 
-              {/* Shop by Sport Mobile Accordion */}
-              <div className="border border-dark-800 rounded-xl p-3 bg-dark-900/60">
-                <div className="flex items-center justify-between pb-2 mb-2 border-b border-dark-800">
-                  <span className="text-xs font-bold text-neon-400 uppercase tracking-wider">Shop by Sport</span>
+              {/* Sports Categories Mobile Accordion */}
+              <div className="border border-brand-border rounded-xl p-3 bg-brand-alt">
+                <div className="flex items-center justify-between pb-2 mb-2 border-b border-brand-border">
+                  <button 
+                    onClick={() => handleNavToSection('sports-categories', '/')}
+                    className="text-xs font-bold text-brand-green uppercase tracking-wider hover:underline text-left cursor-pointer"
+                  >
+                    Sports Categories &darr;
+                  </button>
                   <Link 
                     to="/shop?sport=all" 
                     onClick={() => setMobileMenuOpen(false)}
-                    className="text-xs text-slate-400 hover:text-white"
+                    className="text-xs text-brand-muted hover:text-brand-text"
                   >
                     View All &rarr;
                   </Link>
                 </div>
                 <div className="grid grid-cols-2 gap-1.5">
                   {[
-                    { slug: 'cricket', name: 'Cricket' },
-                    { slug: 'football', name: 'Football' },
-                    { slug: 'basketball', name: 'Basketball' },
-                    { slug: 'badminton', name: 'Badminton' },
-                    { slug: 'volleyball', name: 'Volleyball' },
-                    { slug: 'all', name: 'All Sports' },
-                  ].map(sport => (
+                    { slug: 'sublimation', name: 'Sublimation Kits', path: '/custom-design' },
+                    { slug: 'cricket', name: 'Cricket Kits', path: '/shop?sport=cricket' },
+                    { slug: 'football', name: 'Football Kits', path: '/shop?sport=football' },
+                    { slug: 'volleyball', name: 'Volleyball Kits', path: '/shop?sport=volleyball' },
+                    { slug: 'badminton', name: 'Badminton & Hockey', path: '/shop?sport=badminton' },
+                    { slug: 'all', name: 'All Products', path: '/shop' },
+                  ].map(cat => (
                     <Link
-                      key={sport.slug}
-                      to={`/shop?sport=${sport.slug}`}
+                      key={cat.slug}
+                      to={cat.path}
                       onClick={() => setMobileMenuOpen(false)}
-                      className="px-3 py-2 rounded-lg text-sm text-slate-300 hover:text-white hover:bg-dark-800 font-medium"
+                      className="px-3 py-2 rounded-lg text-xs font-medium text-brand-text hover:bg-white hover:text-brand-green border border-transparent hover:border-brand-border transition-colors"
                     >
-                      {sport.name}
+                      {cat.name}
                     </Link>
                   ))}
                 </div>
               </div>
 
               <NavLink
-                to="/shop"
-                onClick={() => setMobileMenuOpen(false)}
-                className={({ isActive }) => `px-4 py-3 rounded-xl text-base font-medium ${isActive ? 'bg-dark-800 text-neon-400 font-semibold' : 'text-slate-300 hover:bg-dark-900'}`}
-              >
-                Products
-              </NavLink>
-
-              <NavLink
                 to="/custom-design"
                 onClick={() => setMobileMenuOpen(false)}
-                className={({ isActive }) => `px-4 py-3 rounded-xl text-base font-medium flex items-center gap-2 ${isActive ? 'bg-dark-800 text-neon-400 font-semibold' : 'text-slate-300 hover:bg-dark-900'}`}
+                className={({ isActive }) => `px-4 py-3 rounded-xl text-sm font-semibold flex items-center gap-2 ${isActive ? 'bg-brand-50 text-brand-green' : 'text-brand-text hover:bg-brand-alt'}`}
               >
-                <Sparkles className="w-4 h-4 text-neon-400" />
-                <span>Custom Jerseys</span>
+                <Sparkles className="w-4 h-4 text-brand-green" />
+                <span>Customize Your Kit</span>
               </NavLink>
 
               <NavLink
                 to="/about"
                 onClick={() => setMobileMenuOpen(false)}
-                className={({ isActive }) => `px-4 py-3 rounded-xl text-base font-medium ${isActive ? 'bg-dark-800 text-neon-400 font-semibold' : 'text-slate-300 hover:bg-dark-900'}`}
+                className={({ isActive }) => `px-4 py-3 rounded-xl text-sm font-semibold ${isActive ? 'bg-brand-50 text-brand-green' : 'text-brand-text hover:bg-brand-alt'}`}
               >
                 About Us
               </NavLink>
@@ -310,20 +316,20 @@ export default function Navbar() {
               <NavLink
                 to="/contact"
                 onClick={() => setMobileMenuOpen(false)}
-                className={({ isActive }) => `px-4 py-3 rounded-xl text-base font-medium ${isActive ? 'bg-dark-800 text-neon-400 font-semibold' : 'text-slate-300 hover:bg-dark-900'}`}
+                className={({ isActive }) => `px-4 py-3 rounded-xl text-sm font-semibold ${isActive ? 'bg-brand-50 text-brand-green' : 'text-brand-text hover:bg-brand-alt'}`}
               >
                 Contact
               </NavLink>
 
               {/* Mobile Store Google Map & WhatsApp */}
-              <div className="pt-2 space-y-2">
+              <div className="pt-3 space-y-2">
                 <a
                   href={BUSINESS_CONFIG.googleMapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full py-3 px-4 rounded-xl font-bold text-xs text-center bg-navy-800 hover:bg-navy-700 text-slate-200 border border-navy-700 flex items-center justify-center gap-2"
+                  className="w-full py-3 px-4 rounded-xl font-semibold text-xs text-center bg-brand-alt hover:bg-brand-border text-brand-text border border-brand-border flex items-center justify-center gap-2"
                 >
-                  <MapPin className="w-4 h-4 text-brand-red" />
+                  <MapPin className="w-4 h-4 text-brand-green" />
                   <span>View Store on Google Maps</span>
                 </a>
 
@@ -332,7 +338,7 @@ export default function Navbar() {
                     setMobileMenuOpen(false);
                     handleDirectWhatsAppClick();
                   }}
-                  className="w-full py-3.5 px-4 rounded-xl font-bold text-center bg-emerald-600 hover:bg-emerald-500 text-white flex items-center justify-center gap-2 shadow-lg"
+                  className="w-full py-3.5 px-4 rounded-xl font-bold text-center bg-brand-green hover:bg-brand-hover text-white flex items-center justify-center gap-2 shadow-sm"
                 >
                   <Phone className="w-5 h-5 fill-current" />
                   <span>Place Order on WhatsApp</span>
@@ -345,16 +351,16 @@ export default function Navbar() {
 
       {/* SEARCH MODAL */}
       {showSearchModal && (
-        <div className="fixed inset-0 z-50 flex items-start justify-center pt-20 px-4 bg-black/80 backdrop-blur-sm animate-in fade-in">
-          <div className="bg-dark-900 border border-dark-700 w-full max-w-2xl rounded-2xl shadow-2xl p-6 relative">
+        <div className="fixed inset-0 z-50 flex items-start justify-center pt-20 px-4 bg-brand-charcoal/40 backdrop-blur-xs animate-in fade-in duration-150">
+          <div className="bg-white border border-brand-border w-full max-w-2xl rounded-2xl shadow-2xl p-6 relative">
             <button 
               onClick={() => setShowSearchModal(false)}
-              className="absolute top-4 right-4 p-2 text-slate-400 hover:text-white rounded-lg hover:bg-dark-800"
+              className="absolute top-4 right-4 p-2 text-brand-muted hover:text-brand-text rounded-lg hover:bg-brand-alt cursor-pointer"
               aria-label="Close search"
             >
               <X className="w-5 h-5" />
             </button>
-            <h3 className="text-lg font-bold text-white mb-4">Search Products & Custom Kits</h3>
+            <h3 className="text-lg font-bold text-brand-text mb-4">Search Products & Custom Kits</h3>
             <form onSubmit={handleSearchSubmit} className="relative">
               <input
                 type="text"
@@ -362,23 +368,23 @@ export default function Navbar() {
                 placeholder="Search cricket kits, football jersey, volleyball, badminton, hockey..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full bg-dark-950 border border-dark-700 rounded-xl py-3.5 pl-11 pr-24 text-white placeholder-slate-500 focus:outline-none focus:border-neon-500 text-base"
+                className="w-full bg-brand-alt border border-brand-border rounded-xl py-3.5 pl-11 pr-24 text-brand-text placeholder-brand-muted focus:outline-none focus:border-brand-green text-sm sm:text-base"
               />
-              <Search className="w-5 h-5 text-slate-400 absolute left-3.5 top-4" />
+              <Search className="w-5 h-5 text-brand-muted absolute left-3.5 top-4" />
               <button
                 type="submit"
-                className="absolute right-2 top-2 bottom-2 px-4 bg-neon-500 hover:bg-neon-400 text-black rounded-lg font-bold text-sm transition-colors"
+                className="absolute right-2 top-2 bottom-2 px-4 bg-brand-green hover:bg-brand-hover text-white rounded-lg font-bold text-sm transition-colors cursor-pointer"
               >
                 Search
               </button>
             </form>
-            <div className="mt-4 flex flex-wrap gap-2 text-xs text-slate-400">
-              <span className="font-semibold text-slate-300">Quick Searches:</span>
-              <button onClick={() => { setSearchQuery('Cricket'); }} className="hover:text-neon-400 underline">Cricket Kits</button>
-              <button onClick={() => { setSearchQuery('Football'); }} className="hover:text-neon-400 underline">Football Jersey</button>
-              <button onClick={() => { setSearchQuery('Volleyball'); }} className="hover:text-neon-400 underline">Volleyball Kits</button>
-              <button onClick={() => { setSearchQuery('Hockey'); }} className="hover:text-neon-400 underline">Hockey Kits</button>
-              <button onClick={() => { setSearchQuery('Badminton'); }} className="hover:text-neon-400 underline">Badminton</button>
+            <div className="mt-4 flex flex-wrap gap-2 text-xs text-brand-muted">
+              <span className="font-semibold text-brand-text">Quick Searches:</span>
+              <button onClick={() => { setSearchQuery('Cricket'); }} className="hover:text-brand-green underline cursor-pointer">Cricket Kits</button>
+              <button onClick={() => { setSearchQuery('Football'); }} className="hover:text-brand-green underline cursor-pointer">Football Jersey</button>
+              <button onClick={() => { setSearchQuery('Volleyball'); }} className="hover:text-brand-green underline cursor-pointer">Volleyball Kits</button>
+              <button onClick={() => { setSearchQuery('Hockey'); }} className="hover:text-brand-green underline cursor-pointer">Hockey Kits</button>
+              <button onClick={() => { setSearchQuery('Badminton'); }} className="hover:text-brand-green underline cursor-pointer">Badminton</button>
             </div>
           </div>
         </div>
