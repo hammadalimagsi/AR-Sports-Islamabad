@@ -265,28 +265,33 @@ export default function Footer() {
             {/* SPORTS CATEGORIES */}
             <div>
               <h4 className="text-brand-charcoal font-bold text-sm tracking-tight mb-3 border-l-2 border-brand-green pl-2">
-                Sports
+                Sports Categories
               </h4>
-              <ul className="space-y-2 text-xs sm:text-sm text-brand-muted">
+              <ul className="space-y-1.5 text-xs text-brand-muted">
                 {[
-                  { name: "Sublimation Kits", slug: "sublimation", path: "/custom-design" },
-                  { name: "Cricket Kits", slug: "cricket", path: "/shop?sport=cricket" },
-                  { name: "Football Kits", slug: "football", path: "/shop?sport=football" },
-                  { name: "Volleyball Kits", slug: "volleyball", path: "/shop?sport=volleyball" },
-                  { name: "Badminton & Hockey", slug: "badminton", path: "/shop?sport=badminton" },
+                  { name: "Cricket Kits", slug: "cricket" },
+                  { name: "Football Kits", slug: "football" },
+                  { name: "Basketball Gear", slug: "basketball" },
+                  { name: "Volleyball Kits", slug: "volleyball" },
+                  { name: "Badminton Gear", slug: "badminton" },
+                  { name: "Tennis Apparel", slug: "tennis" },
+                  { name: "Rugby Match Wear", slug: "rugby" },
+                  { name: "Field Hockey", slug: "hockey" },
+                  { name: "Gym & Fitness", slug: "gym-fitness" },
+                  { name: "General Sportswear", slug: "general-sportswear" },
                 ].map(sport => (
                   <li key={sport.slug}>
                     <Link 
-                      to={sport.path}
+                      to={`/sports/${sport.slug}`}
                       className="hover:text-brand-green hover:translate-x-0.5 inline-block transition-transform"
                     >
                       {sport.name}
                     </Link>
                   </li>
                 ))}
-                <li>
-                  <Link to="/shop" className="text-brand-green hover:underline flex items-center gap-1 font-semibold pt-1">
-                    <span>All Products</span>
+                <li className="pt-1">
+                  <Link to="/shop" className="text-brand-green hover:underline flex items-center gap-1 font-semibold">
+                    <span>Full Catalog</span>
                     <ArrowRight className="w-3 h-3" />
                   </Link>
                 </li>

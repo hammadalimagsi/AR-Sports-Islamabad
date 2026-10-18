@@ -82,14 +82,7 @@ export default function Shop() {
 
   const primarySportsList = [
     { slug: 'all', name: 'All Sports' },
-    { slug: 'cricket', name: 'Cricket' },
-    { slug: 'football', name: 'Football' },
-    { slug: 'basketball', name: 'Basketball' },
-    { slug: 'badminton', name: 'Badminton' },
-    { slug: 'volleyball', name: 'Volleyball' },
-    { slug: 'gym-fitness', name: 'Gym & Fitness' },
-    { slug: 'school-teamwear', name: 'School & Teamwear' },
-    { slug: 'other-sports', name: 'Accessories & Teamwear' },
+    ...SPORTS_CATEGORIES.map(c => ({ slug: c.slug, name: c.name }))
   ];
 
   return (

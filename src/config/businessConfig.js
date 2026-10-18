@@ -10,11 +10,11 @@ export const BUSINESS_CONFIG = {
   tagline: "SUBLIMATION SPORTS KITS HUB — YOUR TEAM. YOUR DESIGN. YOUR IDENTITY.",
   
   // PRIMARY WHATSAPP NUMBER (Without '+' or spaces)
-  whatsappNumber: "923185098854", 
+  whatsappNumber: "923185052449", 
   
-  // SECONDARY CONTACT / CALLING NUMBER
+  // PRIMARY CONTACT / CALLING NUMBER
   callingPhone: "+92 318 5052449",
-  whatsappPhoneDisplay: "+92 318 5098854",
+  whatsappPhoneDisplay: "+92 318 5052449",
   
   email: "orders@arsports.com",
   

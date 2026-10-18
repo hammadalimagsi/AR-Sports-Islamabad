@@ -46,41 +46,55 @@ export default function Navbar() {
 
   return (
     <>
-      {/* 1. TOP ANNOUNCEMENT & LOCATION BAR */}
-      <div className="bg-brand-alt border-b border-brand-border text-xs py-2 px-4 text-brand-muted">
+      {/* 1. TOP ANNOUNCEMENT BAR WITH DIRECT PHONE & WHATSAPP */}
+      <div className="bg-brand-alt border-b border-brand-border text-xs py-2 px-3 sm:px-4 text-brand-muted">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-1.5 text-center sm:text-left">
           
-          {/* Tagline & City */}
+          {/* Brand Tagline */}
           <div className="flex items-center gap-2 font-medium">
             <span className="inline-block w-2 h-2 rounded-full bg-brand-green animate-pulse"></span>
             <span>
-              <strong className="text-brand-text font-semibold">AR SPORTS ISLAMABAD</strong> — Sublimation Sports Kits Hub (Cricket, Football, Volleyball, Badminton)
+              <strong className="text-brand-text font-semibold">AR SPORTS ISLAMABAD</strong> — Sublimation Sports Kits &amp; Gear Hub
             </span>
           </div>
 
-          {/* Direct Address Link + Phones */}
-          <div className="flex items-center flex-wrap justify-center gap-3 text-brand-muted">
+          {/* Contact Actions: Call, WhatsApp & Location */}
+          <div className="flex items-center flex-wrap justify-center gap-2.5 sm:gap-3 text-brand-muted font-medium">
             <a 
-              href={BUSINESS_CONFIG.googleMapsUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 hover:text-brand-green transition-colors"
-              title="Open Google Maps location"
+              href={`tel:${BUSINESS_CONFIG.callingPhone.replace(/\s+/g, '')}`}
+              className="inline-flex items-center gap-1 text-brand-text hover:text-brand-green font-semibold transition-colors"
+              title="Call AR Sports Islamabad"
             >
-              <MapPin className="w-3.5 h-3.5 text-brand-green" />
-              <span className="hidden md:inline">{BUSINESS_CONFIG.locationDisplay}</span>
-              <span className="md:hidden">Store Location</span>
-              <ExternalLink className="w-2.5 h-2.5 text-brand-muted" />
+              <Phone className="w-3 h-3 text-brand-green fill-current" />
+              <span>Call: {BUSINESS_CONFIG.callingPhone}</span>
             </a>
 
             <span className="text-brand-border hidden sm:inline">|</span>
 
-            <button 
-              onClick={handleDirectWhatsAppClick}
-              className="text-brand-green hover:text-brand-hover transition-colors flex items-center gap-1 font-semibold cursor-pointer"
+            <a
+              href={`https://wa.me/${BUSINESS_CONFIG.whatsappNumber}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-brand-green hover:text-brand-hover font-bold transition-colors"
+              title="Chat on WhatsApp"
             >
-              <Phone className="w-3 h-3 fill-current" /> WA: {BUSINESS_CONFIG.whatsappPhoneDisplay}
-            </button>
+              <span className="w-1.5 h-1.5 rounded-full bg-brand-green animate-ping" />
+              <span>WhatsApp: {BUSINESS_CONFIG.whatsappPhoneDisplay}</span>
+            </a>
+
+            <span className="text-brand-border hidden md:inline">|</span>
+
+            <a 
+              href={BUSINESS_CONFIG.googleMapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 hover:text-brand-green transition-colors text-brand-muted hidden md:inline-flex"
+              title="Open Google Maps location"
+            >
+              <MapPin className="w-3 h-3 text-red-500" />
+              <span>{BUSINESS_CONFIG.locationDisplay}</span>
+              <ExternalLink className="w-2.5 h-2.5 text-brand-muted" />
+            </a>
           </div>
         </div>
       </div>
@@ -110,7 +124,7 @@ export default function Navbar() {
                   </span>
                 </div>
                 <span className="text-[9px] sm:text-[10px] tracking-wider text-brand-muted uppercase font-semibold truncate max-w-[140px] sm:max-w-none">
-                  Custom Sportswear & Kits
+                  Custom Sportswear &amp; Kits
                 </span>
               </div>
             </Link>
@@ -124,7 +138,7 @@ export default function Navbar() {
                 Home
               </NavLink>
 
-              {/* SPORTS CATEGORIES WITH DROPDOWN */}
+              {/* SPORTS CATEGORIES WITH 10-SPORT DROPDOWN */}
               <div 
                 className="relative"
                 onMouseEnter={() => setSportsDropdownOpen(true)}
@@ -136,14 +150,14 @@ export default function Navbar() {
                   className="px-3.5 py-2 rounded-xl transition-all duration-200 flex items-center gap-1.5 text-brand-muted hover:text-brand-text hover:bg-brand-alt font-medium cursor-pointer"
                   aria-expanded={sportsDropdownOpen}
                 >
-                  <span>Sports Categories</span>
+                  <span>Sports</span>
                   <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${sportsDropdownOpen ? 'rotate-180 text-brand-green' : 'text-brand-muted'}`} />
                 </button>
 
                 {sportsDropdownOpen && (
-                  <div className="absolute top-full left-0 w-80 bg-white border border-brand-border rounded-2xl shadow-xl p-3 grid gap-1.5 animate-in fade-in slide-in-from-top-2 duration-150 z-50">
+                  <div className="absolute top-full left-0 w-96 bg-white border border-brand-border rounded-2xl shadow-2xl p-3 animate-in fade-in slide-in-from-top-2 duration-150 z-50">
                     <div className="px-3 py-1.5 text-[11px] font-bold text-brand-muted uppercase tracking-wider border-b border-brand-border flex items-center justify-between">
-                      <span>Browse Categories</span>
+                      <span>10 Sports Collections</span>
                       <button 
                         onClick={() => handleNavToSection('sports-categories', '/')} 
                         className="text-brand-green hover:underline normal-case font-semibold text-xs cursor-pointer"
@@ -151,26 +165,49 @@ export default function Navbar() {
                         All Categories &darr;
                       </button>
                     </div>
-                    {[
-                      { slug: 'sublimation', name: 'Sublimation Sports Kits', badge: 'Hub Focus' },
-                      { slug: 'cricket', name: 'Cricket Kits & Jerseys', badge: 'Popular' },
-                      { slug: 'football', name: 'Football Kits & Jerseys', badge: 'Match Wear' },
-                      { slug: 'volleyball', name: 'Volleyball Kits & Jerseys', badge: 'Athletic' },
-                      { slug: 'badminton', name: 'Badminton & Hockey Kits', badge: 'Lightweight' },
-                      { slug: 'all', name: 'All Products & Gear', badge: 'Catalog' },
-                    ].map((cat) => (
+                    <div className="grid grid-cols-2 gap-1 pt-2">
+                      {[
+                        { slug: 'cricket', name: 'Cricket', badge: 'Popular' },
+                        { slug: 'football', name: 'Football', badge: 'Match Wear' },
+                        { slug: 'basketball', name: 'Basketball', badge: 'Pro Mesh' },
+                        { slug: 'volleyball', name: 'Volleyball', badge: 'Athletic' },
+                        { slug: 'badminton', name: 'Badminton', badge: 'Lightweight' },
+                        { slug: 'tennis', name: 'Tennis', badge: 'Tour Pro' },
+                        { slug: 'rugby', name: 'Rugby', badge: 'Heavy Duty' },
+                        { slug: 'hockey', name: 'Hockey', badge: 'Turf Pro' },
+                        { slug: 'gym-fitness', name: 'Gym & Fitness', badge: 'Training' },
+                        { slug: 'general-sportswear', name: 'General Sportswear', badge: 'Custom Kits' },
+                      ].map((cat) => (
+                        <Link
+                          key={cat.slug}
+                          to={`/sports/${cat.slug}`}
+                          onClick={() => setSportsDropdownOpen(false)}
+                          className="flex items-center justify-between px-2.5 py-1.5 rounded-lg text-brand-text hover:bg-brand-alt hover:text-brand-green transition-colors text-xs group"
+                        >
+                          <span className="font-semibold group-hover:translate-x-0.5 transition-transform truncate">{cat.name}</span>
+                          <span className="text-[9px] px-1.5 py-0.5 rounded bg-brand-alt text-brand-muted group-hover:text-brand-green group-hover:bg-brand-50 border border-brand-border shrink-0 ml-1">
+                            {cat.badge}
+                          </span>
+                        </Link>
+                      ))}
+                    </div>
+                    <div className="mt-2 pt-2 border-t border-brand-border flex items-center justify-between text-xs px-2">
                       <Link
-                        key={cat.slug}
-                        to={cat.slug === 'sublimation' ? '/custom-design' : cat.slug === 'all' ? '/shop' : `/shop?sport=${cat.slug}`}
+                        to="/custom-design"
                         onClick={() => setSportsDropdownOpen(false)}
-                        className="flex items-center justify-between px-3 py-2 rounded-xl text-brand-text hover:bg-brand-alt hover:text-brand-green transition-colors text-sm group"
+                        className="text-brand-green hover:underline font-bold flex items-center gap-1"
                       >
-                        <span className="group-hover:translate-x-1 transition-transform font-medium">{cat.name}</span>
-                        <span className="text-[10px] px-2 py-0.5 rounded-full bg-brand-alt text-brand-muted group-hover:text-brand-green group-hover:bg-brand-50 border border-brand-border transition-colors">
-                          {cat.badge}
-                        </span>
+                        <Sparkles className="w-3.5 h-3.5" />
+                        <span>Customize Your Kit</span>
                       </Link>
-                    ))}
+                      <Link
+                        to="/shop"
+                        onClick={() => setSportsDropdownOpen(false)}
+                        className="text-brand-muted hover:text-brand-text"
+                      >
+                        View Full Catalog &rarr;
+                      </Link>
+                    </div>
                   </div>
                 )}
               </div>
@@ -277,18 +314,22 @@ export default function Navbar() {
                 </div>
                 <div className="grid grid-cols-2 gap-1.5">
                   {[
-                    { slug: 'sublimation', name: 'Sublimation Kits', path: '/custom-design' },
-                    { slug: 'cricket', name: 'Cricket Kits', path: '/shop?sport=cricket' },
-                    { slug: 'football', name: 'Football Kits', path: '/shop?sport=football' },
-                    { slug: 'volleyball', name: 'Volleyball Kits', path: '/shop?sport=volleyball' },
-                    { slug: 'badminton', name: 'Badminton & Hockey', path: '/shop?sport=badminton' },
-                    { slug: 'all', name: 'All Products', path: '/shop' },
+                    { slug: 'cricket', name: 'Cricket' },
+                    { slug: 'football', name: 'Football' },
+                    { slug: 'basketball', name: 'Basketball' },
+                    { slug: 'volleyball', name: 'Volleyball' },
+                    { slug: 'badminton', name: 'Badminton' },
+                    { slug: 'tennis', name: 'Tennis' },
+                    { slug: 'rugby', name: 'Rugby' },
+                    { slug: 'hockey', name: 'Hockey' },
+                    { slug: 'gym-fitness', name: 'Gym & Fitness' },
+                    { slug: 'general-sportswear', name: 'General Sportswear' },
                   ].map(cat => (
                     <Link
                       key={cat.slug}
-                      to={cat.path}
+                      to={`/sports/${cat.slug}`}
                       onClick={() => setMobileMenuOpen(false)}
-                      className="px-3 py-2 rounded-lg text-xs font-medium text-brand-text hover:bg-white hover:text-brand-green border border-transparent hover:border-brand-border transition-colors"
+                      className="px-2.5 py-2 rounded-lg text-xs font-semibold text-brand-text hover:bg-white hover:text-brand-green border border-transparent hover:border-brand-border transition-colors truncate"
                     >
                       {cat.name}
                     </Link>
@@ -321,28 +362,37 @@ export default function Navbar() {
                 Contact
               </NavLink>
 
-              {/* Mobile Store Google Map & WhatsApp */}
+              {/* Mobile Store Google Map & Direct Call & WhatsApp */}
               <div className="pt-3 space-y-2">
+                <div className="grid grid-cols-2 gap-2">
+                  <a
+                    href={`tel:${BUSINESS_CONFIG.callingPhone.replace(/\s+/g, '')}`}
+                    className="py-3 px-3 rounded-xl font-bold text-xs text-center bg-brand-alt hover:bg-brand-border text-brand-text border border-brand-border flex items-center justify-center gap-1.5"
+                  >
+                    <Phone className="w-3.5 h-3.5 text-brand-green fill-current" />
+                    <span className="truncate">Call Store</span>
+                  </a>
+
+                  <a
+                    href={`https://wa.me/${BUSINESS_CONFIG.whatsappNumber}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="py-3 px-3 rounded-xl font-bold text-xs text-center bg-brand-green hover:bg-brand-hover text-white flex items-center justify-center gap-1.5 shadow-xs"
+                  >
+                    <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
+                    <span className="truncate">WhatsApp</span>
+                  </a>
+                </div>
+
                 <a
                   href={BUSINESS_CONFIG.googleMapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full py-3 px-4 rounded-xl font-semibold text-xs text-center bg-brand-alt hover:bg-brand-border text-brand-text border border-brand-border flex items-center justify-center gap-2"
+                  className="w-full py-2.5 px-3 rounded-xl font-semibold text-xs text-center bg-white hover:bg-brand-alt text-brand-muted border border-brand-border flex items-center justify-center gap-1.5"
                 >
-                  <MapPin className="w-4 h-4 text-brand-green" />
-                  <span>View Store on Google Maps</span>
+                  <MapPin className="w-3.5 h-3.5 text-red-500" />
+                  <span>Jmal Plaza, High Court Road (Maps)</span>
                 </a>
-
-                <button
-                  onClick={() => {
-                    setMobileMenuOpen(false);
-                    handleDirectWhatsAppClick();
-                  }}
-                  className="w-full py-3.5 px-4 rounded-xl font-bold text-center bg-brand-green hover:bg-brand-hover text-white flex items-center justify-center gap-2 shadow-sm"
-                >
-                  <Phone className="w-5 h-5 fill-current" />
-                  <span>Place Order on WhatsApp</span>
-                </button>
               </div>
             </div>
           </div>

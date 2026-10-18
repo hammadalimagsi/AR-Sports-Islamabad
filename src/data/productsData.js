@@ -14,7 +14,7 @@ export const SPORTS_CATEGORIES = [
     description: "Custom sublimation cricket jerseys, test whites, match trousers, grade-1 English willow bats, and protective gear.",
     image: "https://images.unsplash.com/photo-1531415074968-036ba1b575da?auto=format&fit=crop&w=800&q=80",
     badge: "Most Popular",
-    equipmentCount: "25+ Products"
+    equipmentCount: "9+ Products"
   },
   {
     id: "football",
@@ -23,16 +23,7 @@ export const SPORTS_CATEGORIES = [
     description: "Pro breathable football kits, goalie uniforms, training bibs, FIFA-grade match footballs, and shin pads.",
     image: "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=800&q=80",
     badge: "Trending",
-    equipmentCount: "20+ Products"
-  },
-  {
-    id: "badminton",
-    name: "Badminton",
-    slug: "badminton",
-    description: "Ultra-lightweight moisture-wicking shirts, graphite carbon rackets, feather shuttlecocks, and tournament court nets.",
-    image: "https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=800&q=80",
-    badge: "High Performance",
-    equipmentCount: "12+ Products"
+    equipmentCount: "6+ Products"
   },
   {
     id: "basketball",
@@ -41,7 +32,7 @@ export const SPORTS_CATEGORIES = [
     description: "Custom reversible basketball jerseys, wide-cut mesh shorts, indoor/outdoor composite leather basketballs.",
     image: "https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=800&q=80",
     badge: "Pro Mesh",
-    equipmentCount: "10+ Products"
+    equipmentCount: "4+ Products"
   },
   {
     id: "volleyball",
@@ -49,44 +40,62 @@ export const SPORTS_CATEGORIES = [
     slug: "volleyball",
     description: "Sleeveless and short-sleeve athletic volleyball tops, team kits, official size volleyballs, and heavy-duty nets.",
     image: "https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?auto=format&fit=crop&w=800&q=80",
-    badge: "Durable",
-    equipmentCount: "10+ Products"
+    badge: "Athletic Cut",
+    equipmentCount: "4+ Products"
+  },
+  {
+    id: "badminton",
+    name: "Badminton",
+    slug: "badminton",
+    description: "Ultra-lightweight moisture-wicking shirts, graphite carbon rackets, feather shuttlecocks, and tournament court gear.",
+    image: "https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=800&q=80",
+    badge: "Lightweight",
+    equipmentCount: "4+ Products"
   },
   {
     id: "tennis",
     name: "Tennis",
     slug: "tennis",
-    description: "Engineered polo shirts, tennis skirts, tour-grade tennis balls, vibration dampeners, and racket bags.",
+    description: "Engineered polo shirts, court stretch shorts, tour-grade tennis balls, vibration dampeners, and racket bags.",
     image: "https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?auto=format&fit=crop&w=800&q=80",
-    badge: "Classic",
-    equipmentCount: "8+ Products"
+    badge: "Classic Tour",
+    equipmentCount: "4+ Products"
+  },
+  {
+    id: "rugby",
+    name: "Rugby",
+    slug: "rugby",
+    description: "Tackle-resistant reinforced match jerseys, heavy-duty rugby shorts, grip-textured match balls, and scrum warmup gear.",
+    image: "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=800&q=80",
+    badge: "Heavy Duty",
+    equipmentCount: "4+ Products"
+  },
+  {
+    id: "hockey",
+    name: "Hockey",
+    slug: "hockey",
+    description: "Field hockey custom team shirts, turf match shorts, carbon composite sticks, dimple balls, and shin protection.",
+    image: "https://images.unsplash.com/photo-1580748141549-71748dbe0bdc?auto=format&fit=crop&w=800&q=80",
+    badge: "Turf Pro",
+    equipmentCount: "5+ Products"
   },
   {
     id: "gym-fitness",
-    name: "Gym & Fitness",
+    name: "Gym & Fitness Wear",
     slug: "gym-fitness",
-    description: "Compression wear, drop-arm tank tops, dry-fit training tracksuits, hoodies, and athletic training shorts.",
+    description: "Compression wear, drop-arm tank tops, dry-fit training tracksuits, workout hoodies, and athletic training shorts.",
     image: "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80",
     badge: "Everyday Core",
-    equipmentCount: "16+ Products"
+    equipmentCount: "5+ Products"
   },
   {
-    id: "school-teamwear",
-    name: "School & Teamwear",
-    slug: "school-teamwear",
-    description: "Bulk custom academy uniforms, inter-school sports kits, tracksuits, house polo shirts, and varsity jackets.",
-    image: "https://images.unsplash.com/photo-1526676037777-05a232554f77?auto=format&fit=crop&w=800&q=80",
-    badge: "Bulk Specialist",
-    equipmentCount: "Customized"
-  },
-  {
-    id: "other-sports",
-    name: "Other Sports & Accessories",
-    slug: "other-sports",
-    description: "Field hockey kits, team socks, athletic caps, floppy sun hats, kit bags, and sports accessories.",
-    image: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=800&q=80",
-    badge: "Full Lineup",
-    equipmentCount: "Available"
+    id: "general-sportswear",
+    name: "General Sportswear",
+    slug: "general-sportswear",
+    description: "Custom sports t-shirts, polo shirts, fleece hoodies, athletic caps, floppy hats, team socks, and equipment duffles.",
+    image: "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=800&q=80",
+    badge: "All-Round",
+    equipmentCount: "8+ Products"
   }
 ];
 
@@ -382,192 +391,162 @@ export const PRODUCTS_DATA = [
   },
 
   // ==========================================
-  // SPORTS SHIRTS, T-SHIRTS & POLOS
+  // BASKETBALL
   // ==========================================
   {
-    id: "sports-performance-dryfit-tshirt",
-    name: "AR Velocity Athletic Dry-Fit T-Shirt",
-    sport: "Gym & Fitness",
-    sportSlug: "gym-fitness",
+    id: "basketball-custom-reversible-jersey",
+    name: "AR Slam Reversible Basketball Jersey",
+    sport: "Basketball",
+    sportSlug: "basketball",
     category: "Sportswear",
-    type: "shirt",
+    type: "jersey",
     isCustomizable: true,
     isFeatured: true,
-    badge: "Core Essential",
-    shortDescription: "Ultra-breathable micro-interlock athletic training t-shirt suitable for gyms, clubs, and corporate events.",
-    description: "The ideal everyday training top. Made from 150 GSM lightweight dry-fit polyester that channels sweat away from the body. Fully printable with custom sublimation graphics, team logos, and chest insignia.",
+    badge: "2-in-1 Reversible",
+    shortDescription: "Double-layered open hole mesh reversible jersey with home and away color schemes on one uniform.",
+    description: "The ultimate solution for club leagues and tournaments. Flip the jersey inside out to switch between light and dark team colors instantly. Deep armholes designed for shooting fluidity.",
     images: [
-      "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=800&q=80"
-    ],
-    sizes: ["XS", "S", "M", "L", "XL", "2XL", "3XL"],
-    colors: ["Jet Black", "Heather Grey", "Navy Blue", "Pure White", "Crimson Red", "Custom Sublimation"],
-    features: ["Quick-dry CoolMax moisture wicking", "Chafe-resistant overlock flatlock seams", "Full sublimation or screen print options", "Shape retention after 50+ washes"]
-  },
-  {
-    id: "custom-club-polo-shirt",
-    name: "AR Elite Custom Team Polo Shirt",
-    sport: "School & Teamwear",
-    sportSlug: "school-teamwear",
-    category: "Sportswear",
-    type: "shirt",
-    isCustomizable: true,
-    isFeatured: true,
-    badge: "Premium Finish",
-    shortDescription: "Classic honeycomb cotton-poly pique polo with ribbed collar, 3-button placket, and custom embroidery.",
-    description: "Designed for school faculty, coaching staff, corporate tournament delegations, and club travel. Offers a sharp, distinguished appearance with breathable all-day comfort.",
-    images: [
-      "https://images.unsplash.com/photo-1586363104862-3a5e2ab60d99?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=800&q=80"
     ],
     sizes: ["S", "M", "L", "XL", "2XL", "3XL"],
-    colors: ["Deep Navy", "Pure White", "Charcoal Grey", "Forest Green", "Burgundy"],
-    features: ["220 GSM heavyweight pique cotton-poly", "High-density precision logo embroidery", "Reinforced side vents and collar bands", "Anti-shrink pre-washed fabric"]
+    colors: ["Black / White Reversible", "Navy / Gold Reversible", "Royal / Red Reversible"],
+    features: ["True 2-in-1 reversible double layer", "Reinforced rib collar and armholes", "Custom team name & numbers on both sides"]
   },
   {
-    id: "custom-sports-snapback-cap",
-    name: "AR Athletic Structured Team Sports Cap",
-    sport: "Other Sports",
-    sportSlug: "other-sports",
-    category: "Accessories",
-    type: "cap",
-    isCustomizable: true,
-    isFeatured: false,
-    badge: "Custom Crest",
-    shortDescription: "6-panel structured athletic cap with 3D raised embroidery, moisture sweatband, and adjustable snapback.",
-    description: "Complete your squad's uniform with customized matching caps. High-grade twill front panels maintain their crown shape, while laser-cut side perforations provide cooling airflow during sunny matches.",
-    images: [
-      "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80"
-    ],
-    sizes: ["One Size Fits Most (Adjustable)"],
-    colors: ["Black / White", "Navy Blue", "Charcoal", "Red / Black", "Custom Colorway"],
-    features: ["3D raised embroidery for club letters/crest", "Internal moisture-wicking sweatband", "Laser-cut ventilation eyelets", "Durable pre-curved visor"]
-  },
-
-  // ==========================================
-  // TRACKSUITS, HOODIES & TRAINING WEAR
-  // ==========================================
-  {
-    id: "gym-dryfit-training-tracksuit",
-    name: "AR Stealth Performance Gym Tracksuit",
-    sport: "Gym & Fitness",
-    sportSlug: "gym-fitness",
-    category: "Sportswear",
-    type: "tracksuit",
-    isCustomizable: true,
-    isFeatured: true,
-    badge: "Top Seller",
-    shortDescription: "Modern tapered zip jacket and athletic training joggers in breathable double-knit interlock.",
-    description: "A staple warm-up and training tracksuit. Features ergonomic thumbholes, zippered ankle tapers, and zipped pockets. Customizable with school crest or gym branding.",
-    images: [
-      "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80"
-    ],
-    sizes: ["S", "M", "L", "XL", "2XL"],
-    colors: ["Dark Navy / Charcoal", "Triple Black", "Heather Grey / Black", "Deep Olive"],
-    features: ["Full front zip jacket with collar", "Tapered joggers with zip hems", "Zip pockets on jacket and pants"]
-  },
-  {
-    id: "squad-fleece-team-hoodie",
-    name: "AR Pro Squad Warmup Fleece Team Hoodie",
-    sport: "School & Teamwear",
-    sportSlug: "school-teamwear",
-    category: "Sportswear",
-    type: "tracksuit",
-    isCustomizable: true,
-    isFeatured: true,
-    badge: "Winter Warmup",
-    shortDescription: "Heavyweight 320 GSM brushed fleece pullover hoodie with double-layer hood and custom team printing.",
-    description: "Essential for winter training sessions, early morning matches, and team travel. Soft brushed fleece interior provides supreme warmth, while the anti-pilling outer shell carries custom team crests and sponsor prints crisply.",
-    images: [
-      "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=800&q=80"
-    ],
-    sizes: ["XS", "S", "M", "L", "XL", "2XL", "3XL"],
-    colors: ["Onyx Black", "Heather Grey", "Navy Blue", "Deep Maroon"],
-    features: ["320 GSM heavyweight cotton-poly fleece", "Spacious kangaroo front pocket", "Metal grommets with braided drawstrings", "Ribbed spandex cuffs and hem"]
-  },
-  {
-    id: "athletic-training-squad-shorts",
-    name: "AR Flex Performance Athletic Training Shorts",
-    sport: "Gym & Fitness",
-    sportSlug: "gym-fitness",
+    id: "basketball-pro-mesh-shorts",
+    name: "AR Slam Wide-Cut Basketball Shorts",
+    sport: "Basketball",
+    sportSlug: "basketball",
     category: "Sportswear",
     type: "shorts",
     isCustomizable: true,
     isFeatured: false,
-    badge: "Lightweight",
-    shortDescription: "4-way mechanical stretch athletic shorts with dual zipped pockets and anti-sweat elastic waistband.",
-    description: "Engineered for maximum mobility across football, gym workouts, cricket fielding practice, and running. Lightweight quick-drying polyester with reinforced split-leg side hems for unrestrained stride.",
+    badge: "Pro Mesh",
+    shortDescription: "Wide-cut heavyweight pro mesh basketball shorts with striped rib waistband and extended inseam.",
+    description: "Built for explosive court movement and crossover handles. Features 100% breathable dazzle and mesh panels, wide ribbed drawstring waistband, and custom side panel sublimation.",
     images: [
-      "https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1519861531473-9200262188bf?auto=format&fit=crop&w=800&q=80"
     ],
-    sizes: ["S", "M", "L", "XL", "2XL"],
-    colors: ["Matte Black", "Deep Navy", "Steel Grey"],
-    features: ["4-way stretch micro-poly fabric", "Dual secure zipped side pockets", "Wide elasticated waistband with internal drawcord", "Quick-drying moisture management"]
+    sizes: ["S", "M", "L", "XL", "2XL", "3XL"],
+    colors: ["Jet Black", "Navy Blue", "Crimson Red", "White", "Custom Colors"],
+    features: ["Heavyweight moisture-wicking mesh", "Extended athletic tournament length", "Reinforced side taping and side vents"]
+  },
+  {
+    id: "basketball-composite-leather-ball",
+    name: "AR Court Master Indoor/Outdoor Basketball",
+    sport: "Basketball",
+    sportSlug: "basketball",
+    category: "Equipment",
+    type: "equipment",
+    isCustomizable: false,
+    isFeatured: false,
+    shortDescription: "Deep pebble composite leather basketball with soft-touch grip for indoor hardwood and outdoor concrete.",
+    description: "Official Size 7 basketball with deep channel grooves for supreme ball control, finger spin, and dependable rebound consistency.",
+    images: [
+      "https://images.unsplash.com/photo-1519861531473-9200262188bf?auto=format&fit=crop&w=800&q=80"
+    ],
+    sizes: ["Official Size 7 (Men)", "Size 6 (Women/Youth)"],
+    features: ["Micro-fiber composite leather casing", "Deep channel rubberized grooves", "Cushioned core technology"]
+  },
+  {
+    id: "basketball-warmup-shooting-shirt",
+    name: "AR Baseline Warmup Shooting Shirt",
+    sport: "Basketball",
+    sportSlug: "basketball",
+    category: "Sportswear",
+    type: "shirt",
+    isCustomizable: true,
+    isFeatured: false,
+    badge: "Pre-Game",
+    shortDescription: "Loose-fit short-sleeve warmup shooting shirt with moisture transport and team lettering.",
+    description: "Designed for pre-game shootarounds and bench travel. Engineered fabric holds muscle warmth while releasing sweat vapour quickly.",
+    images: [
+      "https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=800&q=80"
+    ],
+    sizes: ["S", "M", "L", "XL", "2XL", "3XL"],
+    colors: ["Black / White", "Navy / Gold", "Custom Sublimation"],
+    features: ["Lightweight dry-fit micro-poly", "Comfortable relaxed shooting cut", "Sublimated club sponsor graphics"]
   },
 
   // ==========================================
-  // CUSTOM SUBLIMATION PRINTING & PERSONALIZATION
+  // VOLLEYBALL
   // ==========================================
   {
-    id: "custom-sublimation-studio-package",
-    name: "AR Bespoke Full-Sublimation Squad Print Package",
-    sport: "Other Sports",
-    sportSlug: "other-sports",
+    id: "volleyball-custom-team-uniform",
+    name: "AR Spike Custom Volleyball Uniform Kit",
+    sport: "Volleyball",
+    sportSlug: "volleyball",
     category: "Sportswear",
     type: "complete kit",
     isCustomizable: true,
     isFeatured: true,
-    badge: "Full Customization",
-    shortDescription: "Zero-limitation digital dye sublimation package. Any colors, unlimited sponsor logos, names & squad numbers.",
-    description: "Our signature manufacturing capability. High-definition Japanese industrial sublimation printers infuse colors directly into the textile fibers at 200°C. Colors never peel, crack, or fade, no matter how many times uniforms are washed or subjected to tough match slide tackles.",
+    badge: "Athletic Cut",
+    shortDescription: "Athletic cut jersey paired with stretch volleyball shorts engineered for rapid jumping and diving.",
+    description: "Engineered for rapid lateral dives and vertical spikes. High-stretch spandex-poly blend provides maximum flexibility without riding up during blocks and serves.",
     images: [
-      "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=800&q=80",
-      "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?auto=format&fit=crop&w=800&q=80"
     ],
-    sizes: ["Youth & Adult Sizes (XS to 3XL)"],
-    colors: ["100% Custom Any Color Combination / Pantone"],
-    features: ["All-over permanent digital dye sublimation", "Unlimited chest, back, and sleeve sponsor prints", "Individual roster names & numbers included at no extra charge", "Digital 3D vector proof before printing"]
+    sizes: ["XS", "S", "M", "L", "XL"],
+    colors: ["Navy / Cyber Orange", "Red / White", "Teal / Black", "Custom Colors"],
+    features: ["Includes top & stretch shorts", "Zero friction flatlock seam construction", "Custom front and back numbers"]
   },
   {
-    id: "cushioned-crew-sports-socks",
-    name: "AR MaxGrip Cushioned Athletic Crew Sports Socks",
-    sport: "Other Sports",
-    sportSlug: "other-sports",
-    category: "Accessories",
-    type: "socks",
+    id: "volleyball-pro-sleeveless-jersey",
+    name: "AR Spike Sleeveless Pro Volleyball Jersey",
+    sport: "Volleyball",
+    sportSlug: "volleyball",
+    category: "Sportswear",
+    type: "jersey",
     isCustomizable: true,
     isFeatured: false,
-    badge: "Comfort Fit",
-    shortDescription: "Thick terry-cushioned sports socks with anti-blister arch compression and breathable instep.",
-    description: "Engineered for intense multidirectional sports. Padded heel and forefoot sections absorb ground impact forces, while the midfoot elastic compression band prevents sock slippage inside sports shoes.",
+    badge: "Sublimated",
+    shortDescription: "Ultra-breathable sleeveless tournament jersey with deep armholes and sublimation team graphics.",
+    description: "Allows unhindered shoulder extension for hard spikes and overhead blocks. Moisture-wicking micro-knit keeps athletes dry in humid indoor court conditions.",
     images: [
-      "https://images.unsplash.com/photo-1582966772680-860e372bb558?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?auto=format&fit=crop&w=800&q=80"
     ],
-    sizes: ["Medium (Fits 6-9)", "Large (Fits 10-13)"],
-    colors: ["White / Black Accents", "Triple Black", "Navy / White"],
-    features: ["High-density terry sole cushioning", "Midfoot compression arch support", "Seamless toe closure prevents friction blisters", "Custom jacquard team logo option for bulk orders"]
+    sizes: ["XS", "S", "M", "L", "XL", "2XL"],
+    colors: ["Royal Blue / White", "Black / Neon Lime", "Custom Colorway"],
+    features: ["100% digital dye sublimation", "Chafe-free bound armholes", "Custom roster numbers & logos"]
   },
   {
-    id: "teamwear-kit-duffle-bag",
-    name: "AR Tour Pro Large Squad Equipment Duffle Bag",
-    sport: "Other Sports",
-    sportSlug: "other-sports",
+    id: "volleyball-soft-touch-match-ball",
+    name: "AR Gold Touch Pro Match Volleyball",
+    sport: "Volleyball",
+    sportSlug: "volleyball",
+    category: "Equipment",
+    type: "equipment",
+    isCustomizable: false,
+    isFeatured: false,
+    shortDescription: "18-panel spiral composite leather volleyball with cushioned soft-touch feel to minimize sting.",
+    description: "Official weight and dimensions. Offers predictable trajectory, supreme control on sets, and durable flight dynamics.",
+    images: [
+      "https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?auto=format&fit=crop&w=800&q=80"
+    ],
+    sizes: ["Official Size 5"],
+    features: ["18-panel laminated composite construction", "Double cushioned interior layer", "High visibility color blocks"]
+  },
+  {
+    id: "volleyball-court-defense-knee-pads",
+    name: "AR Court Defense Pro Volleyball Knee Pads (Pair)",
+    sport: "Volleyball",
+    sportSlug: "volleyball",
     category: "Accessories",
     type: "equipment",
-    isCustomizable: true,
+    isCustomizable: false,
     isFeatured: false,
-    badge: "Heavy Duty",
-    shortDescription: "Water-resistant 600D Cordura team duffle bag with ventilated shoe compartment and padded shoulder straps.",
-    description: "Built to carry entire tournament kits, helmets, pads, cricket bats, footballs, and tracksuits. Features reinforced nylon webbing, heavy-duty self-repairing zippers, and customizable school or club screen printing.",
+    shortDescription: "High-density molded EVA foam knee pads with breathable rear mesh and low-profile ergonomics.",
+    description: "Protect athletes against floor burns and hard impact during floor dives and digs. Non-slip elastic sleeve holds firmly in place throughout intense matches.",
     images: [
-      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?auto=format&fit=crop&w=800&q=80"
     ],
-    sizes: ["Large (85 Liters)", "Extra Large (110 Liters)"],
-    colors: ["Matte Black / Neon", "Navy / Royal Blue", "Red / Black"],
-    features: ["600D waterproof PU-coated Cordura", "Ventilated separate boot compartment", "Dual heavy-duty carry handles and padded shoulder strap", "Custom team name & crest printing"]
+    sizes: ["Small/Medium", "Large/X-Large"],
+    colors: ["Matte Black", "Pure White"],
+    features: ["Contoured high-density foam padding", "Rear ventilation cutout", "Anti-odor moisture-wicking sleeve"]
   },
 
   // ==========================================
-  // BADMINTON, BASKETBALL & VOLLEYBALL
+  // BADMINTON
   // ==========================================
   {
     id: "badminton-aero-shirt",
@@ -587,6 +566,25 @@ export const PRODUCTS_DATA = [
     sizes: ["XS", "S", "M", "L", "XL"],
     colors: ["Electric Lime / Navy", "Cherry Red / White", "Pure White / Cyan"],
     features: ["Featherweight 120 GSM fabric", "Underarm gussets for zero-drag swings", "Sublimated team and sponsor prints"]
+  },
+  {
+    id: "badminton-court-pro-shorts",
+    name: "AR Swift Court Badminton Shorts",
+    sport: "Badminton",
+    sportSlug: "badminton",
+    category: "Sportswear",
+    type: "shorts",
+    isCustomizable: true,
+    isFeatured: false,
+    badge: "Lightweight",
+    shortDescription: "Lightweight 4-way stretch shorts with split side hems for lightning-quick lunge recovery.",
+    description: "Tailored for fast-paced court sports. Dual deep pockets securely accommodate replacement shuttles or match accessories without bouncing.",
+    images: [
+      "https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=800&q=80"
+    ],
+    sizes: ["S", "M", "L", "XL", "2XL"],
+    colors: ["Black", "Navy", "White"],
+    features: ["4-way micro-stretch woven fabric", "Side lunge splits for freedom of movement", "Internal drawstring waistband"]
   },
   {
     id: "badminton-carbon-racket-pro",
@@ -623,88 +621,502 @@ export const PRODUCTS_DATA = [
     sizes: ["Speed 77 (Medium)", "Speed 78 (Fast)"],
     features: ["Hand-selected natural goose feathers", "Dual-density laminated cork base", "Tube of 12 shuttlecocks"]
   },
+
+  // ==========================================
+  // TENNIS
+  // ==========================================
   {
-    id: "basketball-custom-reversible-jersey",
-    name: "AR Slam Reversible Basketball Jersey",
-    sport: "Basketball",
-    sportSlug: "basketball",
+    id: "tennis-polo-shirt",
+    name: "AR Tour Elite Sublimated Tennis Polo Shirt",
+    sport: "Tennis",
+    sportSlug: "tennis",
+    category: "Sportswear",
+    type: "polo",
+    isCustomizable: true,
+    isFeatured: true,
+    badge: "Tour Pro",
+    shortDescription: "Engineered 3-button performance polo shirt with ribbed collar, underarm eyelets, and UV sun protection.",
+    description: "Designed for competitive singles and doubles play on clay, grass, and hard courts. Lightweight pique micro-poly fabric delivers premium crisp appearance with high breathability.",
+    images: [
+      "https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?auto=format&fit=crop&w=800&q=80"
+    ],
+    sizes: ["XS", "S", "M", "L", "XL", "2XL"],
+    colors: ["Classic White / Navy", "Navy / Sky Blue", "Forest Green / White", "Custom Sublimation"],
+    features: ["Moisture transport dry-fit fabric", "UPF 40+ solar UV protection", "Full club crest and sponsor printing"]
+  },
+  {
+    id: "tennis-court-shorts",
+    name: "AR Court Master Stretch Tennis Shorts",
+    sport: "Tennis",
+    sportSlug: "tennis",
+    category: "Sportswear",
+    type: "shorts",
+    isCustomizable: true,
+    isFeatured: false,
+    badge: "Deep Pockets",
+    shortDescription: "4-way mechanical stretch athletic shorts with specialized dual tennis ball pockets and ventilated waistband.",
+    description: "Engineered specifically to hold two tennis balls per pocket securely during full-speed serves and court sprints. Non-restrictive side slits.",
+    images: [
+      "https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?auto=format&fit=crop&w=800&q=80"
+    ],
+    sizes: ["S", "M", "L", "XL", "2XL"],
+    colors: ["Crisp White", "Dark Navy", "Charcoal Black"],
+    features: ["Deep ball-holding stretch pockets", "4-way stretch quick-dry polyester", "Comfort elastic waist with drawstring"]
+  },
+  {
+    id: "tennis-carbon-racket",
+    name: "AR Championship Tour Carbon Tennis Racket",
+    sport: "Tennis",
+    sportSlug: "tennis",
+    category: "Equipment",
+    type: "equipment",
+    isCustomizable: false,
+    isFeatured: true,
+    badge: "100 sq.in",
+    shortDescription: "Graphite composite tour frame with 100 sq.in head size offering explosive power and arm-friendly dampening.",
+    description: "Balanced 300g unstrung weight provides solid plow-through against heavy topspin baseline rallies. Strung with synthetic gut at 55 lbs tension.",
+    images: [
+      "https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?auto=format&fit=crop&w=800&q=80"
+    ],
+    sizes: ["Grip Size 2 (4 1/4)", "Grip Size 3 (4 3/8)", "Grip Size 4 (4 1/2)"],
+    features: ["100% graphite matrix frame", "Vibration dampening handle core", "Includes full zip thermal cover"]
+  },
+  {
+    id: "tennis-match-balls-can",
+    name: "AR Tour Extra-Duty Tennis Balls (Can of 3)",
+    sport: "Tennis",
+    sportSlug: "tennis",
+    category: "Equipment",
+    type: "equipment",
+    isCustomizable: false,
+    isFeatured: false,
+    shortDescription: "Pressurized championship tennis balls with premium woven felt for hard and clay court durability.",
+    description: "Engineered for consistent bounce and felt longevity through demanding multi-set matches. High-grade rubber core retains optimum internal pressure.",
+    images: [
+      "https://images.unsplash.com/photo-1595435934249-5df7ed86e1c0?auto=format&fit=crop&w=800&q=80"
+    ],
+    sizes: ["Pressurized Can of 3 Balls"],
+    features: ["Premium interlocked woven wool felt", "Extra-duty rubber core", "ITF tournament compliant specifications"]
+  },
+
+  // ==========================================
+  // RUGBY
+  // ==========================================
+  {
+    id: "rugby-match-jersey",
+    name: "AR Titan Reinforced Sublimation Rugby Jersey",
+    sport: "Rugby",
+    sportSlug: "rugby",
     category: "Sportswear",
     type: "jersey",
     isCustomizable: true,
     isFeatured: true,
-    badge: "2-in-1 Reversible",
-    shortDescription: "Double-layered open hole mesh reversible jersey with home and away color schemes on one uniform.",
-    description: "The ultimate solution for club leagues and tournaments. Flip the jersey inside out to switch between light and dark team colors instantly. Deep armholes designed for shooting fluidity.",
+    badge: "Heavy Duty",
+    shortDescription: "Tackle-resistant 280 GSM heavyweight stretch polyester jersey with reinforced bar-tack stitching.",
+    description: "Built to withstand intense mauls, scrums, and full-contact tackles. Features an ergonomic Mandarin collar that prevents opponents from grabbing, combined with full digital sublimation for club colors.",
     images: [
-      "https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=800&q=80"
     ],
-    sizes: ["S", "M", "L", "XL", "2XL", "3XL"],
-    colors: ["Black / White Reversible", "Navy / Gold Reversible", "Royal / Red Reversible"],
-    features: ["True 2-in-1 reversible double layer", "Reinforced rib collar and armholes", "Custom team name & numbers on both sides"]
+    sizes: ["S", "M", "L", "XL", "2XL", "3XL", "4XL"],
+    colors: ["Black / Red Hoops", "Navy / White Bands", "Emerald / Gold", "Custom Club Scheme"],
+    features: ["280 GSM tear-resistant poly-spandex", "Reinforced triple-stitched stress seams", "Full digital dye sublimation customization"]
   },
   {
-    id: "basketball-composite-leather-ball",
-    name: "AR Court Master Indoor/Outdoor Basketball",
-    sport: "Basketball",
-    sportSlug: "basketball",
+    id: "rugby-tackle-shorts",
+    name: "AR Scrum Force Heavyweight Rugby Shorts",
+    sport: "Rugby",
+    sportSlug: "rugby",
+    category: "Sportswear",
+    type: "shorts",
+    isCustomizable: true,
+    isFeatured: false,
+    badge: "Tough Cotton/Poly",
+    shortDescription: "Rugged drill cotton-poly shorts with stretch spandex crotch gusset and internal non-slip grip waistband.",
+    description: "Engineered specifically for props, hookers, and backline runners. Heavyweight fabric resists ripping during tackles, while the elastic gusset ensures unrestricted kicking and sprinting.",
+    images: [
+      "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=800&q=80"
+    ],
+    sizes: ["S (30\")", "M (32\")", "L (34\")", "XL (36\")", "2XL (38\")", "3XL (40\")"],
+    colors: ["Solid White", "Jet Black", "Dark Navy"],
+    features: ["Heavy-duty tear-proof twill weave", "Lycra inner leg stretch gusset", "Internal gripper waistband and drawcord"]
+  },
+  {
+    id: "rugby-match-ball",
+    name: "AR Vortex Grain Grip Official Match Rugby Ball",
+    sport: "Rugby",
+    sportSlug: "rugby",
+    category: "Equipment",
+    type: "equipment",
+    isCustomizable: false,
+    isFeatured: true,
+    badge: "Match Grade",
+    shortDescription: "4-ply laminated match rugby ball with multi-matrix grain pimple grip for all-weather handling.",
+    description: "Official Size 5 rugby ball. Hand-stitched with high-tensile polyester thread and balanced bladder for true flight accuracy on penalty and conversion kicks.",
+    images: [
+      "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=800&q=80"
+    ],
+    sizes: ["Official Size 5 (Senior)", "Size 4 (Junior)"],
+    features: ["4-ply poly-cotton laminated casing", "Multi-matrix 3D rubber pimple grip", "Tru-flight balanced valve in seam"]
+  },
+  {
+    id: "rugby-warmup-track-top",
+    name: "AR Contact Squad Warmup Quarter-Zip Top",
+    sport: "Rugby",
+    sportSlug: "rugby",
+    category: "Sportswear",
+    type: "tracksuit",
+    isCustomizable: true,
+    isFeatured: false,
+    badge: "Water Resistant",
+    shortDescription: "Wind and water-resistant ripstop warmup top with fleece lining for cold training nights.",
+    description: "Protects players during pitch warmups and team travel. Features reinforced shoulder panels and custom chest club embroidery.",
+    images: [
+      "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=800&q=80"
+    ],
+    sizes: ["S", "M", "L", "XL", "2XL", "3XL"],
+    colors: ["Navy / Grey", "Black / Red", "Forest Green / Gold"],
+    features: ["Ripstop water-shedding exterior", "Thermal brushed interior", "Custom club crest printing"]
+  },
+
+  // ==========================================
+  // HOCKEY
+  // ==========================================
+  {
+    id: "hockey-match-shirt",
+    name: "AR Turf Master Custom Field Hockey Shirt",
+    sport: "Hockey",
+    sportSlug: "hockey",
+    category: "Sportswear",
+    type: "shirt",
+    isCustomizable: true,
+    isFeatured: true,
+    badge: "Turf Pro",
+    shortDescription: "Lightweight moisture-wicking match shirt engineered for rapid turf movement and continuous airflow.",
+    description: "Designed for international and domestic field hockey. Highly breathable jacquard knit wicks moisture instantly during aggressive sprints and low-posture dribbling.",
+    images: [
+      "https://images.unsplash.com/photo-1580748141549-71748dbe0bdc?auto=format&fit=crop&w=800&q=80"
+    ],
+    sizes: ["XS", "S", "M", "L", "XL", "2XL"],
+    colors: ["Kelly Green / White", "Navy / Volt", "Maroon / Gold", "Custom Sublimation"],
+    features: ["100% full dye sublimation", "Anti-odor antimicrobial treatment", "V-neck athletic collar with taped neckline"]
+  },
+  {
+    id: "hockey-match-shorts",
+    name: "AR Turf Elite Field Hockey Shorts / Skort",
+    sport: "Hockey",
+    sportSlug: "hockey",
+    category: "Sportswear",
+    type: "shorts",
+    isCustomizable: true,
+    isFeatured: false,
+    badge: "Match Cut",
+    shortDescription: "Quick-drying athletic shorts with wide elastic waistband and curved side vents for stick handling mobility.",
+    description: "Optimized for players who need total freedom around the hip flexors while staying low over the ball. Chafe-free inner seams.",
+    images: [
+      "https://images.unsplash.com/photo-1580748141549-71748dbe0bdc?auto=format&fit=crop&w=800&q=80"
+    ],
+    sizes: ["XS", "S", "M", "L", "XL"],
+    colors: ["Black", "Navy", "White", "Forest Green"],
+    features: ["Lightweight micro-poly fabric", "Curved side vents for low stance agility", "Custom team crest heat-seal option"]
+  },
+  {
+    id: "hockey-carbon-stick",
+    name: "AR Phantom 90% Carbon Field Hockey Stick",
+    sport: "Hockey",
+    sportSlug: "hockey",
+    category: "Equipment",
+    type: "equipment",
+    isCustomizable: false,
+    isFeatured: true,
+    badge: "90% Carbon",
+    shortDescription: "Pro-bow 90% Japanese Toray carbon stick delivering explosive slap-shots and 3D aerial drag-flick control.",
+    description: "Engineered for elite midfielders and strikers. 24.75mm low bow curve positioned 200mm from the head allows quick 3D skills, aerial distribution, and pinpoint drag-flicks.",
+    images: [
+      "https://images.unsplash.com/photo-1580748141549-71748dbe0bdc?auto=format&fit=crop&w=800&q=80"
+    ],
+    sizes: ["36.5 Inch (Light)", "37.5 Inch (Medium)"],
+    features: ["90% Japanese Toray Carbon Fiber", "Silica coated face for ball traction", "Dual-density anti-shock grip"]
+  },
+  {
+    id: "hockey-match-ball",
+    name: "AR Dimple Turf Official Match Field Hockey Ball",
+    sport: "Hockey",
+    sportSlug: "hockey",
     category: "Equipment",
     type: "equipment",
     isCustomizable: false,
     isFeatured: false,
-    shortDescription: "Deep pebble composite leather basketball with soft-touch grip for indoor hardwood and outdoor concrete.",
-    description: "Official Size 7 basketball with deep channel grooves for supreme ball control, finger spin, and dependable rebound consistency.",
+    shortDescription: "Molded dimpled PVC field hockey ball with hollow cork center for true roll on wet and dry synthetic turf.",
+    description: "Dimpled pattern disrupts surface tension on water-based pitches to eliminate bouncing and erratic skips. Consistent roll and regulation weight.",
     images: [
-      "https://images.unsplash.com/photo-1519861531473-9200262188bf?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1580748141549-71748dbe0bdc?auto=format&fit=crop&w=800&q=80"
     ],
-    sizes: ["Official Size 7 (Men)", "Size 6 (Women/Youth)"],
-    features: ["Micro-fiber composite leather casing", "Deep channel rubberized grooves", "Cushioned core technology"]
+    sizes: ["Regulation Match Ball (Box of 1 or 6)"],
+    colors: ["Classic White", "High-Vis Fluorescent Pink", "Fluorescent Yellow"],
+    features: ["Seamless molded dimple outer", "Solid cork-composite center core", "FIH tournament compliant specifications"]
   },
   {
-    id: "volleyball-custom-team-uniform",
-    name: "AR Spike Custom Volleyball Uniform",
-    sport: "Volleyball",
-    sportSlug: "volleyball",
+    id: "hockey-shin-guards",
+    name: "AR Shield Pro Field Hockey Shin & Ankle Guards",
+    sport: "Hockey",
+    sportSlug: "hockey",
+    category: "Accessories",
+    type: "equipment",
+    isCustomizable: false,
+    isFeatured: false,
+    badge: "Ankle Protection",
+    shortDescription: "Anatomically shaped hard plastic shell with thick foam backing and integrated ankle padding.",
+    description: "Protects shins and delicate ankle malleolus bones against hard stick impacts and high-velocity turf balls. Ventilated front slits keep legs cool.",
+    images: [
+      "https://images.unsplash.com/photo-1580748141549-71748dbe0bdc?auto=format&fit=crop&w=800&q=80"
+    ],
+    sizes: ["Small (Youth)", "Medium (Adult)", "Large (Adult)"],
+    features: ["Shock-dispersing hard TPU outer shell", "Removable washable EVA foam liner", "Under-foot stirrup strap for secure fit"]
+  },
+
+  // ==========================================
+  // GYM & FITNESS WEAR
+  // ==========================================
+  {
+    id: "sports-performance-dryfit-tshirt",
+    name: "AR Velocity Athletic Dry-Fit Gym T-Shirt",
+    sport: "Gym & Fitness Wear",
+    sportSlug: "gym-fitness",
+    category: "Sportswear",
+    type: "shirt",
+    isCustomizable: true,
+    isFeatured: true,
+    badge: "Core Essential",
+    shortDescription: "Ultra-breathable micro-interlock athletic training t-shirt suitable for gyms, clubs, and high-intensity workouts.",
+    description: "The ideal everyday workout top. Made from 150 GSM lightweight dry-fit polyester that channels sweat away from the body. Fully printable with custom sublimation graphics, team logos, and chest insignia.",
+    images: [
+      "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=800&q=80"
+    ],
+    sizes: ["XS", "S", "M", "L", "XL", "2XL", "3XL"],
+    colors: ["Jet Black", "Heather Grey", "Navy Blue", "Pure White", "Crimson Red", "Custom Sublimation"],
+    features: ["Quick-dry CoolMax moisture wicking", "Chafe-resistant overlock flatlock seams", "Full sublimation or screen print options", "Shape retention after 50+ washes"]
+  },
+  {
+    id: "gym-dryfit-training-tracksuit",
+    name: "AR Stealth Performance Gym Tracksuit",
+    sport: "Gym & Fitness Wear",
+    sportSlug: "gym-fitness",
+    category: "Sportswear",
+    type: "tracksuit",
+    isCustomizable: true,
+    isFeatured: true,
+    badge: "Top Seller",
+    shortDescription: "Modern tapered zip jacket and athletic training joggers in breathable double-knit interlock.",
+    description: "A staple warm-up and training tracksuit. Features ergonomic thumbholes, zippered ankle tapers, and zipped pockets. Customizable with school crest or gym branding.",
+    images: [
+      "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80"
+    ],
+    sizes: ["S", "M", "L", "XL", "2XL"],
+    colors: ["Dark Navy / Charcoal", "Triple Black", "Heather Grey / Black", "Deep Olive"],
+    features: ["Full front zip jacket with collar", "Tapered joggers with zip hems", "Zip pockets on jacket and pants"]
+  },
+  {
+    id: "athletic-training-squad-shorts",
+    name: "AR Flex Performance Athletic Training Shorts",
+    sport: "Gym & Fitness Wear",
+    sportSlug: "gym-fitness",
+    category: "Sportswear",
+    type: "shorts",
+    isCustomizable: true,
+    isFeatured: false,
+    badge: "Lightweight",
+    shortDescription: "4-way mechanical stretch athletic shorts with dual zipped pockets and anti-sweat elastic waistband.",
+    description: "Engineered for maximum mobility across gym workouts, squats, sprints, and training drills. Lightweight quick-drying polyester with reinforced split-leg side hems for unrestrained stride.",
+    images: [
+      "https://images.unsplash.com/photo-1517466787929-bc90951d0974?auto=format&fit=crop&w=800&q=80"
+    ],
+    sizes: ["S", "M", "L", "XL", "2XL"],
+    colors: ["Matte Black", "Deep Navy", "Steel Grey"],
+    features: ["4-way stretch micro-poly fabric", "Dual secure zipped side pockets", "Wide elasticated waistband with internal drawcord", "Quick-drying moisture management"]
+  },
+  {
+    id: "gym-compression-recovery-tights",
+    name: "AR Armor Base-Layer Compression Tights",
+    sport: "Gym & Fitness Wear",
+    sportSlug: "gym-fitness",
+    category: "Sportswear",
+    type: "pants",
+    isCustomizable: true,
+    isFeatured: false,
+    badge: "Graduated Fit",
+    shortDescription: "Targeted compression leggings designed to reduce muscle vibration and accelerate post-workout recovery.",
+    description: "Spandex-polyester interlock supports quadriceps, hamstrings, and calves during heavy lifts and high-mileage runs. Breathable crotch gusset prevents overheating.",
+    images: [
+      "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80"
+    ],
+    sizes: ["S", "M", "L", "XL", "2XL"],
+    colors: ["Onyx Black", "Charcoal Melange"],
+    features: ["Graduated athletic compression support", "Flatlock non-abrasive stitching", "Moisture-wicking dry-fit knit"]
+  },
+  {
+    id: "gym-droparm-athletic-tank",
+    name: "AR Muscle-Cut Drop-Arm Gym Tank Top",
+    sport: "Gym & Fitness Wear",
+    sportSlug: "gym-fitness",
+    category: "Sportswear",
+    type: "shirt",
+    isCustomizable: true,
+    isFeatured: false,
+    badge: "Drop-Arm",
+    shortDescription: "Deep armhole cut athletic tank top engineered for complete upper-body shoulder range during lifting.",
+    description: "Featherweight cotton-poly blend offers supreme ventilation for hot workout days. Customizable with personal gym logo or academy lettering.",
+    images: [
+      "https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=800&q=80"
+    ],
+    sizes: ["S", "M", "L", "XL", "2XL"],
+    colors: ["Jet Black", "Heather Grey", "Army Olive", "Pure White"],
+    features: ["Deep drop-armhole styling", "Reinforced crew neck seam", "Custom chest & back print ready"]
+  },
+
+  // ==========================================
+  // GENERAL SPORTSWEAR
+  // ==========================================
+  {
+    id: "custom-club-polo-shirt",
+    name: "AR Elite Custom Team Polo Shirt",
+    sport: "General Sportswear",
+    sportSlug: "general-sportswear",
+    category: "Sportswear",
+    type: "polo",
+    isCustomizable: true,
+    isFeatured: true,
+    badge: "Premium Finish",
+    shortDescription: "Classic honeycomb cotton-poly pique polo with ribbed collar, 3-button placket, and custom embroidery.",
+    description: "Designed for school faculty, coaching staff, corporate tournament delegations, and club travel. Offers a sharp, distinguished appearance with breathable all-day comfort.",
+    images: [
+      "https://images.unsplash.com/photo-1586363104862-3a5e2ab60d99?auto=format&fit=crop&w=800&q=80"
+    ],
+    sizes: ["S", "M", "L", "XL", "2XL", "3XL"],
+    colors: ["Deep Navy", "Pure White", "Charcoal Grey", "Forest Green", "Burgundy"],
+    features: ["220 GSM heavyweight pique cotton-poly", "High-density precision logo embroidery", "Reinforced side vents and collar bands", "Anti-shrink pre-washed fabric"]
+  },
+  {
+    id: "squad-fleece-team-hoodie",
+    name: "AR Pro Squad Warmup Fleece Team Hoodie",
+    sport: "General Sportswear",
+    sportSlug: "general-sportswear",
+    category: "Sportswear",
+    type: "hoodie",
+    isCustomizable: true,
+    isFeatured: true,
+    badge: "Winter Warmup",
+    shortDescription: "Heavyweight 320 GSM brushed fleece pullover hoodie with double-layer hood and custom team printing.",
+    description: "Essential for winter training sessions, early morning matches, and team travel. Soft brushed fleece interior provides supreme warmth, while the anti-pilling outer shell carries custom team crests and sponsor prints crisply.",
+    images: [
+      "https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=800&q=80"
+    ],
+    sizes: ["XS", "S", "M", "L", "XL", "2XL", "3XL"],
+    colors: ["Onyx Black", "Heather Grey", "Navy Blue", "Deep Maroon"],
+    features: ["320 GSM heavyweight cotton-poly fleece", "Spacious kangaroo front pocket", "Metal grommets with braided drawstrings", "Ribbed spandex cuffs and hem"]
+  },
+  {
+    id: "custom-sports-snapback-cap",
+    name: "AR Athletic Structured Team Sports Cap",
+    sport: "General Sportswear",
+    sportSlug: "general-sportswear",
+    category: "Accessories",
+    type: "cap",
+    isCustomizable: true,
+    isFeatured: false,
+    badge: "Custom Crest",
+    shortDescription: "6-panel structured athletic cap with 3D raised embroidery, moisture sweatband, and adjustable snapback.",
+    description: "Complete your squad's uniform with customized matching caps. High-grade twill front panels maintain their crown shape, while laser-cut side perforations provide cooling airflow during sunny matches.",
+    images: [
+      "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?auto=format&fit=crop&w=800&q=80"
+    ],
+    sizes: ["One Size Fits Most (Adjustable)"],
+    colors: ["Black / White", "Navy Blue", "Charcoal", "Red / Black", "Custom Colorway"],
+    features: ["3D raised embroidery for club letters/crest", "Internal moisture-wicking sweatband", "Laser-cut ventilation eyelets", "Durable pre-curved visor"]
+  },
+  {
+    id: "general-floppy-sun-hat",
+    name: "AR Wide-Brim UV Protection Floppy Sun Hat",
+    sport: "General Sportswear",
+    sportSlug: "general-sportswear",
+    category: "Accessories",
+    type: "cap",
+    isCustomizable: true,
+    isFeatured: false,
+    badge: "UV Shield",
+    shortDescription: "Full 360-degree brim cotton sun hat with custom embroidered crest and adjustable chin cord.",
+    description: "Protects umpires, coaching staff, spectators, and players across day-long outdoor events. Lightweight breathable cotton twill with brass mesh ventilation grommets.",
+    images: [
+      "https://images.unsplash.com/photo-1531415074968-036ba1b575da?auto=format&fit=crop&w=800&q=80"
+    ],
+    sizes: ["Small (54-56cm)", "Medium (57-59cm)", "Large (60-62cm)"],
+    colors: ["Natural Cream", "Pure White", "Navy Blue", "Dark Olive"],
+    features: ["360-degree wide protective brim", "UPF 50+ sun radiation shield", "Adjustable chin drawstring with toggle lock"]
+  },
+  {
+    id: "custom-sublimation-studio-package",
+    name: "AR Bespoke Full-Sublimation Squad Print Package",
+    sport: "General Sportswear",
+    sportSlug: "general-sportswear",
     category: "Sportswear",
     type: "complete kit",
     isCustomizable: true,
     isFeatured: true,
-    badge: "Athletic Cut",
-    shortDescription: "Sleeveless or short-sleeve athletic cut jersey paired with stretch volleyball shorts.",
-    description: "Engineered for jumping and rapid lateral diving. High-stretch spandex-poly blend provides maximum flexibility without riding up during blocks and serves.",
+    badge: "Full Customization",
+    shortDescription: "Zero-limitation digital dye sublimation package. Any colors, unlimited sponsor logos, names & squad numbers.",
+    description: "Our signature manufacturing capability. High-definition Japanese industrial sublimation printers infuse colors directly into the textile fibers at 200°C. Colors never peel, crack, or fade, no matter how many times uniforms are washed or subjected to tough match slide tackles.",
     images: [
-      "https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=800&q=80"
     ],
-    sizes: ["XS", "S", "M", "L", "XL"],
-    colors: ["Navy / Cyber Orange", "Red / White", "Teal / Black", "Custom Colors"],
-    features: ["Includes top & stretch shorts", "Zero friction flatlock seam construction", "Custom front and back numbers"]
+    sizes: ["Youth & Adult Sizes (XS to 3XL)"],
+    colors: ["100% Custom Any Color Combination / Pantone"],
+    features: ["All-over permanent digital dye sublimation", "Unlimited chest, back, and sleeve sponsor prints", "Individual roster names & numbers included at no extra charge", "Digital 3D vector proof before printing"]
   },
   {
-    id: "volleyball-soft-touch-match-ball",
-    name: "AR Gold Touch Pro Match Volleyball",
-    sport: "Volleyball",
-    sportSlug: "volleyball",
-    category: "Equipment",
-    type: "equipment",
-    isCustomizable: false,
+    id: "cushioned-crew-sports-socks",
+    name: "AR MaxGrip Cushioned Athletic Crew Sports Socks",
+    sport: "General Sportswear",
+    sportSlug: "general-sportswear",
+    category: "Accessories",
+    type: "socks",
+    isCustomizable: true,
     isFeatured: false,
-    shortDescription: "18-panel spiral composite leather volleyball with cushioned soft-touch feel to minimize sting.",
-    description: "Official weight and dimensions. Offers predictable trajectory, supreme control on sets, and durable flight dynamics.",
+    badge: "Comfort Fit",
+    shortDescription: "Thick terry-cushioned sports socks with anti-blister arch compression and breathable instep.",
+    description: "Engineered for intense multidirectional sports. Padded heel and forefoot sections absorb ground impact forces, while the midfoot elastic compression band prevents sock slippage inside sports shoes.",
     images: [
-      "https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?auto=format&fit=crop&w=800&q=80"
+      "https://images.unsplash.com/photo-1582966772680-860e372bb558?auto=format&fit=crop&w=800&q=80"
     ],
-    sizes: ["Official Size 5"],
-    features: ["18-panel laminated composite construction", "Double cushioned interior layer", "High visibility color blocks"]
+    sizes: ["Medium (Fits 6-9)", "Large (Fits 10-13)"],
+    colors: ["White / Black Accents", "Triple Black", "Navy / White"],
+    features: ["High-density terry sole cushioning", "Midfoot compression arch support", "Seamless toe closure prevents friction blisters", "Custom jacquard team logo option for bulk orders"]
   },
-
-  // ==========================================
-  // SCHOOL & TEAMWEAR SPECIALISTS
-  // ==========================================
+  {
+    id: "teamwear-kit-duffle-bag",
+    name: "AR Tour Pro Large Squad Equipment Duffle Bag",
+    sport: "General Sportswear",
+    sportSlug: "general-sportswear",
+    category: "Accessories",
+    type: "equipment",
+    isCustomizable: true,
+    isFeatured: false,
+    badge: "Heavy Duty",
+    shortDescription: "Water-resistant 600D Cordura team duffle bag with ventilated shoe compartment and padded shoulder straps.",
+    description: "Built to carry entire tournament kits, helmets, pads, cricket bats, footballs, and tracksuits. Features reinforced nylon webbing, heavy-duty self-repairing zippers, and customizable school or club screen printing.",
+    images: [
+      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80"
+    ],
+    sizes: ["Large (85 Liters)", "Extra Large (110 Liters)"],
+    colors: ["Matte Black / Neon", "Navy / Royal Blue", "Red / Black"],
+    features: ["600D waterproof PU-coated Cordura", "Ventilated separate boot compartment", "Dual heavy-duty carry handles and padded shoulder strap", "Custom team name & crest printing"]
+  },
   {
     id: "school-custom-house-sports-kit",
     name: "AR Academy Inter-School House Uniform Kit",
-    sport: "School & Teamwear",
-    sportSlug: "school-teamwear",
-    category: "School & Teamwear",
+    sport: "General Sportswear",
+    sportSlug: "general-sportswear",
+    category: "Sportswear",
     type: "complete kit",
     isCustomizable: true,
     isFeatured: true,
@@ -721,9 +1133,9 @@ export const PRODUCTS_DATA = [
   {
     id: "school-custom-varsity-tracksuit",
     name: "AR Varsity Academy Team Tracksuit",
-    sport: "School & Teamwear",
-    sportSlug: "school-teamwear",
-    category: "School & Teamwear",
+    sport: "General Sportswear",
+    sportSlug: "general-sportswear",
+    category: "Sportswear",
     type: "tracksuit",
     isCustomizable: true,
     isFeatured: true,

@@ -37,59 +37,14 @@ export default function Home() {
     { slug: 'all', name: 'All Sports' },
     { slug: 'cricket', name: 'Cricket' },
     { slug: 'football', name: 'Football' },
+    { slug: 'basketball', name: 'Basketball' },
     { slug: 'volleyball', name: 'Volleyball' },
-    { slug: 'badminton', name: 'Badminton & Hockey' },
-    { slug: 'gym-fitness', name: 'Shirts & Training' },
-    { slug: 'other-sports', name: 'Accessories & Socks' },
-  ];
-
-  // 5 Verified Sports Categories corresponding directly to the AR Sports Islamabad banner
-  const primaryCategories = [
-    {
-      id: "sublimation",
-      number: "01",
-      name: "Sublimation Sports Kits",
-      desc: "All-over permanent digital dye sublimation on dry-fit micro-mesh. Zero peeling or cracking.",
-      image: "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=800&q=80",
-      sportSlug: "all",
-      badge: "Core Specialty"
-    },
-    {
-      id: "cricket",
-      number: "02",
-      name: "Cricket Kits & Jerseys",
-      desc: "Coloured tournament kits, test whites, trousers, and custom player numbers.",
-      image: "https://images.unsplash.com/photo-1531415074968-036ba1b575da?auto=format&fit=crop&w=800&q=80",
-      sportSlug: "cricket",
-      badge: "Popular"
-    },
-    {
-      id: "football",
-      number: "03",
-      name: "Football Kits & Jerseys",
-      desc: "Aerodynamic match jerseys, squad shorts, team socks & goalkeeper kits.",
-      image: "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=800&q=80",
-      sportSlug: "football",
-      badge: "Match Wear"
-    },
-    {
-      id: "volleyball",
-      number: "04",
-      name: "Volleyball Kits & Jerseys",
-      desc: "Sleeveless and athletic-cut breathable team tops, shorts & pro balls.",
-      image: "https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?auto=format&fit=crop&w=800&q=80",
-      sportSlug: "volleyball",
-      badge: "Athletic"
-    },
-    {
-      id: "badminton",
-      number: "05",
-      name: "Badminton & Hockey Kits",
-      desc: "Ultra-lightweight moisture-wicking shirts, turf apparel & carbon gear.",
-      image: "https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=800&q=80",
-      sportSlug: "badminton",
-      badge: "Lightweight"
-    }
+    { slug: 'badminton', name: 'Badminton' },
+    { slug: 'tennis', name: 'Tennis' },
+    { slug: 'rugby', name: 'Rugby' },
+    { slug: 'hockey', name: 'Hockey' },
+    { slug: 'gym-fitness', name: 'Gym & Fitness' },
+    { slug: 'general-sportswear', name: 'General Sportswear' },
   ];
 
   const hubSpecialties = [
@@ -106,16 +61,6 @@ export default function Home() {
 
   const handleScrollToCategories = () => {
     const el = document.getElementById('sports-categories');
-    if (el) {
-      el.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  const handleCategoryCardClick = (cat) => {
-    if (cat.sportSlug !== 'all') {
-      setActiveSportFilter(cat.sportSlug);
-    }
-    const el = document.getElementById('category-products-grid');
     if (el) {
       el.scrollIntoView({ behavior: 'smooth' });
     }
@@ -315,9 +260,9 @@ export default function Home() {
             </Link>
           </div>
 
-          {/* 5 CATEGORY CARDS GRID */}
+          {/* 10 SPORTS CATEGORIES GRID */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5 mb-14">
-            {primaryCategories.map((cat) => (
+            {SPORTS_CATEGORIES.map((cat, idx) => (
               <div
                 key={cat.id}
                 className="bg-white border border-brand-border hover:border-brand-green rounded-2xl overflow-hidden flex flex-col justify-between transition-all duration-300 group hover:-translate-y-1 hover:shadow-xl hover:shadow-brand-green/5"
@@ -333,7 +278,7 @@ export default function Home() {
                   
                   {/* Category Number Pill */}
                   <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-md px-2.5 py-1 rounded-md border border-brand-border text-brand-text text-xs font-extrabold flex items-center gap-1 shadow-xs">
-                    <span className="text-brand-green">{cat.number}</span>
+                    <span className="text-brand-green">{(idx + 1).toString().padStart(2, '0')}</span>
                   </div>
 
                   <div className="absolute top-3 right-3 bg-white/95 backdrop-blur-md px-2 py-0.5 rounded text-[10px] font-bold text-brand-muted border border-brand-border uppercase shadow-xs">
@@ -344,31 +289,30 @@ export default function Home() {
                 {/* Content */}
                 <div className="p-4 flex-1 flex flex-col justify-between">
                   <div>
-                    <h3 className="text-lg font-bold text-brand-text group-hover:text-brand-green transition-colors leading-snug">
+                    <h3 className="text-base sm:text-lg font-bold text-brand-text group-hover:text-brand-green transition-colors leading-snug">
                       {cat.name}
                     </h3>
                     <p className="text-xs text-brand-muted mt-1.5 leading-relaxed line-clamp-2">
-                      {cat.desc}
+                      {cat.description}
                     </p>
                   </div>
 
-                  {/* Actions: Explore Products & Customize */}
+                  {/* Actions: More Details & Customize */}
                   <div className="mt-4 pt-3 border-t border-brand-border space-y-2">
-                    <button
-                      type="button"
-                      onClick={() => handleCategoryCardClick(cat)}
-                      className="w-full py-2.5 px-3 rounded-lg text-xs font-bold bg-brand-green hover:bg-brand-hover text-white flex items-center justify-center gap-1.5 transition-colors cursor-pointer shadow-xs"
+                    <Link
+                      to={`/sports/${cat.slug}`}
+                      className="w-full py-2.5 px-3 rounded-lg text-xs font-bold bg-brand-green hover:bg-brand-hover text-white flex items-center justify-center gap-1.5 transition-colors shadow-xs"
                     >
-                      <span>Explore Products</span>
+                      <span>More Details</span>
                       <ArrowRight className="w-3.5 h-3.5" />
-                    </button>
+                    </Link>
 
                     <Link
-                      to={cat.id === 'sublimation' ? '/custom-design' : `/custom-design?sport=${cat.id}`}
+                      to={`/custom-design?sport=${cat.slug}`}
                       className="w-full py-2 px-3 rounded-lg text-[11px] font-semibold text-brand-muted hover:text-brand-green hover:bg-brand-alt flex items-center justify-center gap-1 transition-colors"
                     >
                       <Sparkles className="w-3 h-3 text-brand-green" />
-                      <span>Customize This Sport</span>
+                      <span>Customize Kit</span>
                     </Link>
                   </div>
                 </div>

@@ -14,6 +14,8 @@ import SchoolTeamwearPage from './pages/SchoolTeamwearPage';
 import About from './pages/About';
 import Contact from './pages/Contact';
 
+import SportCategoryPage from './pages/SportCategoryPage';
+
 // Scroll to top on route change
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -51,6 +53,8 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop />} />
+          <Route path="/sports" element={<Shop />} />
+          <Route path="/sports/:sportSlug" element={<SportCategoryPage />} />
           <Route path="/product/:productId" element={<ProductDetails />} />
           <Route path="/custom-design" element={<CustomDesignPage />} />
           <Route path="/school-teamwear" element={<SchoolTeamwearPage />} />
