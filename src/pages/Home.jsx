@@ -25,13 +25,13 @@ export default function Home() {
     }
   }, []);
 
-  const featuredSportswear = PRODUCTS_DATA.filter(p => p.category === "Sportswear" && p.isFeatured).slice(0, 4);
+  const featuredSportswear = PRODUCTS_DATA.filter(p => p.category === "Sportswear" && p.isFeatured).slice(0, 8);
   const featuredEquipment = PRODUCTS_DATA.filter(p => p.category === "Equipment").slice(0, 4);
 
   // Products dynamically filtered by the functional sport category tab
   const sportProducts = activeSportFilter === 'all'
-    ? PRODUCTS_DATA.filter(p => p.isFeatured).slice(0, 4)
-    : PRODUCTS_DATA.filter(p => p.sportSlug === activeSportFilter).slice(0, 4);
+    ? PRODUCTS_DATA.filter(p => p.isFeatured).slice(0, 8)
+    : PRODUCTS_DATA.filter(p => p.sportSlug === activeSportFilter).slice(0, 8);
 
   const sportTabs = [
     { slug: 'all', name: 'All Sports' },
@@ -39,6 +39,8 @@ export default function Home() {
     { slug: 'football', name: 'Football' },
     { slug: 'volleyball', name: 'Volleyball' },
     { slug: 'badminton', name: 'Badminton & Hockey' },
+    { slug: 'gym-fitness', name: 'Shirts & Training' },
+    { slug: 'other-sports', name: 'Accessories & Socks' },
   ];
 
   // 5 Verified Sports Categories corresponding directly to the AR Sports Islamabad banner
@@ -143,7 +145,7 @@ export default function Home() {
               </div>
 
               {/* Bold Clean Headline */}
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-brand-text leading-[1.1]">
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-brand-text leading-[1.15]">
                 Custom Sportswear. <br className="hidden sm:inline" />
                 Your Team. <br />
                 <span className="text-brand-green">
@@ -152,22 +154,24 @@ export default function Home() {
               </h1>
 
               {/* Supporting Text */}
-              <p className="text-base sm:text-lg text-brand-muted max-w-xl mt-5 leading-relaxed font-normal">
+              <p className="text-sm sm:text-base lg:text-lg text-brand-muted max-w-xl mt-4 sm:mt-5 leading-relaxed font-normal">
                 Rawalpindi & Islamabad's custom sportswear manufacturer. We engineer tournament-grade sublimated match jerseys, complete squad kits, school uniforms, and sports equipment built to endure.
               </p>
 
               {/* Physical Store Pill */}
-              <div className="mt-6 p-3.5 rounded-xl bg-brand-alt border border-brand-border flex items-center gap-3 text-xs text-brand-muted max-w-lg shadow-sm">
-                <MapPin className="w-5 h-5 text-red-500 flex-shrink-0" />
-                <div className="flex-1 text-left">
-                  <span className="text-brand-text font-bold block">Visit Our Store in Rawalpindi / Islamabad:</span>
-                  <span className="text-brand-muted truncate block">Jmal Plaza, Shop# 3, High Court Road, Near Car Chowk</span>
+              <div className="mt-6 p-3 sm:p-3.5 rounded-xl bg-brand-alt border border-brand-border flex items-center justify-between gap-3 text-xs text-brand-muted max-w-lg shadow-xs w-full">
+                <div className="flex items-start gap-2.5 min-w-0">
+                  <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-red-500 shrink-0 mt-0.5" />
+                  <div className="text-left min-w-0">
+                    <span className="text-brand-text font-bold block truncate">Visit Store in Rawalpindi / Islamabad:</span>
+                    <span className="text-brand-muted truncate block text-[11px] sm:text-xs">Jmal Plaza, Shop# 3, High Court Road</span>
+                  </div>
                 </div>
                 <a
                   href={BUSINESS_CONFIG.googleMapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-3 py-1.5 rounded-lg bg-white text-brand-green hover:bg-brand-green hover:text-white font-bold flex items-center gap-1 transition-colors border border-brand-border shrink-0"
+                  className="px-2.5 sm:px-3 py-1.5 rounded-lg bg-white text-brand-green hover:bg-brand-green hover:text-white font-bold flex items-center gap-1 transition-colors border border-brand-border shrink-0 text-xs shadow-2xs"
                 >
                   <span>Map</span>
                   <ExternalLink className="w-3 h-3" />
@@ -752,32 +756,31 @@ export default function Home() {
 
               {/* Map Illustration card */}
               <div className="lg:col-span-5">
-                <a
-                  href={BUSINESS_CONFIG.googleMapsUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block relative rounded-2xl overflow-hidden border border-brand-border bg-white group shadow-sm aspect-[4/3]"
-                >
-                  <img
-                    src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=800&q=80"
-                    alt="AR Sports Location Map"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-all duration-500"
+                <div className="relative rounded-2xl overflow-hidden border border-brand-border bg-white shadow-sm aspect-[4/3] w-full">
+                  <iframe
+                    src={BUSINESS_CONFIG.googleMapsEmbedUrl}
+                    title="AR Sports Islamabad Google Map Location"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="w-full h-full"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
-                  
-                  <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
-                    <div className="w-14 h-14 rounded-2xl bg-red-600 text-white flex items-center justify-center shadow-lg mb-3 group-hover:scale-110 transition-transform">
-                      <MapPin className="w-7 h-7" />
-                    </div>
-                    <span className="text-xl font-bold text-white tracking-tight">
-                      View Store on Google Maps
-                    </span>
-                    <span className="text-xs text-emerald-300 font-semibold mt-1 flex items-center gap-1">
-                      <span>Jmal Plaza, Shop# 3, Rawalpindi</span>
+                  <div className="absolute bottom-3 right-3">
+                    <a
+                      href={BUSINESS_CONFIG.googleMapsUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-3 py-1.5 rounded-lg bg-white/95 backdrop-blur-md text-brand-green hover:bg-brand-green hover:text-white border border-brand-border text-xs font-bold flex items-center gap-1.5 shadow-sm transition-colors"
+                    >
+                      <MapPin className="w-3.5 h-3.5 text-red-500" />
+                      <span>Directions</span>
                       <ExternalLink className="w-3 h-3" />
-                    </span>
+                    </a>
                   </div>
-                </a>
+                </div>
               </div>
 
             </div>

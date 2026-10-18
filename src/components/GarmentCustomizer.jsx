@@ -125,12 +125,12 @@ export default function GarmentCustomizer({ initialSport = "Cricket", initialPro
   };
 
   return (
-    <div className="bg-white border border-brand-border rounded-3xl p-6 lg:p-8 shadow-sm">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+    <div className="bg-white border border-brand-border rounded-3xl p-4 sm:p-6 lg:p-8 shadow-sm">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
         
         {/* LEFT: INTERACTIVE GARMENT PREVIEW */}
         <div className="lg:col-span-5 flex flex-col items-center">
-          <div className="w-full bg-brand-alt border border-brand-border rounded-2xl p-6 flex flex-col items-center relative overflow-hidden">
+          <div className="w-full bg-brand-alt border border-brand-border rounded-2xl p-4 sm:p-6 flex flex-col items-center relative overflow-hidden">
             
             {/* View angle toggle */}
             <div className="flex items-center gap-1.5 mb-4 bg-white p-1 rounded-xl border border-brand-border z-10 shadow-xs">
@@ -575,7 +575,7 @@ export default function GarmentCustomizer({ initialSport = "Cricket", initialPro
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label className="block text-xs font-semibold text-brand-text mb-1.5">Select Size</label>
-                <div className="grid grid-cols-7 gap-1">
+                <div className="grid grid-cols-4 sm:grid-cols-7 gap-1.5">
                   {["XS", "S", "M", "L", "XL", "2XL", "3XL"].map((sz) => (
                     <button
                       key={sz}

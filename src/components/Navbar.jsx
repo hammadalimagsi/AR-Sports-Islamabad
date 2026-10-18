@@ -91,25 +91,25 @@ export default function Navbar() {
           <div className="flex items-center justify-between h-20">
             
             {/* BRAND LOGO WITH AR SPORTS ISLAMABAD BADGE */}
-            <Link to="/" className="flex items-center gap-3 group flex-shrink-0">
+            <Link to="/" className="flex items-center gap-2 sm:gap-3 group flex-shrink-0 min-w-0">
               <img
                 src="/brand/logo.png"
                 alt="AR Sports Islamabad"
-                className="h-11 sm:h-12 w-auto object-contain transition-transform group-hover:scale-105"
+                className="h-9 sm:h-11 md:h-12 w-auto object-contain transition-transform group-hover:scale-105"
                 onError={(e) => {
                   e.target.style.display = 'none';
                 }}
               />
-              <div className="flex flex-col">
-                <div className="flex items-center gap-1.5">
-                  <span className="text-xl sm:text-2xl font-extrabold tracking-tight text-brand-charcoal group-hover:text-brand-green transition-colors">
+              <div className="flex flex-col min-w-0">
+                <div className="flex items-center gap-1 sm:gap-1.5">
+                  <span className="text-base sm:text-xl lg:text-2xl font-extrabold tracking-tight text-brand-charcoal group-hover:text-brand-green transition-colors whitespace-nowrap">
                     AR SPORTS
                   </span>
-                  <span className="text-[10px] font-bold px-1.5 py-0.5 rounded bg-brand-green text-white uppercase tracking-wider">
-                    ISLAMABAD
+                  <span className="text-[9px] sm:text-[10px] font-bold px-1 sm:px-1.5 py-0.5 rounded bg-brand-green text-white uppercase tracking-wider shrink-0">
+                    ISB
                   </span>
                 </div>
-                <span className="text-[10px] tracking-wider text-brand-muted uppercase font-semibold">
+                <span className="text-[9px] sm:text-[10px] tracking-wider text-brand-muted uppercase font-semibold truncate max-w-[140px] sm:max-w-none">
                   Custom Sportswear & Kits
                 </span>
               </div>
@@ -199,11 +199,11 @@ export default function Navbar() {
             </nav>
 
             {/* RIGHT ACTIONS: SEARCH, CART, WHATSAPP ORDER BUTTON */}
-            <div className="flex items-center space-x-2 sm:space-x-3">
+            <div className="flex items-center space-x-1 sm:space-x-3 shrink-0">
               {/* Search Toggle */}
               <button 
                 onClick={() => setShowSearchModal(true)}
-                className="p-2.5 rounded-xl text-brand-muted hover:text-brand-text hover:bg-brand-alt transition-colors cursor-pointer"
+                className="p-2 sm:p-2.5 rounded-xl text-brand-muted hover:text-brand-text hover:bg-brand-alt transition-colors cursor-pointer"
                 title="Search Products"
                 aria-label="Search Products"
               >
@@ -213,7 +213,7 @@ export default function Navbar() {
               {/* Cart Drawer Toggle */}
               <button 
                 onClick={() => setIsCartOpen(true)}
-                className="relative p-2.5 rounded-xl text-brand-muted hover:text-brand-text hover:bg-brand-alt transition-colors cursor-pointer"
+                className="relative p-2 sm:p-2.5 rounded-xl text-brand-muted hover:text-brand-text hover:bg-brand-alt transition-colors cursor-pointer"
                 title="View Inquiry Cart"
                 aria-label="Inquiry Cart"
               >
@@ -228,7 +228,7 @@ export default function Navbar() {
               {/* PROMINENT WHATSAPP ACTION BUTTON */}
               <button
                 onClick={handleDirectWhatsAppClick}
-                className="hidden sm:inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl font-semibold text-xs sm:text-sm bg-brand-green hover:bg-brand-hover text-white shadow-xs transition-all hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
+                className="hidden sm:inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl font-semibold text-xs sm:text-sm bg-brand-green hover:bg-brand-hover text-white shadow-xs transition-all hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
               >
                 <Phone className="w-4 h-4 fill-current" />
                 <span>Order on WhatsApp</span>
@@ -237,7 +237,7 @@ export default function Navbar() {
               {/* MOBILE HAMBURGER BUTTON */}
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="lg:hidden p-2.5 rounded-xl text-brand-text hover:bg-brand-alt transition-colors cursor-pointer"
+                className="lg:hidden p-2 sm:p-2.5 rounded-xl text-brand-text hover:bg-brand-alt transition-colors cursor-pointer"
                 aria-label="Toggle navigation menu"
               >
                 {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}

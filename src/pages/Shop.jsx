@@ -87,8 +87,9 @@ export default function Shop() {
     { slug: 'basketball', name: 'Basketball' },
     { slug: 'badminton', name: 'Badminton' },
     { slug: 'volleyball', name: 'Volleyball' },
-    { slug: 'school-teamwear', name: 'School & Teamwear' },
     { slug: 'gym-fitness', name: 'Gym & Fitness' },
+    { slug: 'school-teamwear', name: 'School & Teamwear' },
+    { slug: 'other-sports', name: 'Accessories & Teamwear' },
   ];
 
   return (
@@ -157,9 +158,10 @@ export default function Shop() {
                   className="w-full bg-white border border-brand-border rounded-xl py-3 px-4 text-brand-text text-sm focus:border-brand-green focus:outline-none focus:ring-1 focus:ring-brand-green cursor-pointer shadow-xs"
                 >
                   <option value="all">All Product Types</option>
-                  <option value="Sportswear">Sportswear (Jerseys & Kits)</option>
+                  <option value="Sportswear">Sportswear (Jerseys, Kits & Apparel)</option>
                   <option value="Equipment">Sports Equipment</option>
                   <option value="School & Teamwear">School & Teamwear</option>
+                  <option value="Accessories">Accessories & Socks</option>
                 </select>
               </div>
 

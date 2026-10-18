@@ -2,13 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-brand-bg: #FFFFFF;
+  --color-brand-alt: #F5F7F5;
+  --color-brand-text: #202720;
+  --color-brand-muted: #626B63;
+  --color-brand-green: #248A45;
+  --color-brand-hover: #176B35;
+  --color-brand-border: #E2E8E2;
+  --color-brand-charcoal: #202720;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    max-width: 100vw;
   }
   body {
     @apply bg-white text-brand-text font-sans;
     overflow-x: hidden;
+    max-width: 100vw;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  #root {
+    overflow-x: hidden;
+    max-width: 100vw;
+    width: 100%;
+  }
+
+  img, video, iframe {
+    max-width: 100%;
   }
 
   /* Accessible keyboard focus states */

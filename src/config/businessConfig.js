@@ -2,7 +2,7 @@
  * AR SPORTS ISLAMABAD - Central Business Configuration
  * 
  * Configured with genuine store branch details, WhatsApp numbers, 
- * physical address in Rawalpindi/Islamabad, and Google Maps location.
+ * physical address in Rawalpindi/Islamabad, and updated Google Maps location.
  */
 export const BUSINESS_CONFIG = {
   brandName: "AR SPORTS ISLAMABAD",
@@ -22,13 +22,14 @@ export const BUSINESS_CONFIG = {
   address: "Jmal Plaza, Shop# 3, High Court Road, Near Car Chowk, Rawalpindi / Islamabad",
   locationDisplay: "High Court Road, Near Car Chowk, Rawalpindi",
   
-  // GOOGLE MAPS DIRECT STORE & EMBED LINK (Uses env var if provided, otherwise verified store location)
-  googleMapsUrl: import.meta.env?.VITE_GOOGLE_MAPS_URL || "https://www.google.com/maps/search/?api=1&query=Jmal+Plaza+Shop+3+High+Court+Road+Near+Car+Chowk+Rawalpindi",
-  googleMapsEmbedUrl: import.meta.env?.VITE_GOOGLE_MAPS_EMBED_URL || "https://maps.google.com/maps?q=Jmal+Plaza+Shop+3+High+Court+Road+Near+Car+Chowk+Rawalpindi&t=&z=15&ie=UTF8&iwloc=&output=embed",
+  // GOOGLE MAPS DIRECT STORE & EMBED LINK
+  googleMapsUrl: import.meta.env?.VITE_GOOGLE_MAPS_URL || "https://maps.google.com/maps?q=33.5738546%2C73.1052338&z=17&hl=en",
+  googleMapsEmbedUrl: import.meta.env?.VITE_GOOGLE_MAPS_EMBED_URL || "https://maps.google.com/maps?q=33.5738546,73.1052338&z=17&hl=en&output=embed",
   
   businessHours: "Mon - Sat: 10:00 AM - 10:00 PM (PKT)",
   
   socials: {
+    linkedin: "https://www.linkedin.com/in/ar-sports-725870194",
     instagram: "https://instagram.com/arsportsislamabad1?utm_source=qr&psln=MTNobTUzamxpemx0Yw==",
     x: "https://x.com/arsportsis",
     threads: "https://www.threads.com/@arsportsislamabad1",

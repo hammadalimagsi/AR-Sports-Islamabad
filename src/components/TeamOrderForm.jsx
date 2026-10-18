@@ -79,7 +79,7 @@ export default function TeamOrderForm() {
   };
 
   return (
-    <div className="bg-white border border-brand-border rounded-3xl p-6 lg:p-10 shadow-sm">
+    <div className="bg-white border border-brand-border rounded-3xl p-4 sm:p-6 lg:p-10 shadow-sm">
       <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 pb-6 border-b border-brand-border">
         <div>
           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-emerald-50 text-brand-green border border-emerald-200 mb-2">
@@ -192,8 +192,8 @@ export default function TeamOrderForm() {
           )}
 
           {/* Roster responsive table */}
-          <div className="overflow-x-auto border border-brand-border rounded-2xl bg-white shadow-xs">
-            <table className="w-full text-left text-sm text-brand-text">
+          <div className="overflow-x-auto border border-brand-border rounded-2xl bg-white shadow-xs max-w-full">
+            <table className="w-full min-w-[580px] text-left text-sm text-brand-text">
               <thead className="bg-brand-alt text-xs text-brand-muted uppercase font-semibold border-b border-brand-border">
                 <tr>
                   <th className="py-3 px-4 w-12 text-center">#</th>

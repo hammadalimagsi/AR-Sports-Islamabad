@@ -34,9 +34,9 @@ export default function App() {
       
       {/* Toast Notification */}
       {toastMessage && (
-        <div className="fixed bottom-6 right-6 z-50 bg-brand-charcoal text-white font-medium text-sm px-5 py-3.5 rounded-xl shadow-2xl flex items-center gap-3 border border-brand-green/50 animate-in slide-in-from-bottom-2 duration-200">
-          <span className="w-2.5 h-2.5 rounded-full bg-brand-green animate-ping" />
-          <span>{toastMessage}</span>
+        <div className="fixed bottom-4 sm:bottom-6 right-4 sm:right-6 left-4 sm:left-auto max-w-sm z-50 bg-brand-charcoal text-white font-medium text-xs sm:text-sm px-4 sm:px-5 py-3 sm:py-3.5 rounded-xl shadow-2xl flex items-center gap-3 border border-brand-green/50 animate-in slide-in-from-bottom-2 duration-200">
+          <span className="w-2.5 h-2.5 rounded-full bg-brand-green animate-ping shrink-0" />
+          <span className="truncate">{toastMessage}</span>
         </div>
       )}
 

@@ -132,14 +132,28 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* 5 VERIFIED SOCIAL MEDIA LINKS */}
+            {/* OFFICIAL SOCIAL MEDIA PROFILES */}
             <div className="pt-2">
               <span className="text-xs font-bold text-brand-text uppercase tracking-wider block mb-2.5">
                 Official Social Profiles
               </span>
               <div className="flex items-center gap-2 flex-wrap">
                 
-                {/* 1. Instagram */}
+                {/* 1. LinkedIn */}
+                <a 
+                  href={BUSINESS_CONFIG.socials.linkedin} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="w-9 h-9 rounded-xl bg-white border border-brand-border flex items-center justify-center text-brand-muted hover:text-blue-700 hover:border-blue-400 hover:bg-blue-50 transition-all hover:scale-105"
+                  aria-label="Connect with AR Sports Islamabad on LinkedIn"
+                  title="LinkedIn"
+                >
+                  <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                  </svg>
+                </a>
+
+                {/* 2. Instagram */}
                 <a 
                   href={BUSINESS_CONFIG.socials.instagram} 
                   target="_blank" 
@@ -153,7 +167,7 @@ export default function Footer() {
                   </svg>
                 </a>
 
-                {/* 2. X (Twitter) */}
+                {/* 3. X (Twitter) */}
                 <a 
                   href={BUSINESS_CONFIG.socials.x} 
                   target="_blank" 
@@ -167,7 +181,7 @@ export default function Footer() {
                   </svg>
                 </a>
 
-                {/* 3. Threads */}
+                {/* 4. Threads */}
                 <a 
                   href={BUSINESS_CONFIG.socials.threads} 
                   target="_blank" 
@@ -181,7 +195,7 @@ export default function Footer() {
                   </svg>
                 </a>
 
-                {/* 4. TikTok */}
+                {/* 5. TikTok */}
                 <a 
                   href={BUSINESS_CONFIG.socials.tiktok} 
                   target="_blank" 
@@ -195,7 +209,7 @@ export default function Footer() {
                   </svg>
                 </a>
 
-                {/* 5. Facebook */}
+                {/* 6. Facebook */}
                 <a 
                   href={BUSINESS_CONFIG.socials.facebook} 
                   target="_blank" 
@@ -344,7 +358,7 @@ export default function Footer() {
         <div className="mt-12 pt-8 border-t border-brand-border text-xs text-brand-muted flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
           <p>
             &copy; {currentYear} <strong className="text-brand-text">AR SPORTS ISLAMABAD</strong>. All rights reserved. 
-            Jmal Plaza, Shop# 3, High Court Road, Near Car Chowk, Rawalpindi.
+            Main Car Chowk,Near Allied Bank Rawalpindi,Pakistan.
           </p>
           <div className="flex items-center justify-center gap-4 text-brand-muted">
             <span>Direct WhatsApp Quotation</span>
