@@ -1,9 +1,13 @@
 /**
- * AR SPORTS - Central Product & Sports Catalog
+ * AR SPORTS ISLAMABAD - Central Product & Sports Catalog
  * 
  * CRITICAL BUSINESS RULE:
  * Prices are intentionally omitted everywhere across this catalog.
- * Every order receives custom confirmation and quoting via WhatsApp.
+ * Every order receives custom confirmation and quoting via WhatsApp: +92 318 5052449.
+ * 
+ * PHOTO INTEGRITY RULE:
+ * - 32 authentic uploaded product photos are assigned strictly 1:1 with zero duplication.
+ * - Remaining products are marked with imageStatus: 'needs_client_photo'.
  */
 
 export const SPORTS_CATEGORIES = [
@@ -150,7 +154,7 @@ export const PRODUCTS_DATA = [
       "Unlimited sponsor branding",
       "Pantone color matching"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "cricket-complete-match-kit",
@@ -192,7 +196,7 @@ export const PRODUCTS_DATA = [
       "Individual player sizes & names",
       "Club sponsor packages"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "cricket-t20-colored-tournament-kit",
@@ -234,7 +238,7 @@ export const PRODUCTS_DATA = [
       "Sponsor logos front, back & sleeves",
       "Player names & numbers"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "cricket-test-whites-uniform",
@@ -273,7 +277,7 @@ export const PRODUCTS_DATA = [
       "Collar contrast tipping color",
       "Sponsor logo print"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "cricket-match-trousers",
@@ -311,7 +315,7 @@ export const PRODUCTS_DATA = [
       "Team color stripe",
       "Embroidered club crest"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "cricket-team-sleeveless-sweater",
@@ -349,7 +353,7 @@ export const PRODUCTS_DATA = [
       "Custom stripe color combination",
       "Embroidered club crest on left chest"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "cricket-training-tracksuit",
@@ -390,7 +394,7 @@ export const PRODUCTS_DATA = [
       "Chest embroidery",
       "Sponsor printing"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "cricket-english-willow-bat",
@@ -405,7 +409,7 @@ export const PRODUCTS_DATA = [
     "shortDescription": "Hand-crafted Grade 1 air-dried English willow with huge profile, massive edges, and supreme balance.",
     "description": "Engineered for power hitters. Features a mid-to-low sweet spot, 38-40mm edges, semi-oval Sarawak cane handle with chevron grip for ultimate shock absorption and effortless ping.",
     "images": [
-      "https://images.unsplash.com/photo-1589487391730-58f20eb2c308?auto=format&fit=crop&w=800&q=80"
+      "/products/cricket-cw-bat.jpg"
     ],
     "sizes": [
       "Short Handle (SH)",
@@ -428,7 +432,7 @@ export const PRODUCTS_DATA = [
       "Custom laser-engraved player name",
       "Selected weight preference"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "uploaded_photo"
   },
   {
     "id": "cricket-kashmir-willow-bat",
@@ -464,7 +468,7 @@ export const PRODUCTS_DATA = [
       "Toe guard installation",
       "Grip color preference"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "cricket-leather-balls-box",
@@ -479,7 +483,7 @@ export const PRODUCTS_DATA = [
     "shortDescription": "Alum-tanned steer hide 4-piece leather balls for league, club, and school multi-day matches.",
     "description": "Hand-stitched with 80+ stitches, cork-rubber laminated core, lacquered finish for maximum seam retention and swing longevity through 50+ overs.",
     "images": [
-      "https://images.unsplash.com/photo-1628891890467-b79f2c8ba9dc?auto=format&fit=crop&w=800&q=80"
+      "/products/cricket-pink-leather-ball.jpg"
     ],
     "sizes": [
       "Standard Men 156g",
@@ -498,7 +502,7 @@ export const PRODUCTS_DATA = [
     "customizationOptions": [
       "Custom club logo stamping on ball seam (bulk orders)"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "uploaded_photo"
   },
   {
     "id": "cricket-stumps-bails-set",
@@ -529,7 +533,7 @@ export const PRODUCTS_DATA = [
     "customizationOptions": [
       "Custom tournament sponsor sticker on stumps"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "cricket-practice-hanging-ball",
@@ -558,7 +562,7 @@ export const PRODUCTS_DATA = [
       "Heavy-duty swivel carabiner clasp"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "cricket-shoes-spikes",
@@ -597,7 +601,7 @@ export const PRODUCTS_DATA = [
     "customizationOptions": [
       "Includes full set of extra spikes and spike wrench"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "cricket-rubber-stud-shoes",
@@ -632,7 +636,7 @@ export const PRODUCTS_DATA = [
       "Breathable antimicrobial lining"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "cricket-batting-gloves-pads",
@@ -666,7 +670,7 @@ export const PRODUCTS_DATA = [
     "customizationOptions": [
       "Custom color decals to match club jersey"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "cricket-batting-helmet",
@@ -703,7 +707,7 @@ export const PRODUCTS_DATA = [
       "Embroidered club logo patch",
       "Custom shell color"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "cricket-wicketkeeping-gloves-pads",
@@ -733,7 +737,7 @@ export const PRODUCTS_DATA = [
       "Compact ultra-light leg guards with quick velcro straps"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "cricket-thigh-inner-thigh-combo",
@@ -761,7 +765,7 @@ export const PRODUCTS_DATA = [
       "Wide dual-velcro strap security"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "cricket-arm-guard-chest-protector",
@@ -787,7 +791,7 @@ export const PRODUCTS_DATA = [
       "Comfortable soft elastic straps"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "cricket-abdominal-guard",
@@ -813,7 +817,7 @@ export const PRODUCTS_DATA = [
       "Ventilated airflow slots"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "cricket-practice-net-lane",
@@ -828,7 +832,7 @@ export const PRODUCTS_DATA = [
     "shortDescription": "UV-treated 2.5mm knotted polyethylene practice lane netting with reinforced border cord for academies.",
     "description": "Built to stop full-blooded leather ball drives and express bowling. Weatherproof knotted twine will not rot or degrade in direct sunlight. Includes brass eyelets every 3 feet.",
     "images": [
-      "https://images.unsplash.com/photo-1531415074968-036ba1b575da?auto=format&fit=crop&w=800&q=80"
+      "/products/cricket-heavy-duty-practice-net.jpg"
     ],
     "sizes": [
       "10ft x 10ft x 30ft (Full Lane)",
@@ -847,7 +851,7 @@ export const PRODUCTS_DATA = [
     "customizationOptions": [
       "Custom length and lane dimensions made to order"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "uploaded_photo"
   },
   {
     "id": "cricket-bowling-target-cones",
@@ -875,7 +879,7 @@ export const PRODUCTS_DATA = [
       "Compact storage stand included"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "cricket-batting-tee-trainer",
@@ -889,7 +893,7 @@ export const PRODUCTS_DATA = [
     "shortDescription": "Telescoping rubber batting tee on heavy weighted base for cover drives, pull shots, and bat path training.",
     "description": "Allows repetitive stroke execution without requiring a thrower. Adjustable height accommodates back-foot and front-foot drills. Flexible rubber top won't damage bat edges upon contact.",
     "images": [
-      "https://images.unsplash.com/photo-1589487391730-58f20eb2c308?auto=format&fit=crop&w=800&q=80"
+      "/products/cricket-full-academy-practice-cage.jpg"
     ],
     "sizes": [
       "Adjustable Height (45cm - 90cm)"
@@ -900,7 +904,8 @@ export const PRODUCTS_DATA = [
       "Instant screw-lock height adjustment"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "uploaded_photo",
+    "badge": "Uploaded Photo"
   },
   {
     "id": "cricket-tournament-floppy-hat",
@@ -938,7 +943,7 @@ export const PRODUCTS_DATA = [
       "Club crest embroidery",
       "Custom color piping around brim"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "cricket-wheelie-kitbag",
@@ -953,7 +958,7 @@ export const PRODUCTS_DATA = [
     "shortDescription": "115-liter capacity wheeled tournament bag with 4 padded bat sleeves, shoe tunnel, and helmet garage.",
     "description": "Built for serious cricketers. Heavy-duty 1000D Cordura nylon with three rugged off-road tractor wheels. Reinforced structural base keeps the bag upright in the pavilion dressing room.",
     "images": [
-      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80"
+      "/products/cricket-kit-bag-guards.jpg"
     ],
     "sizes": [
       "Extra Large (100cm x 40cm x 38cm)"
@@ -973,7 +978,7 @@ export const PRODUCTS_DATA = [
       "Custom printed player name & squad number",
       "Club emblem screen printing"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "uploaded_photo"
   },
   {
     "id": "cricket-bat-grip-multipack",
@@ -1001,7 +1006,7 @@ export const PRODUCTS_DATA = [
       "Includes hardwood applicator cone"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "cricket-cushioned-crew-socks",
@@ -1033,7 +1038,7 @@ export const PRODUCTS_DATA = [
     "customizationOptions": [
       "Jacquard woven club initials on bulk team orders"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "football-pro-custom-jersey",
@@ -1048,7 +1053,7 @@ export const PRODUCTS_DATA = [
     "shortDescription": "Aero-mesh aerodynamic cut jersey with moisture transport and customizable club badge.",
     "description": "Crafted from high-tensile lightweight jacquard fabric with ribbed crew neck or V-neck collars. Designed for optimal speed and temperature regulation during 90 minutes of high intensity.",
     "images": [
-      "https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=800&q=80"
+      "/products/football-classic-club-jerseys-collection.jpg"
     ],
     "sizes": [
       "S",
@@ -1073,7 +1078,7 @@ export const PRODUCTS_DATA = [
       "Player names & squad numbers",
       "Custom sleeve patches"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "uploaded_photo"
   },
   {
     "id": "football-full-team-kit",
@@ -1088,7 +1093,7 @@ export const PRODUCTS_DATA = [
     "shortDescription": "Complete set: Sublimated match jersey, athletic shorts with drawstring, and rib-support knee socks.",
     "description": "Equip your entire squad with unified tournament aesthetics. Available in customized designs with your club crest, front jersey sponsor, back player numbers, and matching shorts.",
     "images": [
-      "https://images.unsplash.com/photo-1560272564-c83b66b1ad12?auto=format&fit=crop&w=800&q=80"
+      "/products/football-ub-striped-match-kit.jpg"
     ],
     "sizes": [
       "XS",
@@ -1114,7 +1119,7 @@ export const PRODUCTS_DATA = [
       "Individual roster names & numbers",
       "Club badge embroidery"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "uploaded_photo"
   },
   {
     "id": "football-pro-goalkeeper-kit",
@@ -1152,7 +1157,7 @@ export const PRODUCTS_DATA = [
       "Club crest badge",
       "Sponsor printing"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "football-training-bibs-set",
@@ -1187,7 +1192,7 @@ export const PRODUCTS_DATA = [
     "customizationOptions": [
       "Club name or sponsor logo printed on chest"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "football-compression-base-layer",
@@ -1225,7 +1230,7 @@ export const PRODUCTS_DATA = [
     "customizationOptions": [
       "Club crest print on center chest"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "football-match-ball-fifa",
@@ -1254,7 +1259,7 @@ export const PRODUCTS_DATA = [
     "customizationOptions": [
       "Custom tournament logo printing for bulk league orders"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "football-training-ball-pack",
@@ -1284,7 +1289,7 @@ export const PRODUCTS_DATA = [
       "Pack of 3 training balls"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "football-boots-firm-ground",
@@ -1321,7 +1326,7 @@ export const PRODUCTS_DATA = [
       "Padded anatomical heel cup"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "football-turf-shoes",
@@ -1356,7 +1361,7 @@ export const PRODUCTS_DATA = [
       "Reinforced suede toe bumper"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "football-shin-guards-sleeves",
@@ -1389,7 +1394,7 @@ export const PRODUCTS_DATA = [
       "Includes pair of breathable calf retention sleeves"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "football-goalkeeper-gloves-fingersave",
@@ -1426,7 +1431,7 @@ export const PRODUCTS_DATA = [
     "customizationOptions": [
       "Custom printed name or initials on wrist strap"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "football-protective-padded-undershorts",
@@ -1457,7 +1462,7 @@ export const PRODUCTS_DATA = [
       "Flatlock non-abrasive seams"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "football-agility-ladder-cones",
@@ -1482,7 +1487,7 @@ export const PRODUCTS_DATA = [
       "Includes 20 saucer cones and ground stakes"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "football-freekick-dummy-wall",
@@ -1508,7 +1513,7 @@ export const PRODUCTS_DATA = [
       "High-visibility neon frame"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "pro-football-long-socks",
@@ -1546,7 +1551,7 @@ export const PRODUCTS_DATA = [
       "Custom team colors",
       "Club crest jacquard knit"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "captain-armband-wristbands",
@@ -1578,7 +1583,7 @@ export const PRODUCTS_DATA = [
       "Includes pair of matching wrist sweatbands"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "football-dual-action-pump",
@@ -1604,7 +1609,7 @@ export const PRODUCTS_DATA = [
       "Includes 3 steel inflation pins"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "basketball-custom-reversible-jersey",
@@ -1619,7 +1624,7 @@ export const PRODUCTS_DATA = [
     "shortDescription": "Double-layered open hole mesh reversible jersey with home and away color schemes on one uniform.",
     "description": "The ultimate solution for club leagues and tournaments. Flip the jersey inside out to switch between light and dark team colors instantly. Deep armholes designed for shooting fluidity.",
     "images": [
-      "https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&w=800&q=80"
+      "/products/basketball-mens-custom-jersey-kit.jpg"
     ],
     "sizes": [
       "S",
@@ -1644,7 +1649,7 @@ export const PRODUCTS_DATA = [
       "Individual player names & numbers",
       "Pantone color matching"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "uploaded_photo"
   },
   {
     "id": "basketball-complete-uniform-kit",
@@ -1685,7 +1690,7 @@ export const PRODUCTS_DATA = [
       "Front team name and back roster numbers",
       "Side panel design"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "basketball-pro-mesh-shorts",
@@ -1726,7 +1731,7 @@ export const PRODUCTS_DATA = [
       "Custom sublimated side stripes",
       "Team crest on leg"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "basketball-warmup-shooting-shirt",
@@ -1765,7 +1770,7 @@ export const PRODUCTS_DATA = [
       "Team name across chest",
       "Player name & number on back"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "basketball-breakaway-warmup-pants",
@@ -1801,7 +1806,7 @@ export const PRODUCTS_DATA = [
     "customizationOptions": [
       "Custom printed team crest on hip"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "basketball-composite-leather-ball",
@@ -1830,7 +1835,7 @@ export const PRODUCTS_DATA = [
     "customizationOptions": [
       "Custom laser-stamped team logo (bulk orders)"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "basketball-tournament-game-ball",
@@ -1856,7 +1861,7 @@ export const PRODUCTS_DATA = [
       "Balanced butyl bladder"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "basketball-high-top-court-shoes",
@@ -1892,7 +1897,7 @@ export const PRODUCTS_DATA = [
       "Reinforced TPU shank plate"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "basketball-arm-compression-sleeve",
@@ -1927,7 +1932,7 @@ export const PRODUCTS_DATA = [
     "customizationOptions": [
       "Custom printed team initials or number"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "basketball-court-knee-pads",
@@ -1959,7 +1964,7 @@ export const PRODUCTS_DATA = [
       "Moisture-wicking dry-knit"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "basketball-ankle-stabilizer-brace",
@@ -1989,7 +1994,7 @@ export const PRODUCTS_DATA = [
       "Low-profile fit inside court shoes"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "basketball-heavy-trainer-ball",
@@ -2014,7 +2019,7 @@ export const PRODUCTS_DATA = [
       "Heavy-gauge rubber bladder"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "basketball-equipment-backpack",
@@ -2048,7 +2053,7 @@ export const PRODUCTS_DATA = [
       "Custom team logo print",
       "Player name and jersey number"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "basketball-headband-wristband-set",
@@ -2081,7 +2086,7 @@ export const PRODUCTS_DATA = [
     "customizationOptions": [
       "Embroidered club crest on bulk orders"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "volleyball-custom-team-uniform",
@@ -2096,7 +2101,7 @@ export const PRODUCTS_DATA = [
     "shortDescription": "Athletic cut jersey paired with stretch volleyball shorts engineered for rapid jumping and diving.",
     "description": "Engineered for rapid lateral dives and vertical spikes. High-stretch spandex-poly blend provides maximum flexibility without riding up during blocks and serves.",
     "images": [
-      "https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?auto=format&fit=crop&w=800&q=80"
+      "/products/volleyball-yamamay-team-jersey.jpg"
     ],
     "sizes": [
       "XS",
@@ -2122,7 +2127,7 @@ export const PRODUCTS_DATA = [
       "Custom team name & player numbers",
       "Club badge embroidery"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "uploaded_photo"
   },
   {
     "id": "volleyball-pro-sleeveless-jersey",
@@ -2137,7 +2142,7 @@ export const PRODUCTS_DATA = [
     "shortDescription": "Ultra-breathable sleeveless tournament jersey with deep armholes and sublimation team graphics.",
     "description": "Allows unhindered shoulder extension for hard spikes and overhead blocks. Moisture-wicking micro-knit keeps athletes dry in humid indoor court conditions.",
     "images": [
-      "https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?auto=format&fit=crop&w=800&q=80"
+      "/products/volleyball-givova-sleeveless-uniform.jpg"
     ],
     "sizes": [
       "XS",
@@ -2161,7 +2166,7 @@ export const PRODUCTS_DATA = [
       "Any color scheme",
       "Individual player names and numbers"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "uploaded_photo"
   },
   {
     "id": "volleyball-libero-contrasting-jersey",
@@ -2176,7 +2181,7 @@ export const PRODUCTS_DATA = [
     "shortDescription": "Official contrasting tournament jersey for the team libero, featuring reinforced abrasion-resistant chest panels.",
     "description": "Meets international FIVB regulations requiring the libero to wear a contrasting team color. Features reinforced front fabric that withstands repeated floor dive abrasions.",
     "images": [
-      "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=800&q=80"
+      "/products/volleyball-match-action.jpg"
     ],
     "sizes": [
       "XS",
@@ -2199,7 +2204,7 @@ export const PRODUCTS_DATA = [
       "Custom contrasting palette matching team kit",
       "Player name and number"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "uploaded_photo"
   },
   {
     "id": "volleyball-compression-shorts",
@@ -2235,7 +2240,7 @@ export const PRODUCTS_DATA = [
     "customizationOptions": [
       "Custom printed club crest on left hip"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "volleyball-soft-touch-match-ball",
@@ -2263,7 +2268,7 @@ export const PRODUCTS_DATA = [
     "customizationOptions": [
       "Custom tournament logo stamping (bulk orders)"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "volleyball-beach-outdoor-ball",
@@ -2292,7 +2297,7 @@ export const PRODUCTS_DATA = [
       "Butyl bladder air retention"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "volleyball-indoor-gum-sole-shoes",
@@ -2329,7 +2334,7 @@ export const PRODUCTS_DATA = [
       "Breathable mesh upper with synthetic overlays"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "volleyball-court-defense-knee-pads",
@@ -2360,7 +2365,7 @@ export const PRODUCTS_DATA = [
       "Anti-odor moisture-wicking sleeve"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "volleyball-figure8-ankle-supports",
@@ -2391,7 +2396,7 @@ export const PRODUCTS_DATA = [
       "Slim tongue fits cleanly inside court shoes"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "volleyball-forearm-passing-sleeves",
@@ -2421,7 +2426,7 @@ export const PRODUCTS_DATA = [
       "Thumb hole locks sleeve in place"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "volleyball-tournament-net-cables",
@@ -2447,7 +2452,7 @@ export const PRODUCTS_DATA = [
       "Includes pair of fiberglass clip-on boundary antennas"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "volleyball-spike-trainer-harness",
@@ -2472,7 +2477,7 @@ export const PRODUCTS_DATA = [
       "Universal metal swivel attachment clip"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "badminton-aero-shirt",
@@ -2510,7 +2515,7 @@ export const PRODUCTS_DATA = [
       "Custom country or club flag",
       "Player back lettering & sponsor logos"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "badminton-court-pro-shorts",
@@ -2548,7 +2553,7 @@ export const PRODUCTS_DATA = [
       "Custom color side stripes",
       "Club crest heat transfer"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "badminton-complete-team-uniform",
@@ -2588,7 +2593,7 @@ export const PRODUCTS_DATA = [
       "Country/Club emblem",
       "Sponsor logos"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "badminton-warmup-tracktop",
@@ -2624,7 +2629,7 @@ export const PRODUCTS_DATA = [
       "Club name across back shoulders",
       "Embroidered chest crest"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "badminton-carbon-racket-pro",
@@ -2639,7 +2644,7 @@ export const PRODUCTS_DATA = [
     "shortDescription": "High-modulus carbon graphite frame strung to 28-30 lbs for explosive smashes and pinpoint shuttle control.",
     "description": "Engineered with an isometric head shape to enlarge the sweet spot by 32%. Slim aero-dynamic shaft cuts through air resistance for lightning-fast net play.",
     "images": [
-      "https://images.unsplash.com/photo-1613918431703-085718501252?auto=format&fit=crop&w=800&q=80"
+      "/products/badminton-yonex-racket-shuttle.jpg"
     ],
     "sizes": [
       "3U (85-89g)",
@@ -2653,7 +2658,7 @@ export const PRODUCTS_DATA = [
     "customizationOptions": [
       "String tension selection (24 to 30 lbs)"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "uploaded_photo"
   },
   {
     "id": "badminton-power-shaft-racket",
@@ -2668,7 +2673,7 @@ export const PRODUCTS_DATA = [
     "shortDescription": "Head-heavy balanced carbon racket with 6.8mm ultra-slim shaft for devastating smash velocity.",
     "description": "Built for offensive backcourt smashers. Head-heavy balance transfers maximum kinetic momentum to the shuttle on full jump smashes.",
     "images": [
-      "https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=800&q=80"
+      "/products/badminton-eminent-rackets-pair.jpg"
     ],
     "sizes": [
       "3U (86g - G5 Grip)",
@@ -2680,7 +2685,7 @@ export const PRODUCTS_DATA = [
       "Box-frame torsional rigidity"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "uploaded_photo"
   },
   {
     "id": "badminton-feather-shuttlecocks-tube",
@@ -2707,7 +2712,7 @@ export const PRODUCTS_DATA = [
       "Tube of 12 shuttlecocks"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "badminton-synthetic-shuttlecocks-tube",
@@ -2737,7 +2742,7 @@ export const PRODUCTS_DATA = [
       "Tube of 6 durable shuttles"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "badminton-court-shoes-gum-sole",
@@ -2772,7 +2777,7 @@ export const PRODUCTS_DATA = [
       "Lightweight breathable synthetic upper"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "badminton-knee-patella-strap",
@@ -2800,7 +2805,7 @@ export const PRODUCTS_DATA = [
       "Soft breathable neoprene lining"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "badminton-wrist-compression-band",
@@ -2829,7 +2834,7 @@ export const PRODUCTS_DATA = [
       "Dual velcro lock"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "badminton-tournament-net-set",
@@ -2843,7 +2848,7 @@ export const PRODUCTS_DATA = [
     "shortDescription": "Official 6.1m tournament net with portable freestanding steel frame that sets up in under 3 minutes.",
     "description": "Full tournament-grade net with double-stitched white canvas headband and vinyl cable. Freestanding steel frame base requires no court floor drilling or tie-downs.",
     "images": [
-      "https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=800&q=80"
+      "/products/badminton-training-gear-set.jpg"
     ],
     "sizes": [
       "6.1m (Official Doubles Width) x 1.55m Height"
@@ -2854,7 +2859,8 @@ export const PRODUCTS_DATA = [
       "Includes padded travel carry duffel"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "uploaded_photo",
+    "badge": "Uploaded Photo"
   },
   {
     "id": "badminton-thermal-6-racket-bag",
@@ -2888,7 +2894,7 @@ export const PRODUCTS_DATA = [
       "Custom team logo print",
       "Player name embroidery"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "badminton-tacky-overgrips-pack",
@@ -2916,7 +2922,7 @@ export const PRODUCTS_DATA = [
       "Includes 5 finishing adhesive tapes"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "tennis-polo-shirt",
@@ -2957,7 +2963,7 @@ export const PRODUCTS_DATA = [
       "Custom color tipping on collar",
       "Sponsor printing"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "tennis-court-shorts",
@@ -2995,7 +3001,7 @@ export const PRODUCTS_DATA = [
       "Club initials print",
       "Custom side piping"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "tennis-match-skort-pleated",
@@ -3032,7 +3038,7 @@ export const PRODUCTS_DATA = [
     "customizationOptions": [
       "Custom waistband club logo embroidery"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "tennis-tournament-warmup-tracksuit",
@@ -3069,7 +3075,7 @@ export const PRODUCTS_DATA = [
       "Club crest embroidery",
       "Custom back name printing"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "tennis-carbon-racket",
@@ -3099,7 +3105,7 @@ export const PRODUCTS_DATA = [
     "customizationOptions": [
       "Custom string tension preference"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "tennis-spin-matrix-racket",
@@ -3126,7 +3132,7 @@ export const PRODUCTS_DATA = [
       "305g unstrung tour weight"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "tennis-match-balls-can",
@@ -3152,7 +3158,7 @@ export const PRODUCTS_DATA = [
       "ITF tournament compliant specifications"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "tennis-championship-balls-case",
@@ -3177,7 +3183,7 @@ export const PRODUCTS_DATA = [
       "Extra-duty felt weave"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "tennis-court-shoes-all-surface",
@@ -3214,7 +3220,7 @@ export const PRODUCTS_DATA = [
       "Padded ankle support collar"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "tennis-elbow-brace-pad",
@@ -3242,7 +3248,7 @@ export const PRODUCTS_DATA = [
       "Reinforced D-ring strap lock"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "tennis-ankle-wrap-guard",
@@ -3271,7 +3277,7 @@ export const PRODUCTS_DATA = [
       "Washable breathable material"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "tennis-ball-hopper-80",
@@ -3300,7 +3306,7 @@ export const PRODUCTS_DATA = [
       "Floating wire pickup bars"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "tennis-racket-pro-bag-6",
@@ -3332,7 +3338,7 @@ export const PRODUCTS_DATA = [
     "customizationOptions": [
       "Custom printed player name or academy crest"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "tennis-vibration-dampener-grip-kit",
@@ -3360,7 +3366,7 @@ export const PRODUCTS_DATA = [
       "Finishing tape included"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "rugby-match-jersey",
@@ -3402,7 +3408,7 @@ export const PRODUCTS_DATA = [
       "Player roster names and numbers",
       "Sponsor branding"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "rugby-tackle-shorts",
@@ -3440,7 +3446,7 @@ export const PRODUCTS_DATA = [
     "customizationOptions": [
       "Club initials or badge embroidered on leg"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "rugby-complete-squad-kit",
@@ -3481,7 +3487,7 @@ export const PRODUCTS_DATA = [
       "Squad roster names and numbers",
       "Club crest badge"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "rugby-warmup-track-top",
@@ -3520,7 +3526,7 @@ export const PRODUCTS_DATA = [
       "Embroidered club crest",
       "Back squad name lettering"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "rugby-match-ball",
@@ -3549,7 +3555,7 @@ export const PRODUCTS_DATA = [
     "customizationOptions": [
       "Custom tournament sponsor logo stamping (bulk orders)"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "rugby-training-ball-pack",
@@ -3578,7 +3584,7 @@ export const PRODUCTS_DATA = [
       "Multipack of 3 practice balls"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "rugby-kicking-tee-adjustable",
@@ -3606,7 +3612,7 @@ export const PRODUCTS_DATA = [
       "Wide weighted circular base"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "rugby-boots-8-stud",
@@ -3644,7 +3650,7 @@ export const PRODUCTS_DATA = [
     "customizationOptions": [
       "Includes replacement studs and stud wrench"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "rugby-headguard-padded",
@@ -3678,7 +3684,7 @@ export const PRODUCTS_DATA = [
       "Expandable rear lace and velcro chin strap"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "rugby-shoulder-vest-padding",
@@ -3711,7 +3717,7 @@ export const PRODUCTS_DATA = [
       "World Rugby regulation compliant thickness"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "rugby-boil-bite-mouthguard",
@@ -3742,7 +3748,7 @@ export const PRODUCTS_DATA = [
       "Includes sterile antimicrobial carry case"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "rugby-tackle-cylinder-bag",
@@ -3774,7 +3780,7 @@ export const PRODUCTS_DATA = [
     "customizationOptions": [
       "Custom printed club crest on side"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "rugby-curved-contact-shield",
@@ -3802,7 +3808,7 @@ export const PRODUCTS_DATA = [
       "High-density multi-layer foam core"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "rugby-over-calf-match-socks",
@@ -3837,7 +3843,7 @@ export const PRODUCTS_DATA = [
       "Custom club hoops and colors",
       "Knitted club initials"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "hockey-match-shirt",
@@ -3878,7 +3884,7 @@ export const PRODUCTS_DATA = [
       "Player names and roster numbers",
       "Pantone color matching"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "hockey-match-shorts",
@@ -3917,7 +3923,7 @@ export const PRODUCTS_DATA = [
       "Custom color side piping",
       "Team crest printing"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "hockey-complete-team-uniform",
@@ -3932,7 +3938,7 @@ export const PRODUCTS_DATA = [
     "shortDescription": "Complete tournament uniform set: sublimated match shirt, athletic shorts/skorts, and matching turf socks.",
     "description": "Equips entire clubs and school squads with unified pro aesthetics. Engineered for high friction on water-based and sand-dressed synthetic turf.",
     "images": [
-      "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=800&q=80"
+      "/products/hockey-match-turf-uniform.jpg"
     ],
     "sizes": [
       "XS",
@@ -3957,7 +3963,7 @@ export const PRODUCTS_DATA = [
       "Individual player names & squad numbers",
       "Sponsor branding"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "uploaded_photo"
   },
   {
     "id": "hockey-training-warmup-jacket",
@@ -3993,7 +3999,7 @@ export const PRODUCTS_DATA = [
       "Embroidered club crest",
       "Back squad name print"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "hockey-carbon-stick",
@@ -4022,7 +4028,7 @@ export const PRODUCTS_DATA = [
     "customizationOptions": [
       "Includes padded thermal stick sleeve"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "hockey-midbow-composite-stick",
@@ -4049,7 +4055,7 @@ export const PRODUCTS_DATA = [
       "Vibration-dampening foam handle core"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "hockey-dimple-match-balls-box",
@@ -4080,7 +4086,7 @@ export const PRODUCTS_DATA = [
       "FIH tournament compliant specifications"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "hockey-smooth-indoor-balls",
@@ -4109,7 +4115,7 @@ export const PRODUCTS_DATA = [
       "Regulation 156g weight"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "hockey-turf-stud-shoes",
@@ -4144,7 +4150,7 @@ export const PRODUCTS_DATA = [
       "Water-shedding synthetic upper"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "hockey-shin-guards-ankle",
@@ -4172,7 +4178,7 @@ export const PRODUCTS_DATA = [
       "Under-foot stirrup strap for secure fit"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "hockey-protective-glove-left",
@@ -4204,7 +4210,7 @@ export const PRODUCTS_DATA = [
       "Wide velcro wrist closure"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "hockey-goalkeeper-complete-kit",
@@ -4219,7 +4225,7 @@ export const PRODUCTS_DATA = [
     "shortDescription": "Complete set: High-rebound foam leg guards, kickers, hand protectors, chest body armor, and cage helmet.",
     "description": "The complete tournament-grade goalkeeper protection suite. High-rebound dual-density foam kickers allow keepers to clear hard shots to the sidelines with maximum velocity.",
     "images": [
-      "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?auto=format&fit=crop&w=800&q=80"
+      "/products/hockey-hindon-goalie-armor-kit.jpg"
     ],
     "sizes": [
       "Senior Adult",
@@ -4237,7 +4243,7 @@ export const PRODUCTS_DATA = [
     "customizationOptions": [
       "Custom team color foam pads on bulk order"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "uploaded_photo"
   },
   {
     "id": "hockey-mouthguard-lipshield",
@@ -4267,7 +4273,7 @@ export const PRODUCTS_DATA = [
       "Includes antibacterial storage case"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "hockey-full-stick-bag",
@@ -4282,7 +4288,7 @@ export const PRODUCTS_DATA = [
     "shortDescription": "Heavy-duty 600D polyester stick bag holding up to 4 field hockey sticks, shinguards, shoes, and match gear.",
     "description": "Features a dedicated full-length stick compartment, separate ventilated shoe pouch, waterproof base, and padded ergonomic backpack straps for cycling to the pitch.",
     "images": [
-      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80"
+      "/products/hockey-maxed-stick-kit-bag.jpg"
     ],
     "sizes": [
       "Large Stick Bag (100cm x 25cm x 22cm)"
@@ -4301,7 +4307,7 @@ export const PRODUCTS_DATA = [
       "Custom printed club crest",
       "Player name and squad number"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "uploaded_photo"
   },
   {
     "id": "hockey-cushioned-turf-socks",
@@ -4335,7 +4341,7 @@ export const PRODUCTS_DATA = [
     "customizationOptions": [
       "Custom club colors and team stripes"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "sports-performance-dryfit-tshirt",
@@ -4380,7 +4386,7 @@ export const PRODUCTS_DATA = [
       "Chest and back printing",
       "Full sublimation patterns"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "gym-dryfit-training-tracksuit",
@@ -4419,7 +4425,7 @@ export const PRODUCTS_DATA = [
       "Gym logo embroidery",
       "Custom color contrast panels"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "athletic-training-squad-shorts",
@@ -4457,7 +4463,7 @@ export const PRODUCTS_DATA = [
     "customizationOptions": [
       "Custom printed gym logo on hem"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "gym-compression-recovery-tights",
@@ -4493,7 +4499,7 @@ export const PRODUCTS_DATA = [
     "customizationOptions": [
       "Custom waistband branding"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "gym-droparm-athletic-tank",
@@ -4532,7 +4538,7 @@ export const PRODUCTS_DATA = [
       "Gym logo screen printing",
       "Custom back slogan"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "gym-seamless-sports-bra-crop",
@@ -4569,7 +4575,7 @@ export const PRODUCTS_DATA = [
     "customizationOptions": [
       "Custom printed gym logo on chest"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "gym-fleece-training-hoodie",
@@ -4609,7 +4615,7 @@ export const PRODUCTS_DATA = [
       "Custom gym crest embroidery",
       "Screen-printed back graphic"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "gym-cross-training-shoes",
@@ -4645,7 +4651,7 @@ export const PRODUCTS_DATA = [
       "Breathable ballistic mesh upper"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "gym-weightlifting-shoes",
@@ -4679,7 +4685,7 @@ export const PRODUCTS_DATA = [
       "Diamond-textured anti-slip rubber outsole"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "gym-leather-lifting-belt",
@@ -4711,7 +4717,7 @@ export const PRODUCTS_DATA = [
       "Non-slip internal suede lining"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "gym-gloves-wrist-wraps",
@@ -4743,7 +4749,7 @@ export const PRODUCTS_DATA = [
       "Quick-pull finger removal tabs"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "gym-neoprene-knee-sleeves-7mm",
@@ -4777,7 +4783,7 @@ export const PRODUCTS_DATA = [
       "Heavy-duty non-tear flatlock stitching"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "gym-resistance-loop-bands-5",
@@ -4803,7 +4809,7 @@ export const PRODUCTS_DATA = [
       "Includes waterproof travel carry pouch"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "gym-non-slip-yoga-mat-6mm",
@@ -4833,7 +4839,7 @@ export const PRODUCTS_DATA = [
       "Includes elastic carry strap"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "gym-pro-duffel-bag-shoes",
@@ -4867,7 +4873,7 @@ export const PRODUCTS_DATA = [
       "Custom printed gym logo",
       "Personalized name tag"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "gym-speed-jump-rope",
@@ -4897,7 +4903,7 @@ export const PRODUCTS_DATA = [
       "Includes spare coated steel cable and wear protector"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "custom-club-polo-shirt",
@@ -4940,7 +4946,7 @@ export const PRODUCTS_DATA = [
       "Custom color collar tipping",
       "Screen printed delegation name"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "squad-fleece-team-hoodie",
@@ -4983,7 +4989,7 @@ export const PRODUCTS_DATA = [
       "Individual embroidered player names",
       "Full custom color combos"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "school-custom-house-sports-kit",
@@ -5027,7 +5033,7 @@ export const PRODUCTS_DATA = [
       "House color assignments",
       "Student name and roll numbering"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "school-custom-varsity-tracksuit",
@@ -5069,7 +5075,7 @@ export const PRODUCTS_DATA = [
       "Contrast stripe colors",
       "Student name tagging"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "custom-sublimation-studio-package",
@@ -5103,7 +5109,7 @@ export const PRODUCTS_DATA = [
       "Full sponsor integration",
       "Individual roster customization"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "all-sport-training-windbreaker",
@@ -5140,7 +5146,7 @@ export const PRODUCTS_DATA = [
       "Embroidered club crest on chest",
       "Back delegation lettering"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "crewneck-athletic-sweatshirt",
@@ -5178,7 +5184,7 @@ export const PRODUCTS_DATA = [
       "Chenille or 3D embroidered club crest",
       "Screen printed team name"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "all-sports-trainer-sneakers",
@@ -5215,7 +5221,7 @@ export const PRODUCTS_DATA = [
       "Molded memory foam insole"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "custom-sports-snapback-cap",
@@ -5253,7 +5259,7 @@ export const PRODUCTS_DATA = [
       "Custom color piping",
       "Side sponsor embroidery"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "general-floppy-sun-hat",
@@ -5290,7 +5296,7 @@ export const PRODUCTS_DATA = [
       "Embroidered team emblem",
       "Custom color brim trim"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "cushioned-crew-sports-socks",
@@ -5326,7 +5332,7 @@ export const PRODUCTS_DATA = [
       "Custom jacquard club lettering on bulk orders",
       "Team color stripe"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "teamwear-kit-duffle-bag",
@@ -5363,7 +5369,7 @@ export const PRODUCTS_DATA = [
       "Team name across top",
       "Player name window"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "all-sport-drawstring-gym-sack",
@@ -5397,7 +5403,7 @@ export const PRODUCTS_DATA = [
       "School or club logo screen printing",
       "Student name print"
     ],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "cricket-sri-lankan-tape-ball-bat",
@@ -5481,7 +5487,7 @@ export const PRODUCTS_DATA = [
     "isCustomizable": false,
     "isFeatured": true,
     "badge": "45mm Edges",
-    "imageStatus": "verified",
+    "imageStatus": "needs_client_photo",
     "shortDescription": "Specialized 35-inch long blade with 45mm+ thick contoured edges and triple-cushion rubber handle.",
     "description": "Designed for competitive tape-ball day/night tournaments. Crafted from carefully selected air-seasoned wood with deep concave sculpting for maximum sweet spot elevation and power transfer.",
     "images": [
@@ -5637,7 +5643,7 @@ export const PRODUCTS_DATA = [
       "Predictable bounce on concrete & clay wickets"
     ],
     "customizationOptions": [],
-    "imageStatus": "verified"
+    "imageStatus": "needs_client_photo"
   },
   {
     "id": "cricket-pvc-tape-rolls-box",
@@ -5683,11 +5689,11 @@ export const PRODUCTS_DATA = [
     "isCustomizable": true,
     "isFeatured": true,
     "badge": "All-In-One Match Kit",
-    "imageStatus": "verified",
+    "imageStatus": "uploaded_photo",
     "shortDescription": "Comprehensive tournament-ready hard-ball cricket package equipping individual players or entire clubs.",
     "description": "The complete tournament-ready hard-ball cricket package. Equips players with professional gear: Grade English/Kashmir willow bat, 4-piece leather match ball, test-standard batting pads, batting gloves, titanium grille helmet, thigh guard, inner thigh guard, arm guard, chest protector, abdominal box, cricket spike shoes, regulation stumps & bails, wicket-keeping gloves & pads, customized sublimated team jersey, match trousers, padded socks, and large wheelie tournament kitbag.",
     "images": [
-      "https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=800&q=80"
+      "/products/cricket-legend-full-kit.jpg"
     ],
     "sizes": [
       "Junior / Youth Package",
@@ -5721,11 +5727,11 @@ export const PRODUCTS_DATA = [
     "isCustomizable": true,
     "isFeatured": false,
     "badge": "Padded Foam",
-    "imageStatus": "verified",
+    "imageStatus": "uploaded_photo",
     "shortDescription": "Full-length padded thermal racket cover with adjustable shoulder strap and accessory zip pocket.",
     "description": "Protects high-tension racket strings and carbon graphite frames from impacts, scratches, and temperature variations during transit to the court. Fits 1 to 2 rackets securely.",
     "images": [
-      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80"
+      "/products/badminton-kesika-pair.jpg"
     ],
     "sizes": [
       "Full Length (Single/Double Racket)"
@@ -5755,11 +5761,11 @@ export const PRODUCTS_DATA = [
     "isCustomizable": true,
     "isFeatured": true,
     "badge": "Metal Championship Cup",
-    "imageStatus": "verified",
+    "imageStatus": "uploaded_photo",
     "shortDescription": "Cast metal tournament cup with gold/silver electroplating on mahogany-finish wooden pedestal base.",
     "description": "Prestigious championship trophy cup designed for tournament winners, player of the match awards, and annual sports galas. Comes mounted on a solid wooden base with custom laser-engraved metal plaque.",
     "images": [
-      "https://images.unsplash.com/photo-1578269174936-2709b6aeb913?auto=format&fit=crop&w=800&q=80"
+      "/products/trophy-gold-cup-lidded.jpg"
     ],
     "sizes": [
       "Large (24 Inch)",
@@ -5793,11 +5799,11 @@ export const PRODUCTS_DATA = [
     "isCustomizable": true,
     "isFeatured": true,
     "badge": "School & Club Favorite",
-    "imageStatus": "verified",
+    "imageStatus": "uploaded_photo",
     "shortDescription": "Durable high-gloss electroplated plastic sports trophy on heavy weighted composite base.",
     "description": "Cost-effective, elegant sports trophies ideal for school sports days, inter-house events, cricket tournaments, football leagues, and participation awards. Features a brilliant gold finish that looks prestigious on the podium.",
     "images": [
-      "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80"
+      "/products/trophy-trio-crown-set.jpg"
     ],
     "sizes": [
       "10 Inch",
@@ -5830,11 +5836,11 @@ export const PRODUCTS_DATA = [
     "isCustomizable": true,
     "isFeatured": false,
     "badge": "Perpetual Shield",
-    "imageStatus": "verified",
+    "imageStatus": "uploaded_photo",
     "shortDescription": "Traditional polished teak-finish hardwood presentation shield with central embossed metal plaque.",
     "description": "The classic presentation shield for perpetual championships, collegiate leagues, and distinguished achievement honors. Includes central title plate and surrounding date/winner tabs for multi-year tracking.",
     "images": [
-      "https://images.unsplash.com/photo-1578269174936-2709b6aeb913?auto=format&fit=crop&w=800&q=80"
+      "/products/trophy-multi-sports-awards-set.jpg"
     ],
     "sizes": [
       "10 Inch Table Shield",
@@ -5866,7 +5872,7 @@ export const PRODUCTS_DATA = [
     "isCustomizable": true,
     "isFeatured": true,
     "badge": "Heavy Cast Metal",
-    "imageStatus": "verified",
+    "imageStatus": "needs_client_photo",
     "shortDescription": "Heavyweight 65mm die-cast metal sports medals with satin neck ribbons for 1st, 2nd, and 3rd place.",
     "description": "High-quality cast medals delivering true weight and prestige around athletes' necks. Comes complete with red-white-blue or custom national green satin neck ribbons. Back is flat for custom engraving or label printing.",
     "images": [
@@ -5903,7 +5909,7 @@ export const PRODUCTS_DATA = [
     "isCustomizable": true,
     "isFeatured": false,
     "badge": "Man of the Match",
-    "imageStatus": "verified",
+    "imageStatus": "needs_client_photo",
     "shortDescription": "Beveled optical crystal / acrylic presentation award for Man of the Match, Best Batsman, and Best Bowler.",
     "description": "Modern, stylish desktop trophy for individual tournament distinctions: Man of the Match, Best Batsman, Best Bowler, Best Fielder, and Player of the Tournament. Clean laser-engraved typography with high optical clarity.",
     "images": [
@@ -5927,6 +5933,274 @@ export const PRODUCTS_DATA = [
       "Player name, performance stats (e.g. '56 Runs / 3 Wickets')",
       "Tournament crest & match date"
     ]
+  },
+  {
+    "id": "volleyball-libero-jersey-huskies",
+    "name": "AR Huskies Custom Sublimation Volleyball Jersey",
+    "sport": "Volleyball",
+    "sportSlug": "volleyball",
+    "category": "Clothing & Team Kits",
+    "type": "jersey",
+    "isCustomizable": true,
+    "isFeatured": true,
+    "badge": "Uploaded Photo",
+    "shortDescription": "Custom blue and black geometric pattern volleyball jersey with player name and squad numbering.",
+    "description": "Showcasing our precision custom sublimation capabilities for volleyball teams. Features athletic V-neck collar, raglan sleeves with contrasting black panels, and breathable moisture-wicking micro-mesh fabric. Complete with your school or club crest, player names, and numbers.",
+    "images": [
+      "/products/volleyball-huskies-custom-jersey.jpg"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "2XL"
+    ],
+    "colors": [
+      "Royal Blue / Black",
+      "Custom Team Combination"
+    ],
+    "features": [
+      "Full digital sublimation",
+      "Breathable athletic mesh",
+      "Front team crest & back name/number",
+      "Reinforced neck & armholes"
+    ],
+    "customizationOptions": [
+      "Player roster printing",
+      "Custom colors and patterns",
+      "Sponsor logos & crests"
+    ],
+    "imageStatus": "uploaded_photo"
+  },
+  {
+    "id": "tennis-junior-starter-set",
+    "name": "AR Junior Starter Tennis Set with Racket, Bag & Balls",
+    "sport": "Tennis",
+    "sportSlug": "tennis",
+    "category": "Equipment",
+    "type": "set",
+    "isCustomizable": false,
+    "isFeatured": true,
+    "badge": "Uploaded Photo",
+    "shortDescription": "Complete youth starter tennis set with lightweight 21-inch racket, padded cover bag, training balls, and eye-masks.",
+    "description": "Complete training kit designed for young tennis learners and school academy training. Includes Prince Cool Shot 21 aluminium junior racket with padded shoulder carry cover, 6 foam training tennis balls, vision training blindfolds, and starter instruction manual.",
+    "images": [
+      "/products/tennis-junior-starter-set.jpg"
+    ],
+    "variants": [
+      "Junior 21-Inch Set (Ages 5-8)",
+      "Junior 23-Inch Set (Ages 8-10)"
+    ],
+    "features": [
+      "21-inch lightweight aluminium racket",
+      "Padded zippered shoulder bag",
+      "6 soft foam training balls",
+      "Includes training aids"
+    ],
+    "imageStatus": "uploaded_photo"
+  },
+  {
+    "id": "tennis-pro-tournament-gear-set",
+    "name": "AR Grand Slam Pro Tennis Package with Wire Ball Hopper & Shoes",
+    "sport": "Tennis",
+    "sportSlug": "tennis",
+    "category": "Equipment",
+    "type": "set",
+    "isCustomizable": false,
+    "isFeatured": true,
+    "badge": "Uploaded Photo",
+    "shortDescription": "Professional tournament tennis package featuring dual carbon rackets, standing wire ball hopper with 72 balls, court backpack, and shoes.",
+    "description": "Comprehensive tennis training package for coaches, clubs, and competitive players. Includes 2 Wilson & Prince tournament-grade carbon rackets, heavy-duty wire ball pickup hopper loaded with tennis balls, dedicated tennis tournament backpack, and hard-court stability tennis shoes.",
+    "images": [
+      "/products/tennis-pro-tournament-gear-set.jpg"
+    ],
+    "features": [
+      "2 tournament carbon rackets",
+      "Wire ball hopper with standing legs",
+      "Wilson US Open tour backpack",
+      "All-court stability court shoes"
+    ],
+    "imageStatus": "uploaded_photo"
+  },
+  {
+    "id": "tennis-adv-pro-bag-rackets-collection",
+    "name": "AR Tour Pro 6-Racket Tournament Bag & Complete Court Gear Collection",
+    "sport": "Tennis",
+    "sportSlug": "tennis",
+    "category": "Equipment",
+    "type": "set",
+    "isCustomizable": false,
+    "isFeatured": true,
+    "badge": "Uploaded Photo",
+    "shortDescription": "Ultimate tournament tennis kitbag featuring 6 precision strung carbon rackets, tennis balls, shoes, coach clipboard, and accessories.",
+    "description": "Premium master tennis equipment collection. Includes ADV high-capacity tournament backpack / duffel bag with thermal compartments, 6 matched performance carbon tennis rackets, Wilson US Open match balls cans, court shoes, tactical coach court clipboard, jump rope, resistance bands, and recovery kit.",
+    "images": [
+      "/products/tennis-adv-pro-bag-rackets-collection.jpg"
+    ],
+    "features": [
+      "6-racket matched tournament carbon rackets",
+      "Thermal multi-compartment ADV kitbag",
+      "Ball cans, court shoes & coach board",
+      "Fitness speed rope and resistance bands"
+    ],
+    "imageStatus": "uploaded_photo"
+  },
+  {
+    "id": "gym-core-home-gym-equipment-combo",
+    "name": "AR Complete Fitness Training Combo Set with Mini Cycle, Pushup Bar & Shaker",
+    "sport": "Gym & Fitness Wear",
+    "sportSlug": "gym-fitness",
+    "category": "Equipment",
+    "type": "equipment",
+    "isCustomizable": false,
+    "isFeatured": true,
+    "badge": "Uploaded Photo",
+    "shortDescription": "Multi-piece home gym fitness combo including mini pedal exerciser, resistance tube system, pushup bars, waist twister, hand gripper, and protein shaker.",
+    "description": "Comprehensive all-in-one personal fitness and rehabilitation package. Includes portable mini cycle pedal trainer, 11-piece resistance tube workout system, S-type pushup stands, ab waist twist disc, speed jump rope, adjustable hand gripper, posture support strap, weightlifting wrist wraps, and shaker bottle.",
+    "images": [
+      "/products/gym-combo-training-set.jpg"
+    ],
+    "features": [
+      "Mini pedal exerciser with resistance knob",
+      "Multi-level resistance tube set",
+      "Rotating waist disc & pushup bars",
+      "Includes shaker, gripper & jump rope"
+    ],
+    "imageStatus": "uploaded_photo"
+  },
+  {
+    "id": "gym-multi-function-pushup-board",
+    "name": "AR 14-in-1 Color-Coded Pushup Board & Full-Body Resistance System",
+    "sport": "Gym & Fitness Wear",
+    "sportSlug": "gym-fitness",
+    "category": "Equipment",
+    "type": "equipment",
+    "isCustomizable": false,
+    "isFeatured": true,
+    "badge": "Uploaded Photo",
+    "shortDescription": "Foldable 14-in-1 color-coded pushup board system with dual ab-roller wheels, heavy resistance bands, and squat bar.",
+    "description": "Engineered for complete upper and lower body calisthenics training. Color-coded board positions target chest (blue), shoulders (red), back (yellow), and triceps (green). Comes complete with dual ab workout wheels, heavy-duty resistance tubes with door anchors and foot straps, 3-section steel workout bar, and non-slip handles.",
+    "images": [
+      "/products/gym-multi-function-pushup-board.jpg"
+    ],
+    "features": [
+      "14-in-1 color-coded muscle targeting board",
+      "Dual ab-roller wheels with steel axle",
+      "Heavy-duty resistance cords & squat bar",
+      "Foldable portable compact design"
+    ],
+    "imageStatus": "uploaded_photo"
+  },
+  {
+    "id": "gym-commercial-multi-gym-station",
+    "name": "AR Liveup Heavy-Duty Multi-Station Home & Commercial Gym Machine",
+    "sport": "Gym & Fitness Wear",
+    "sportSlug": "gym-fitness",
+    "category": "Equipment",
+    "type": "equipment",
+    "isCustomizable": false,
+    "isFeatured": true,
+    "badge": "Uploaded Photo",
+    "shortDescription": "All-in-one multi-station weight stack gym machine with lat pulldown, chest press, pec deck, leg extension, and stepper station.",
+    "description": "Complete commercial-grade home and club multi-gym workhorse. Built with high-gauge powder-coated steel tubing, 150 lbs shrouded weight stack, aircraft-grade steel cables, and high-density padded bench and backrests. Allows 30+ exercises including lat pulldown, seated row, leg extension, chest flyes, bench press, and dip/stepper workouts.",
+    "images": [
+      "/products/gym-commercial-multi-gym-station.jpg"
+    ],
+    "features": [
+      "Heavy-gauge powder-coated steel frame",
+      "Enclosed 150 lbs weight stack",
+      "High and low pulley cable stations",
+      "Ergonomic dual-tone padded seats"
+    ],
+    "imageStatus": "uploaded_photo"
+  },
+  {
+    "id": "gym-commercial-treadmills-row",
+    "name": "AR Commercial Motorized Heavy-Duty Treadmill Series",
+    "sport": "Gym & Fitness Wear",
+    "sportSlug": "gym-fitness",
+    "category": "Equipment",
+    "type": "equipment",
+    "isCustomizable": false,
+    "isFeatured": true,
+    "badge": "Uploaded Photo",
+    "shortDescription": "Commercial-grade continuous duty motorized cardio treadmill with HD interactive touchscreen display and hydraulic deck cushioning.",
+    "description": "Built for high-traffic fitness clubs, corporate gyms, and endurance training centres. Powered by a 4.5 HP continuous AC motor, reaching speeds up to 22 km/h with 15 levels of automatic power incline. Large multi-ply orthopaedic running belt with advanced shock absorption protects joints during sprints.",
+    "images": [
+      "/products/gym-commercial-treadmills-row.jpg"
+    ],
+    "features": [
+      "4.5 HP continuous AC commercial motor",
+      "High-definition touchscreen display console",
+      "Multi-ply orthopaedic shock-absorbing belt",
+      "Heavy-duty commercial steel frame"
+    ],
+    "imageStatus": "uploaded_photo"
+  },
+  {
+    "id": "trophies-gold-champion-cup-ribbons",
+    "name": "AR Grand Champion Gold Trophy Cup with Presentation Ribbons",
+    "sport": "Trophies & Awards",
+    "sportSlug": "trophies-awards",
+    "category": "Equipment",
+    "type": "trophy",
+    "isCustomizable": true,
+    "isFeatured": true,
+    "badge": "Uploaded Photo",
+    "shortDescription": "Handcrafted gold-plated championship trophy cup with sculpted crown finial lid, decorative handles, red-white-blue ribbons, and black base.",
+    "description": "Prestigious tournament award designed for finals, annual sports days, and championship winners. Features radiant mirror gold-plated bowl, decorative filigree detailing, finial lid, tri-color presentation ribbons, and solid black pedestal base with custom engraving plate.",
+    "images": [
+      "/products/trophy-gold-champion-cup-ribbons.jpg"
+    ],
+    "sizes": [
+      "Small (14-Inch)",
+      "Medium (18-Inch)",
+      "Large (22-Inch)"
+    ],
+    "features": [
+      "Mirror gold-plated cup finish",
+      "Crown finial removable lid",
+      "Tri-color ceremonial ribbons",
+      "Heavy weighted base with custom plate"
+    ],
+    "customizationOptions": [
+      "Tournament name engraving",
+      "Team/winner logo printing",
+      "Choice of ribbon colors"
+    ],
+    "imageStatus": "uploaded_photo"
+  },
+  {
+    "id": "trophies-rose-gold-star-award",
+    "name": "AR Elite Rose-Gold Shooting Star Recognition Trophy",
+    "sport": "Trophies & Awards",
+    "sportSlug": "trophies-awards",
+    "category": "Equipment",
+    "type": "trophy",
+    "isCustomizable": true,
+    "isFeatured": true,
+    "badge": "Uploaded Photo",
+    "shortDescription": "Modern sculptural rose-gold five-point star award on tapered black pedestal base.",
+    "description": "Sophisticated modern recognition award ideal for Player of the Tournament, Best Performer, Corporate Excellence, and Academic Sports Awards. Cast in polished rose-gold metallic finish with dynamic wing-flame riser holding a five-point star atop a weighted black bevelled base.",
+    "images": [
+      "/products/trophy-rose-gold-star-award.jpg"
+    ],
+    "sizes": [
+      "Standard (10-Inch)",
+      "Tall (12-Inch)"
+    ],
+    "features": [
+      "Metallic rose-gold mirror finish",
+      "Dynamic sculptural flame riser",
+      "Five-point star crown",
+      "Weighted bevelled engraving base"
+    ],
+    "customizationOptions": [
+      "Custom laser engraved brass plate",
+      "Winner name and award title"
+    ],
+    "imageStatus": "uploaded_photo"
   }
 ];
 
