@@ -109,34 +109,36 @@ export default function ProductCard({ product }) {
               )}
             </div>
           )}
+
+          {/* KEY FEATURES SNIPPET */}
+          {product.features && product.features.length > 0 && (
+            <div className="mt-2.5 flex flex-wrap gap-1">
+              {product.features.slice(0, 2).map((feat, i) => (
+                <span key={i} className="inline-flex items-center gap-1 text-[10px] font-medium bg-emerald-50 text-brand-green px-1.5 py-0.5 rounded border border-emerald-100/80">
+                  <span>✓</span>
+                  <span className="truncate max-w-[140px]">{feat}</span>
+                </span>
+              ))}
+            </div>
+          )}
         </div>
 
         {/* BOTTOM ACTION BUTTONS */}
-        <div className="pt-3.5 mt-3.5 border-t border-brand-border grid grid-cols-2 gap-1.5 sm:gap-2">
-          {product.isCustomizable ? (
-            <Link
-              to={`/custom-design?sport=${product.sportSlug}&product=${product.id}`}
-              className="col-span-1 px-2.5 sm:px-3 py-2 sm:py-2.5 rounded-xl text-[11px] sm:text-xs font-semibold bg-brand-alt hover:bg-brand-border/60 text-brand-text border border-brand-border flex items-center justify-center gap-1 transition-colors text-center"
-            >
-              <Sparkles className="w-3.5 h-3.5 text-brand-green shrink-0" />
-              <span className="truncate">Customize</span>
-            </Link>
-          ) : (
-            <button
-              onClick={handleQuickAddToCart}
-              className="col-span-1 px-2.5 sm:px-3 py-2 sm:py-2.5 rounded-xl text-[11px] sm:text-xs font-semibold bg-brand-alt hover:bg-brand-border/60 text-brand-text border border-brand-border flex items-center justify-center gap-1 transition-colors cursor-pointer text-center"
-            >
-              <Plus className="w-3.5 h-3.5 text-brand-muted shrink-0" />
-              <span className="truncate">Add to Cart</span>
-            </button>
-          )}
+        <div className="pt-3.5 mt-3.5 border-t border-brand-border grid grid-cols-2 gap-2">
+          <Link
+            to={`/product/${product.id}`}
+            className="px-2 sm:px-3 py-2 sm:py-2.5 rounded-xl text-xs font-semibold bg-brand-alt hover:bg-brand-border/60 text-brand-text border border-brand-border flex items-center justify-center gap-1.5 transition-colors text-center"
+          >
+            <Eye className="w-3.5 h-3.5 text-brand-green shrink-0" />
+            <span className="truncate">View Details</span>
+          </Link>
 
           <button
             onClick={handleQuickWhatsAppInquiry}
-            className="col-span-1 px-2.5 sm:px-3 py-2 sm:py-2.5 rounded-xl text-[11px] sm:text-xs font-bold bg-brand-green hover:bg-brand-hover text-white flex items-center justify-center gap-1 sm:gap-1.5 shadow-xs transition-colors cursor-pointer text-center"
+            className="px-2 sm:px-3 py-2 sm:py-2.5 rounded-xl text-xs font-bold bg-brand-green hover:bg-brand-hover text-white flex items-center justify-center gap-1.5 shadow-xs transition-colors cursor-pointer text-center"
           >
             <MessageCircle className="w-3.5 h-3.5 fill-current shrink-0" />
-            <span className="truncate">Inquire</span>
+            <span className="truncate">Order WhatsApp</span>
           </button>
         </div>
 

@@ -150,11 +150,13 @@ export default function Shop() {
                   onChange={(e) => setSelectedCategory(e.target.value)}
                   className="w-full bg-white border border-brand-border rounded-xl py-3 px-4 text-brand-text text-sm focus:border-brand-green focus:outline-none focus:ring-1 focus:ring-brand-green cursor-pointer shadow-xs"
                 >
-                  <option value="all">All Product Types</option>
-                  <option value="Sportswear">Sportswear (Jerseys, Kits & Apparel)</option>
-                  <option value="Equipment">Sports Equipment</option>
-                  <option value="School & Teamwear">School & Teamwear</option>
-                  <option value="Accessories">Accessories & Socks</option>
+                  <option value="all">All Product Categories</option>
+                  <option value="Clothing & Team Kits">Clothing & Team Kits</option>
+                  <option value="Playing Equipment">Playing Equipment</option>
+                  <option value="Shoes & Footwear">Shoes & Footwear</option>
+                  <option value="Safety & Protection">Safety & Protection</option>
+                  <option value="Training Equipment">Training Equipment</option>
+                  <option value="Accessories">Accessories</option>
                 </select>
               </div>
 

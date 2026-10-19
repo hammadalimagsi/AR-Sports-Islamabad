@@ -178,6 +178,28 @@ export default function ProductDetails() {
               </div>
             )}
 
+            {/* CUSTOMIZATION OPTIONS IF APPLICABLE */}
+            {product.customizationOptions && product.customizationOptions.length > 0 && (
+              <div className="bg-emerald-50/60 border border-emerald-200/80 rounded-2xl p-4">
+                <div className="flex items-center gap-1.5 mb-2">
+                  <Sparkles className="w-3.5 h-3.5 text-brand-green" />
+                  <h4 className="text-xs font-bold uppercase tracking-wider text-brand-text">
+                    Available Customization Options:
+                  </h4>
+                </div>
+                <div className="flex flex-wrap gap-1.5">
+                  {product.customizationOptions.map((opt, i) => (
+                    <span
+                      key={i}
+                      className="px-2.5 py-1 rounded-lg bg-white border border-emerald-200 text-xs font-semibold text-brand-text shadow-2xs"
+                    >
+                      {opt}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            )}
+
             {/* PRODUCT OPTIONS SELECTION */}
             <form onSubmit={handleWhatsAppInquiry} className="space-y-5 pt-2">
               

@@ -24,14 +24,20 @@ export default function SportCategoryPage() {
     return PRODUCTS_DATA.filter(p => p.sportSlug === currentSport.slug);
   }, [currentSport]);
 
+  // Available sub-categories for this sport
+  const sportCategories = useMemo(() => {
+    const cats = new Set();
+    sportProducts.forEach(p => {
+      if (p.category) cats.add(p.category);
+    });
+    return Array.from(cats);
+  }, [sportProducts]);
+
   // Filtered by subcategory if applicable
   const displayedProducts = useMemo(() => {
     if (activeTypeFilter === 'all') return sportProducts;
     if (activeTypeFilter === 'customizable') return sportProducts.filter(p => p.isCustomizable);
-    if (activeTypeFilter === 'equipment') return sportProducts.filter(p => p.category === 'Equipment');
-    if (activeTypeFilter === 'sportswear') return sportProducts.filter(p => p.category === 'Sportswear');
-    if (activeTypeFilter === 'accessories') return sportProducts.filter(p => p.category === 'Accessories');
-    return sportProducts;
+    return sportProducts.filter(p => p.category === activeTypeFilter);
   }, [sportProducts, activeTypeFilter]);
 
   // Other sports for quick cross-navigation
@@ -206,25 +212,46 @@ export default function SportCategoryPage() {
 
             {/* Sub-Filter Pills */}
             <div className="flex flex-wrap items-center gap-1.5">
-              {[
-                { id: 'all', label: `All (${sportProducts.length})` },
-                { id: 'customizable', label: 'Customizable Kits' },
-                { id: 'sportswear', label: 'Apparel' },
-                { id: 'equipment', label: 'Equipment' },
-                { id: 'accessories', label: 'Accessories' }
-              ].map(filter => (
+              <button
+                onClick={() => setActiveTypeFilter('all')}
+                className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors cursor-pointer ${
+                  activeTypeFilter === 'all'
+                    ? 'bg-brand-green text-white shadow-2xs'
+                    : 'bg-brand-alt text-brand-muted hover:text-brand-text hover:bg-brand-border/60 border border-brand-border'
+                }`}
+              >
+                All ({sportProducts.length})
+              </button>
+              
+              {sportProducts.some(p => p.isCustomizable) && (
                 <button
-                  key={filter.id}
-                  onClick={() => setActiveTypeFilter(filter.id)}
+                  onClick={() => setActiveTypeFilter('customizable')}
                   className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors cursor-pointer ${
-                    activeTypeFilter === filter.id
+                    activeTypeFilter === 'customizable'
                       ? 'bg-brand-green text-white shadow-2xs'
                       : 'bg-brand-alt text-brand-muted hover:text-brand-text hover:bg-brand-border/60 border border-brand-border'
                   }`}
                 >
-                  {filter.label}
+                  Customizable Kits ({sportProducts.filter(p => p.isCustomizable).length})
                 </button>
-              ))}
+              )}
+
+              {sportCategories.map(cat => {
+                const count = sportProducts.filter(p => p.category === cat).length;
+                return (
+                  <button
+                    key={cat}
+                    onClick={() => setActiveTypeFilter(cat)}
+                    className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-colors cursor-pointer ${
+                      activeTypeFilter === cat
+                        ? 'bg-brand-green text-white shadow-2xs'
+                        : 'bg-brand-alt text-brand-muted hover:text-brand-text hover:bg-brand-border/60 border border-brand-border'
+                    }`}
+                  >
+                    {cat} ({count})
+                  </button>
+                );
+              })}
             </div>
           </div>
 
