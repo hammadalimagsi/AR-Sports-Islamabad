@@ -279,6 +279,7 @@ export default function Footer() {
                   { name: "Field Hockey", slug: "hockey" },
                   { name: "Gym & Fitness", slug: "gym-fitness" },
                   { name: "General Sportswear", slug: "general-sportswear" },
+                  { name: "Trophies & Awards", slug: "trophies-awards" },
                 ].map(sport => (
                   <li key={sport.slug}>
                     <Link 

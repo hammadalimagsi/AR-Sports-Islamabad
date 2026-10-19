@@ -11,12 +11,15 @@ export default function ProductCard({ product }) {
   const handleQuickWhatsAppInquiry = (e) => {
     e.preventDefault();
     e.stopPropagation();
-    const msg = buildProductInquiryMessage({
+    let msg = buildProductInquiryMessage({
       product,
       selectedSize: product.sizes?.[0] || null,
       selectedVariant: product.variants?.[0] || product.colors?.[0] || null,
       quantity: 1
     });
+    if (product.imageStatus === 'needs_client_photo') {
+      msg += "\n\n_Note: Please also share live actual photographs and video of this item from your shop floor._";
+    }
     openWhatsAppChat(msg);
   };
 
@@ -53,6 +56,11 @@ export default function ProductCard({ product }) {
           {product.badge && (
             <span className="px-2.5 py-1 rounded-lg text-[11px] font-extrabold uppercase tracking-wider bg-brand-green text-white shadow-xs">
               {product.badge}
+            </span>
+          )}
+          {product.imageStatus === 'needs_client_photo' && (
+            <span className="px-2 py-0.5 rounded-lg text-[10px] font-bold uppercase tracking-wider bg-amber-500 text-white shadow-xs">
+              Live Photo on WA
             </span>
           )}
         </div>

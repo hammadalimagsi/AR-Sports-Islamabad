@@ -157,7 +157,7 @@ export default function Navbar() {
                 {sportsDropdownOpen && (
                   <div className="absolute top-full left-0 w-96 bg-white border border-brand-border rounded-2xl shadow-2xl p-3 animate-in fade-in slide-in-from-top-2 duration-150 z-50">
                     <div className="px-3 py-1.5 text-[11px] font-bold text-brand-muted uppercase tracking-wider border-b border-brand-border flex items-center justify-between">
-                      <span>10 Sports Collections</span>
+                      <span>11 Sports & Awards Collections</span>
                       <button 
                         onClick={() => handleNavToSection('sports-categories', '/')} 
                         className="text-brand-green hover:underline normal-case font-semibold text-xs cursor-pointer"
@@ -177,6 +177,7 @@ export default function Navbar() {
                         { slug: 'hockey', name: 'Hockey', badge: 'Turf Pro' },
                         { slug: 'gym-fitness', name: 'Gym & Fitness', badge: 'Training' },
                         { slug: 'general-sportswear', name: 'General Sportswear', badge: 'Custom Kits' },
+                        { slug: 'trophies-awards', name: 'Trophies & Awards', badge: 'Awards' },
                       ].map((cat) => (
                         <Link
                           key={cat.slug}
@@ -324,6 +325,7 @@ export default function Navbar() {
                     { slug: 'hockey', name: 'Hockey' },
                     { slug: 'gym-fitness', name: 'Gym & Fitness' },
                     { slug: 'general-sportswear', name: 'General Sportswear' },
+                    { slug: 'trophies-awards', name: 'Trophies & Awards' },
                   ].map(cat => (
                     <Link
                       key={cat.slug}

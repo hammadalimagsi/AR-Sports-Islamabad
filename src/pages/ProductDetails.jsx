@@ -48,13 +48,16 @@ export default function ProductDetails() {
 
   const handleWhatsAppInquiry = (e) => {
     e.preventDefault();
-    const msg = buildProductInquiryMessage({
+    let msg = buildProductInquiryMessage({
       product,
       selectedVariant,
       selectedSize,
       quantity,
       notes: customNotes
     });
+    if (product.imageStatus === 'needs_client_photo') {
+      msg += "\n\n_Note: Please also share live actual photographs and video of this item from your shop floor._";
+    }
     openWhatsAppChat(msg);
   };
 
@@ -160,6 +163,19 @@ export default function ProductDetails() {
                 {product.description}
               </p>
             </div>
+
+            {/* PHOTO VERIFICATION NOTICE IF PENDING CLIENT PHOTOS */}
+            {product.imageStatus === 'needs_client_photo' && (
+              <div className="p-4 rounded-2xl bg-amber-50/90 border border-amber-200 text-amber-950 text-xs">
+                <div className="flex items-center gap-2 font-bold text-amber-900 mb-1">
+                  <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
+                  <span>Actual Shop Photograph Available on Request</span>
+                </div>
+                <p className="leading-relaxed text-amber-800">
+                  {product.photoNotice || "This is a specialized local product handcrafted or stocked at our Rawalpindi / Islamabad workshop. In keeping with our genuine product policy, contact our team directly on WhatsApp to receive real-time photos and videos of current stock."}
+                </p>
+              </div>
+            )}
 
             {/* KEY FEATURES LIST */}
             {product.features && (

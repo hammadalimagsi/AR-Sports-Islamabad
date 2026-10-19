@@ -45,6 +45,7 @@ export default function Home() {
     { slug: 'hockey', name: 'Hockey' },
     { slug: 'gym-fitness', name: 'Gym & Fitness' },
     { slug: 'general-sportswear', name: 'General Sportswear' },
+    { slug: 'trophies-awards', name: 'Trophies & Awards' },
   ];
 
   const hubSpecialties = [
